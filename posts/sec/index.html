@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html><head>
-	<meta name="generator" content="Hugo 0.96.0" />
-<title>Blog</title>
+<title>Sec</title>
 
 
-
-  
 
 
 <meta charset="utf-8">
@@ -54,6 +51,8 @@
 
 
 
+  <script src="/js/toc.js"></script>
+
 
 
 
@@ -71,7 +70,7 @@
 <body>
     	<div id="app"><div id="sideContainer" class="side-container">
     
-    <a class="a-block nav-head active" href="https://foezzy.github.io/">
+    <a class="a-block nav-head false" href="https://foezzy.github.io/">
     
         <div class="nav-title">
             Blog
@@ -103,6 +102,11 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 </div><div id="extraContainer" class="extra-container">
     
     
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+</div>
+    
     <div class="pagination">
         <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
             <i class="material-icons pagination-action-icon">
@@ -117,8 +121,6 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
         </a>
         
         
-        
-        
     </div>
 </div>
 <div class="single-column-drawer-container" id="drawer"
@@ -128,6 +130,11 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
             
             
             
+            
+            <div class="toc">
+
+
+</div>
             
         </div>
     </div>
@@ -167,74 +174,80 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
             <div id="content">
                 <div id="streamContainer" class="stream-container">
 
-
-    <div class="post-list-container post-list-container-no-background">
-        
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
             
-            <a href="https://foezzy.github.io/posts/sec/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                Sec
-                            </div>
-                            <div class="post-item-summary">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    2022-07-12
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
+            
+            
 
-                        </div>
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Sec
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2022-07-12 15:21
+                        </time>
+                        
+
+                        
+
                         
                         
                     </div>
                 </div>
+            </div>
             
-        
-            
-            <a href="https://foezzy.github.io/posts/first/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                First
-                            </div>
-                            <div class="post-item-summary">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    2022-07-12
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <p>sec</p>
 
-                        </div>
-                        
-                        
-                    </div>
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2022-07-12</p>
+                    
                 </div>
+            </div>
             
-        
-        </a>
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts">
+			Next<br>No newer posts.
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://foezzy.github.io/posts/first/">
+			Previous<br>First
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
     </div>
 
 
                     </div>
-            </div>
-
-
-<div id="single-column-footer">
+            </div><div id="single-column-footer">
 Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
 <br>
 Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
