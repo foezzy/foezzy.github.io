@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>adb连接 on Blog</title>
+    <link>https://foezzy.github.io/tags/adb%E8%BF%9E%E6%8E%A5/</link>
+    <description>Recent content in adb连接 on Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 May 2020 11:34:05 +0000</lastBuildDate><atom:link href="https://foezzy.github.io/tags/adb%E8%BF%9E%E6%8E%A5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>不用数据线连接adb,需要root权限</title>
+      <link>https://foezzy.github.io/posts/%E4%B8%8D%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BA%BF%E8%BF%9E%E6%8E%A5adb-%E9%9C%80%E8%A6%81root%E6%9D%83%E9%99%90/</link>
+      <pubDate>Fri, 15 May 2020 11:34:05 +0000</pubDate>
+      
+      <guid>https://foezzy.github.io/posts/%E4%B8%8D%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BA%BF%E8%BF%9E%E6%8E%A5adb-%E9%9C%80%E8%A6%81root%E6%9D%83%E9%99%90/</guid>
+      <description>有 2 种方法开启无线调试，其中一种需要 USB 线先连接，这里只介绍另一种不借助 USB 线的
+过程很简单，手机需要有 ROOT 权限
+   手机端下载 终端模拟器 或其他终端   手机终端输入如下命令
+   su
+setprop service.adb.tcp.port 5555
+stop adbd
+start adbd
+ 查看本机 ip   ifconfig
+  在开发者选项中打开 USB 调试（否则连接后会显示未授权）
+  电脑端输入
+   adb connect Phone_ip:5555 (Phone_ip 为你自己手机 ip) adb devices
+ 若成功 此时你便能看到自己的设备了   List of devices attached
+192.168.1.59:5555 device
+ 可能遇到的问题 问题：unable to connect to 192.</description>
+    </item>
+    
+  </channel>
+</rss>

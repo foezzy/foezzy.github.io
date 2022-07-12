@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html><head>
+<title>Glide用到的代码记录</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://foezzy.github.io/scss/journal.min.c5d92f380bf10f6849c7ac487c7df2b22c081e0851e5339224f1ae29210b20d2.css" integrity="sha256-xdkvOAvxD2hJx6xIfH3ysiwIHghR5TOSJPGuKSELINI=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://foezzy.github.io/scss/dark-mode.min.9f8d8c2df9285089d141edd4a50cb7506c7948e6ab79a29968dced1bd0ab7d22.css" integrity="sha256-n42MLfkoUInRQe3UpQy3UGx5SOareaKZaNztG9CrfSI=" media="screen">
+
+
+<script src="/vendor/js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
+</script>
+
+
+
+
+
+
+  <script src="/js/toc.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://foezzy.github.io/">
+    
+        <div class="nav-title">
+            Blog
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 Blog
+	
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%90%8c%e6%ad%a5%e5%8a%a0%e8%bd%bd" onclick="onNavClick(`#同步加载-nav`)" id="同步加载-nav">
+									同步加载
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%8e%b7%e5%8f%96%e5%ae%bd%e9%ab%98" onclick="onNavClick(`#获取宽高-nav`)" id="获取宽高-nav">
+									获取宽高
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e6%96%b9%e5%bc%8f1" onclick="onNavClick(`#方式1-nav`)" id="方式1-nav">
+									方式1：
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%96%b9%e5%bc%8f2" onclick="onNavClick(`#方式2-nav`)" id="方式2-nav">
+									方式2：
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%bd%e5%ba%a6%e9%80%82%e5%ba%94%e5%b1%8f%e5%b9%95%e9%ab%98%e5%ba%a6%e8%87%aa%e9%80%82%e5%ba%94" onclick="onNavClick(`#宽度适应屏幕高度自适应-nav`)" id="宽度适应屏幕高度自适应-nav">
+									宽度适应屏幕，高度自适应
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%9b%91%e5%90%ac%e8%af%b7%e6%b1%82" onclick="onNavClick(`#监听请求-nav`)" id="监听请求-nav">
+									监听请求
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%b8%a6%e5%9c%86%e8%a7%92%e7%9a%84%e5%9b%be%e7%89%87" onclick="onNavClick(`#带圆角的图片-nav`)" id="带圆角的图片-nav">
+									带圆角的图片
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e7%b1%bb%e5%9e%8b1%e5%9c%86%e5%bd%a2%e5%9b%be%e7%89%87" onclick="onNavClick(`#类型1圆形图片-nav`)" id="类型1圆形图片-nav">
+									类型1：圆形图片
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%b1%bb%e5%9e%8b2%e5%9c%86%e8%a7%92%e5%9b%be%e7%89%87" onclick="onNavClick(`#类型2圆角图片-nav`)" id="类型2圆角图片-nav">
+									类型2：圆角图片
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%90%8c%e6%ad%a5%e5%8a%a0%e8%bd%bd" onclick="onNavClick(`#同步加载-nav`)" id="同步加载-nav">
+									同步加载
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%8e%b7%e5%8f%96%e5%ae%bd%e9%ab%98" onclick="onNavClick(`#获取宽高-nav`)" id="获取宽高-nav">
+									获取宽高
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e6%96%b9%e5%bc%8f1" onclick="onNavClick(`#方式1-nav`)" id="方式1-nav">
+									方式1：
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%96%b9%e5%bc%8f2" onclick="onNavClick(`#方式2-nav`)" id="方式2-nav">
+									方式2：
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%bd%e5%ba%a6%e9%80%82%e5%ba%94%e5%b1%8f%e5%b9%95%e9%ab%98%e5%ba%a6%e8%87%aa%e9%80%82%e5%ba%94" onclick="onNavClick(`#宽度适应屏幕高度自适应-nav`)" id="宽度适应屏幕高度自适应-nav">
+									宽度适应屏幕，高度自适应
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%9b%91%e5%90%ac%e8%af%b7%e6%b1%82" onclick="onNavClick(`#监听请求-nav`)" id="监听请求-nav">
+									监听请求
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%b8%a6%e5%9c%86%e8%a7%92%e7%9a%84%e5%9b%be%e7%89%87" onclick="onNavClick(`#带圆角的图片-nav`)" id="带圆角的图片-nav">
+									带圆角的图片
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e7%b1%bb%e5%9e%8b1%e5%9c%86%e5%bd%a2%e5%9b%be%e7%89%87" onclick="onNavClick(`#类型1圆形图片-nav`)" id="类型1圆形图片-nav">
+									类型1：圆形图片
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%b1%bb%e5%9e%8b2%e5%9c%86%e8%a7%92%e5%9b%be%e7%89%87" onclick="onNavClick(`#类型2圆角图片-nav`)" id="类型2圆角图片-nav">
+									类型2：圆角图片
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://foezzy.github.io/">
+            Blog
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://foezzy.github.io/">
+        <div class="single-column-header-title">Blog</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Glide用到的代码记录
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-05-12 10:32
+                        </time>
+                        
+
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h3 id="同步加载">同步加载</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loadImgSync</span><span style="color:#f92672">(</span>Context context<span style="color:#f92672">,</span> String url<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">new</span> Thread<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Runnable<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">run</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                FutureTarget<span style="color:#f92672">&lt;</span>Bitmap<span style="color:#f92672">&gt;</span> futureBitmap <span style="color:#f92672">=</span> Glide<span style="color:#f92672">.</span><span style="color:#a6e22e">with</span><span style="color:#f92672">(</span>context<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#f92672">.</span><span style="color:#a6e22e">asBitmap</span><span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#f92672">.</span><span style="color:#a6e22e">load</span><span style="color:#f92672">(</span>url<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#f92672">.</span><span style="color:#a6e22e">submit</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                    Bitmap myBitmap <span style="color:#f92672">=</span> futureBitmap<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>                    LogUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">d</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;hei:&#34;</span> <span style="color:#f92672">+</span> myBitmap<span style="color:#f92672">.</span><span style="color:#a6e22e">getHeight</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>                    LogUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">d</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;wid:&#34;</span> <span style="color:#f92672">+</span> myBitmap<span style="color:#f92672">.</span><span style="color:#a6e22e">getWidth</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>ExecutionException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                    e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>InterruptedException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                    e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}).</span><span style="color:#a6e22e">start</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span></code></pre></div><h3 id="获取宽高">获取宽高</h3>
+<h4 id="方式1">方式1：</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Glide<span style="color:#f92672">.</span><span style="color:#a6e22e">with</span><span style="color:#f92672">(</span>getContext<span style="color:#f92672">().</span><span style="color:#a6e22e">getApplicationContext</span><span style="color:#f92672">())</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">.</span><span style="color:#a6e22e">asBitmap</span><span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">.</span><span style="color:#a6e22e">load</span><span style="color:#f92672">(</span>path<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">.</span><span style="color:#a6e22e">into</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> SimpleTarget<span style="color:#f92672">&lt;</span>Bitmap<span style="color:#f92672">&gt;()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onResourceReady</span><span style="color:#f92672">(</span>Bitmap bitmap<span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>                                     Transition<span style="color:#f92672">&lt;?</span> <span style="color:#66d9ef">super</span> Bitmap<span style="color:#f92672">&gt;</span> transition<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                                     
+</span></span><span style="display:flex;"><span>             <span style="color:#66d9ef">int</span> w <span style="color:#f92672">=</span> bitmap<span style="color:#f92672">.</span><span style="color:#a6e22e">getWidth</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>             <span style="color:#66d9ef">int</span> h <span style="color:#f92672">=</span> bitmap<span style="color:#f92672">.</span><span style="color:#a6e22e">getHeight</span><span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>         <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">});</span>
+</span></span></code></pre></div><h4 id="方式2">方式2：</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Glide<span style="color:#f92672">.</span><span style="color:#a6e22e">with</span><span style="color:#f92672">(</span>getContext<span style="color:#f92672">()).</span><span style="color:#a6e22e">load</span><span style="color:#f92672">(</span>imageUrl<span style="color:#f92672">).</span><span style="color:#a6e22e">listener</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> RequestListener<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> GlideDrawable<span style="color:#f92672">&gt;()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">onException</span><span style="color:#f92672">(</span>Exception e<span style="color:#f92672">,</span> String model<span style="color:#f92672">,</span> Target<span style="color:#f92672">&lt;</span>GlideDrawable<span style="color:#f92672">&gt;</span> target<span style="color:#f92672">,</span> <span style="color:#66d9ef">boolean</span> isFirstResource<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">onResourceReady</span><span style="color:#f92672">(</span>GlideDrawable resource<span style="color:#f92672">,</span> String model<span style="color:#f92672">,</span> Target<span style="color:#f92672">&lt;</span>GlideDrawable<span style="color:#f92672">&gt;</span> target<span style="color:#f92672">,</span> <span style="color:#66d9ef">boolean</span> isFromMemoryCache<span style="color:#f92672">,</span> <span style="color:#66d9ef">boolean</span> isFirstResource<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">//This returns 0,0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            Log<span style="color:#f92672">.</span><span style="color:#a6e22e">e</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;TAG&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;_width: &#34;</span> <span style="color:#f92672">+</span> resource<span style="color:#f92672">.</span><span style="color:#a6e22e">getBounds</span><span style="color:#f92672">().</span><span style="color:#a6e22e">width</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; _height:&#34;</span> <span style="color:#f92672">+</span>resource<span style="color:#f92672">.</span><span style="color:#a6e22e">getBounds</span><span style="color:#f92672">().</span><span style="color:#a6e22e">height</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}).</span><span style="color:#a6e22e">into</span><span style="color:#f92672">(</span>ivImage<span style="color:#f92672">).</span><span style="color:#a6e22e">getSize</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> SizeReadyCallback<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onSizeReady</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> width<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> height<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">//This returns size of imageview.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            Log<span style="color:#f92672">.</span><span style="color:#a6e22e">e</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;TAG&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;width: &#34;</span> <span style="color:#f92672">+</span> width <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; height: &#34;</span> <span style="color:#f92672">+</span> height<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">});</span>
+</span></span></code></pre></div><h3 id="宽度适应屏幕高度自适应">宽度适应屏幕，高度自适应</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loadPicsFitWidth</span><span style="color:#f92672">(</span>Context context<span style="color:#f92672">,</span> <span style="color:#66d9ef">final</span> String imageUrl<span style="color:#f92672">,</span> ImageView imageView<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                ViewGroup<span style="color:#f92672">.</span><span style="color:#a6e22e">LayoutParams</span> params <span style="color:#f92672">=</span> imageView<span style="color:#f92672">.</span><span style="color:#a6e22e">getLayoutParams</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//        params.width = ScreenUtils.getScreenWidth(context) - DensityUtil.dp2px(7) * 2;//减去图片两边距,在item_classify_ad.xml的CardView里
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>        params<span style="color:#f92672">.</span><span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> ScreenUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">getScreenWidth</span><span style="color:#f92672">(</span>context<span style="color:#f92672">)</span> <span style="color:#f92672">-</span> DensityUtil<span style="color:#f92672">.</span><span style="color:#a6e22e">dp2px</span><span style="color:#f92672">(</span>7<span style="color:#f92672">)</span> <span style="color:#f92672">*</span> 2<span style="color:#f92672">;</span><span style="color:#75715e">//左右边距
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>        params<span style="color:#f92672">.</span><span style="color:#a6e22e">height</span> <span style="color:#f92672">=</span> 100<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        imageView<span style="color:#f92672">.</span><span style="color:#a6e22e">setLayoutParams</span><span style="color:#f92672">(</span>params<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Glide<span style="color:#f92672">.</span><span style="color:#a6e22e">with</span><span style="color:#f92672">(</span>context<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">.</span><span style="color:#a6e22e">load</span><span style="color:#f92672">(</span>imageUrl<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">.</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>RequestOptions<span style="color:#f92672">.</span><span style="color:#a6e22e">bitmapTransform</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> RoundedCorners<span style="color:#f92672">(</span>10<span style="color:#f92672">)))</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">.</span><span style="color:#a6e22e">listener</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> RequestListener<span style="color:#f92672">&lt;</span>Drawable<span style="color:#f92672">&gt;()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">onLoadFailed</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@Nullable</span> GlideException e<span style="color:#f92672">,</span> Object model<span style="color:#f92672">,</span> Target<span style="color:#f92672">&lt;</span>Drawable<span style="color:#f92672">&gt;</span> target<span style="color:#f92672">,</span> <span style="color:#66d9ef">boolean</span> isFirstResource<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">onResourceReady</span><span style="color:#f92672">(</span>Drawable resource<span style="color:#f92672">,</span> Object model<span style="color:#f92672">,</span> Target<span style="color:#f92672">&lt;</span>Drawable<span style="color:#f92672">&gt;</span> target<span style="color:#f92672">,</span> DataSource dataSource<span style="color:#f92672">,</span> <span style="color:#66d9ef">boolean</span> isFirstResource<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>imageView <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#75715e">// 首先设置 imageView 的 ScaleType 属性为 ScaleType.FIT_XY，让图片不按比例缩放，把图片塞满整个 View。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>imageView<span style="color:#f92672">.</span><span style="color:#a6e22e">getScaleType</span><span style="color:#f92672">()</span> <span style="color:#f92672">!=</span> ImageView<span style="color:#f92672">.</span><span style="color:#a6e22e">ScaleType</span><span style="color:#f92672">.</span><span style="color:#a6e22e">FIT_XY</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                            imageView<span style="color:#f92672">.</span><span style="color:#a6e22e">setScaleType</span><span style="color:#f92672">(</span>ImageView<span style="color:#f92672">.</span><span style="color:#a6e22e">ScaleType</span><span style="color:#f92672">.</span><span style="color:#a6e22e">FIT_XY</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#75715e">// 得到当前 imageView 的宽度（我设置的是屏幕宽度），获取到 imageView 与图片宽的比例，然后通过这个比例去设置 imageView 的高
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                        ViewGroup<span style="color:#f92672">.</span><span style="color:#a6e22e">LayoutParams</span> params <span style="color:#f92672">=</span> imageView<span style="color:#f92672">.</span><span style="color:#a6e22e">getLayoutParams</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">int</span> vw <span style="color:#f92672">=</span> params<span style="color:#f92672">.</span><span style="color:#a6e22e">width</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">float</span> scale <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">float</span><span style="color:#f92672">)</span> vw <span style="color:#f92672">/</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">float</span><span style="color:#f92672">)</span> resource<span style="color:#f92672">.</span><span style="color:#a6e22e">getIntrinsicWidth</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">int</span> vh <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">round</span><span style="color:#f92672">(</span>resource<span style="color:#f92672">.</span><span style="color:#a6e22e">getIntrinsicHeight</span><span style="color:#f92672">()</span> <span style="color:#f92672">*</span> scale<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                        params<span style="color:#f92672">.</span><span style="color:#a6e22e">height</span> <span style="color:#f92672">=</span> vh <span style="color:#f92672">+</span> imageView<span style="color:#f92672">.</span><span style="color:#a6e22e">getPaddingTop</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> imageView<span style="color:#f92672">.</span><span style="color:#a6e22e">getPaddingBottom</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                        imageView<span style="color:#f92672">.</span><span style="color:#a6e22e">setLayoutParams</span><span style="color:#f92672">(</span>params<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">})</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">.</span><span style="color:#a6e22e">into</span><span style="color:#f92672">(</span>imageView<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span></code></pre></div><h3 id="监听请求">监听请求</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Glide<span style="color:#f92672">.</span><span style="color:#a6e22e">with</span><span style="color:#f92672">(</span>context<span style="color:#f92672">).</span><span style="color:#a6e22e">load</span><span style="color:#f92672">(</span>url<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">.</span><span style="color:#a6e22e">listener</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> RequestListener<span style="color:#f92672">&lt;</span>Drawable<span style="color:#f92672">&gt;()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">onLoadFailed</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@Nullable</span> GlideException e<span style="color:#f92672">,</span> Object model<span style="color:#f92672">,</span> Target<span style="color:#f92672">&lt;</span>Drawable<span style="color:#f92672">&gt;</span> target<span style="color:#f92672">,</span> <span style="color:#66d9ef">boolean</span> isFirstResource<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">onResourceReady</span><span style="color:#f92672">(</span>Drawable resource<span style="color:#f92672">,</span> Object model<span style="color:#f92672">,</span> Target<span style="color:#f92672">&lt;</span>Drawable<span style="color:#f92672">&gt;</span> target<span style="color:#f92672">,</span> DataSource dataSource<span style="color:#f92672">,</span> <span style="color:#66d9ef">boolean</span> isFirstResource<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#75715e">//dosomething
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">})</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">.</span><span style="color:#a6e22e">into</span><span style="color:#f92672">(</span>imageView<span style="color:#f92672">);</span>
+</span></span></code></pre></div><h3 id="带圆角的图片">带圆角的图片</h3>
+<h4 id="类型1圆形图片">类型1：圆形图片</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Glide<span style="color:#f92672">.</span><span style="color:#a6e22e">with</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">).</span><span style="color:#a6e22e">load</span><span style="color:#f92672">(</span>imgUrl<span style="color:#f92672">).</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>RequestOptions<span style="color:#f92672">.</span><span style="color:#a6e22e">bitmapTransform</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> CircleCrop<span style="color:#f92672">())).</span><span style="color:#a6e22e">into</span><span style="color:#f92672">(</span>image<span style="color:#f92672">);</span>
+</span></span></code></pre></div><h4 id="类型2圆角图片">类型2：圆角图片</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Glide<span style="color:#f92672">.</span><span style="color:#a6e22e">with</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">).</span><span style="color:#a6e22e">load</span><span style="color:#f92672">(</span>imgUrl<span style="color:#f92672">).</span><span style="color:#a6e22e">apply</span><span style="color:#f92672">(</span>RequestOptions<span style="color:#f92672">.</span><span style="color:#a6e22e">bitmapTransform</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> RoundedCorners<span style="color:#f92672">(</span>20<span style="color:#f92672">))).</span><span style="color:#a6e22e">into</span><span style="color:#f92672">(</span>image<span style="color:#f92672">);</span>
+</span></span></code></pre></div>
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2020-05-12</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://foezzy.github.io/posts/%E4%B8%8D%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BA%BF%E8%BF%9E%E6%8E%A5adb-%E9%9C%80%E8%A6%81root%E6%9D%83%E9%99%90/">
+			Next<br>不用数据线连接adb,需要root权限
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://foezzy.github.io/posts/charles%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BAproxy/">
+			Previous<br>Charles快速配置安卓手机Proxy
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 Blog
+	
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script>
+    </body>
+</html>

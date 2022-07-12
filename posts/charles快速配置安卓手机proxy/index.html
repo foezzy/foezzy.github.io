@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html><head>
+<title>Charles快速配置安卓手机Proxy</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://foezzy.github.io/scss/journal.min.c5d92f380bf10f6849c7ac487c7df2b22c081e0851e5339224f1ae29210b20d2.css" integrity="sha256-xdkvOAvxD2hJx6xIfH3ysiwIHghR5TOSJPGuKSELINI=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://foezzy.github.io/scss/dark-mode.min.9f8d8c2df9285089d141edd4a50cb7506c7948e6ab79a29968dced1bd0ab7d22.css" integrity="sha256-n42MLfkoUInRQe3UpQy3UGx5SOareaKZaNztG9CrfSI=" media="screen">
+
+
+<script src="/vendor/js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
+</script>
+
+
+
+
+
+
+  <script src="/js/toc.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://foezzy.github.io/">
+    
+        <div class="nav-title">
+            Blog
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 Blog
+	
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%89%8d%e8%a8%80" onclick="onNavClick(`#前言-nav`)" id="前言-nav">
+									前言
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%b8%bb%e8%a6%81%e6%96%b9%e5%bc%8f" onclick="onNavClick(`#主要方式-nav`)" id="主要方式-nav">
+									主要方式
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%9b%ae%e5%89%8d%e5%81%9a%e6%b3%95" onclick="onNavClick(`#目前做法-nav`)" id="目前做法-nav">
+									目前做法
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%ad%a5%e9%aa%a4" onclick="onNavClick(`#步骤-nav`)" id="步骤-nav">
+									步骤
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%81%87%e5%88%b0%e7%9a%84%e5%9d%91" onclick="onNavClick(`#遇到的坑-nav`)" id="遇到的坑-nav">
+									遇到的坑
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%89%8d%e8%a8%80" onclick="onNavClick(`#前言-nav`)" id="前言-nav">
+									前言
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%b8%bb%e8%a6%81%e6%96%b9%e5%bc%8f" onclick="onNavClick(`#主要方式-nav`)" id="主要方式-nav">
+									主要方式
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%9b%ae%e5%89%8d%e5%81%9a%e6%b3%95" onclick="onNavClick(`#目前做法-nav`)" id="目前做法-nav">
+									目前做法
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%ad%a5%e9%aa%a4" onclick="onNavClick(`#步骤-nav`)" id="步骤-nav">
+									步骤
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%81%87%e5%88%b0%e7%9a%84%e5%9d%91" onclick="onNavClick(`#遇到的坑-nav`)" id="遇到的坑-nav">
+									遇到的坑
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://foezzy.github.io/">
+            Blog
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://foezzy.github.io/">
+        <div class="single-column-header-title">Blog</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Charles快速配置安卓手机Proxy
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-05-11 15:02
+                        </time>
+                        
+
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h3 id="前言">前言</h3>
+<p>Charles可以实现很多功能，比如抓包，修改返回结果，限速，真是一个神器，但是每次手机配置代理，真是逆天的操作</p>
+<p>1.进入设置
+2.进入 WLAN
+3.找对应 wifi 连接
+4.进入详情
+5.找到代理
+6.选择手动
+7.输入主机名
+8.输入端口号
+9.最后保存</p>
+<p>所以这篇文章就是为了把这么多步简化的过程，在网上搜索了一些方式，发现有两篇有很好的参考价值
+<a href="http://tao93.top/2018/10/31/%E4%B8%80%E9%94%AE%E8%AE%BE%E7%BD%AE%20Android%20http%20proxy%20%E7%9A%84%E5%B0%9D%E8%AF%95/">一键设置 Android http proxy 的尝试</a>
+<a href="https://zhuanlan.zhihu.com/p/134136375">Android自动设置HTTP代理
+</a></p>
+<h3 id="主要方式">主要方式</h3>
+<p>方式一：安装一个app,然后用adb shell发送给app，代码进行wifi连接与配置，这种方式在 Api &gt; 23 就会失效，目前大部分都是8.0以上的手机，这种方式就不好用了</p>
+<p>方式二：用adb shell settings put global进行配置，但是这种方式是临时的，不用的话还要手动关一下</p>
+<h3 id="目前做法">目前做法</h3>
+<p>参考知乎上那位大神的做法，直接写个sh脚本，再加上zsh的alias，就能比较方便的配置proxy了</p>
+<h3 id="步骤">步骤</h3>
+<p>新建 easy_proxy.sh 的文本，把以下代码贴进去即可</p>
+<pre tabindex="0"><code>#!/bin/bash
+
+echo &#34;\n---------------- Support ------------------&#34;
+echo &#34;设置本机IP代理    ./easy_proxy.sh set&#34;
+echo &#34;设置自定义代理  ./easy_proxy.sh set ****:8888&#34;
+echo &#34;删除代理       ./easy_proxy.sh clean&#34;
+echo &#34;--------------------------------------------\n&#34;
+
+# 获取当前IP
+ip=$(ifconfig en0 | grep -E &#39;inet \d{3}.&#39; | awk &#39;{print $2}&#39;)
+default_proxy=${ip}&#34;:8888&#34;
+
+echo &#34;本机IP为: $default_proxy\n&#34;
+if [ &#34;$1&#34; == &#34;set&#34; ];then
+    if [ -n &#34;$2&#34; ];then
+        echo &#34;设置自定义代理 $2&#34;
+        adb shell settings put global http_proxy $2
+    else
+        echo &#34;设置本机IP代理 $default_proxy&#34;
+        adb shell settings put global http_proxy $default_proxy
+    fi
+elif [ &#34;$1&#34; == &#34;clean&#34; ];then
+    echo &#34;清除代理成功&#34;
+    adb shell settings put global http_proxy :0
+else
+    echo &#34;!!! 请输入合法的操作符 !!!&#34;
+fi
+</code></pre><p>设置代理</p>
+<pre tabindex="0"><code>$ ./easy_proxy.sh set
+</code></pre><p>删除代理</p>
+<pre tabindex="0"><code>$ ./easy_proxy.sh clean
+</code></pre><h3 id="遇到的坑">遇到的坑</h3>
+<p>小米手机要打开一个设置：
+开发者选项 - 调试 - USB调试要打开</p>
+<p>不然会报java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS 的错误</p>
+<p>其他品牌的手机没试过，可能也会有类似的坑</p>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2020-05-11</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://foezzy.github.io/posts/glide%E7%94%A8%E5%88%B0%E7%9A%84%E4%BB%A3%E7%A0%81%E8%AE%B0%E5%BD%95/">
+			Next<br>Glide用到的代码记录
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://foezzy.github.io/posts/java%E7%A2%B0%E5%88%B0%E7%9A%84%E5%A5%87%E6%80%AA%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">
+			Previous<br>Java碰到的奇怪问题汇总
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 Blog
+	
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script>
+    </body>
+</html>

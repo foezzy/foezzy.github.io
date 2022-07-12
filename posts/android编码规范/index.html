@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html><head>
+<title>Android编码规范</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="https://foezzy.github.io/scss/journal.min.c5d92f380bf10f6849c7ac487c7df2b22c081e0851e5339224f1ae29210b20d2.css" integrity="sha256-xdkvOAvxD2hJx6xIfH3ysiwIHghR5TOSJPGuKSELINI=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://foezzy.github.io/scss/dark-mode.min.9f8d8c2df9285089d141edd4a50cb7506c7948e6ab79a29968dced1bd0ab7d22.css" integrity="sha256-n42MLfkoUInRQe3UpQy3UGx5SOareaKZaNztG9CrfSI=" media="screen">
+
+
+<script src="/vendor/js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
+</script>
+
+
+
+
+
+
+  <script src="/js/toc.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://foezzy.github.io/">
+    
+        <div class="nav-title">
+            Blog
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 Blog
+	
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#android%e7%bc%96%e7%a0%81%e8%a7%84%e8%8c%83" onclick="onNavClick(`#android编码规范-nav`)" id="android编码规范-nav">
+									Android编码规范
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%91%bd%e5%90%8d%e8%a7%84%e8%8c%83" onclick="onNavClick(`#命名规范-nav`)" id="命名规范-nav">
+									命名规范
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%a0%bc%e5%bc%8f%e8%a7%84%e8%8c%83" onclick="onNavClick(`#格式规范-nav`)" id="格式规范-nav">
+									格式规范
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%bc%98%e5%8c%96" onclick="onNavClick(`#优化-nav`)" id="优化-nav">
+									优化
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%80%82%e9%85%8d" onclick="onNavClick(`#适配-nav`)" id="适配-nav">
+									适配
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#android%e7%bc%96%e7%a0%81%e8%a7%84%e8%8c%83" onclick="onNavClick(`#android编码规范-nav`)" id="android编码规范-nav">
+									Android编码规范
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%91%bd%e5%90%8d%e8%a7%84%e8%8c%83" onclick="onNavClick(`#命名规范-nav`)" id="命名规范-nav">
+									命名规范
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%a0%bc%e5%bc%8f%e8%a7%84%e8%8c%83" onclick="onNavClick(`#格式规范-nav`)" id="格式规范-nav">
+									格式规范
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%bc%98%e5%8c%96" onclick="onNavClick(`#优化-nav`)" id="优化-nav">
+									优化
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%80%82%e9%85%8d" onclick="onNavClick(`#适配-nav`)" id="适配-nav">
+									适配
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://foezzy.github.io/">
+            Blog
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://foezzy.github.io/">
+        <div class="single-column-header-title">Blog</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Android编码规范
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2019-06-14 10:07
+                        </time>
+                        
+
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h3 id="android编码规范">Android编码规范</h3>
+<h4 id="命名规范">命名规范</h4>
+<ol>
+<li>
+<p>包命名及分包结构规范</p>
+<ul>
+<li>包名沿用 Java 编程的通用风格</li>
+</ul>
+</li>
+<li>
+<p>类命名规范</p>
+<ul>
+<li>
+<p>基本的类名沿用 Java 编程的通用风格（采用完整的英文描述符，所有单词第一个字母大写，采用驼峰式命名）</p>
+</li>
+<li>
+<p>android 特有的类，如 Activity、Fragment、Service、Provider、Adapter、View 等，则以对应的类型单词为后缀</p>
+</li>
+</ul>
+</li>
+<li>
+<p>接口命名规范</p>
+<ul>
+<li>
+<p>类命名以大写字母 I 为前缀，如果是监听接口以 Listener 结尾</p>
+</li>
+<li>
+<p>在自定义的监听接口里，监听事件以 on 开头, 如 onOpenMenu(), onRefresh()&hellip;</p>
+</li>
+</ul>
+</li>
+<li>
+<p>方法命名规范</p>
+<ul>
+<li>方法命名沿用 Java 编程的通用风格（采用完整的英文描述符，函数名字以代表函数功能的英文单词组成，除首单词小写，其他单词首字母大写；一般的，函数第一个单词要求用动词）</li>
+</ul>
+</li>
+<li>
+<p>变量命名规范</p>
+<ul>
+<li>
+<p>boolean 成员要以 is 开头，或以 has 开头。如： isFirst, hasMore</p>
+</li>
+<li>
+<p>控件命名规范： 原则是 “view 的缩写 + 功能描述”。 比如一个 TextView 缩写为 tv(驼峰命名抽取出来的缩写)， 这个 TextView 是显示用户名字的， 所以就可以命名为: tvUserName。</p>
+</li>
+<li>
+<p>常量的名字全部大写，单词之间用’_’分开</p>
+</li>
+<li>
+<p>控件命名规范： 原则是 “view 的缩写 + 功能描述”。 比如一个 TextView 缩写为 tv(驼峰命名抽取出来的缩写)， 这个 TextView 是显示用户名字的， 所以就可以命名为: tvUserName</p>
+</li>
+</ul>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>TextView : tv</th>
+<th>EditText : et</th>
+<th>Button : btn</th>
+<th>ImageButton : ib</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ImageView : iv</td>
+<td>CheckBox : cb</td>
+<td>RadioButton : rb</td>
+<td>ProgressBar : pb</td>
+</tr>
+<tr>
+<td>Seekbar : sb</td>
+<td>ScrollView : sv</td>
+<td>ListView : lv</td>
+<td>GridView : gv</td>
+</tr>
+<tr>
+<td>WebView : wv</td>
+<td>ViewPager : vp</td>
+<td>ExpandableListView : elv</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="格式规范">格式规范</h4>
+<ol>
+<li>
+<p>注释规范</p>
+<ul>
+<li>
+<p>文件头注释（文件要加文件头）</p>
+<pre tabindex="0"><code>/**
+* @author xxxx
+* @date xxxx年xx月xx日
+* Copyright xxxx. All rights reserved.
+*/复制代码
+</code></pre></li>
+<li>
+<p>类／接口注释 (必须注明类／接口的编写目的、用途)</p>
+<pre tabindex="0"><code>/** 
+* 类或接口的作用描述
+* @author XXX&lt;email&gt;
+* @version xxxx-xx-xx（xxxx-xx-xx为年月日)
+* Copyright XXXX. All rights reserved.
+*/复制代码
+</code></pre></li>
+<li>
+<p>方法头注释</p>
+<pre tabindex="0"><code>/**
+* 方法的描述
+* @param 参数的描述
+* @return 返回类型的描述
+* @exception 异常信息的描述
+*/复制代码
+</code></pre></li>
+<li>
+<p>方法体注释</p>
+<p>使用 &ldquo;//&rdquo; 进行注释，注释的内容包括：</p>
+<ul>
+<li>控制流结构说明</li>
+<li>变量说明</li>
+<li>复杂代码说明</li>
+<li>处理顺序说明</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>空行使用规范</p>
+<ul>
+<li>
+<p>package 和 import 之间要空一行</p>
+</li>
+<li>
+<p>给不同功能的代码块之间加上空行， 提升可读性</p>
+</li>
+</ul>
+</li>
+<li>
+<p>括弧使用规范</p>
+<ul>
+<li>
+<p>括号沿用 Java 风格，即左弧号 {是在方法声明这一行，而不是 C++ 式的另起一行</p>
+</li>
+<li>
+<p>即使只有一行内容， if/else/for/while 等条件或循环，都要加上大括号 { }</p>
+</li>
+</ul>
+</li>
+<li>
+<p>代码位置放置规范</p>
+<ul>
+<li>
+<p>Activity 以 onCreate() 作为第一个方法， 其它类以构造函数做为第一个方法。 提高可读性</p>
+</li>
+<li>
+<p>功能上相近，有调用关系的函数尽量紧挨在一起</p>
+</li>
+<li>
+<p>Activity、Fragment 这些 android 里面具备生命周期的类，尽量把生命周期的方法按顺序排到一起，提高可读性</p>
+</li>
+<li>
+<p>内部类／接口建议统一放在文件的开头或者结尾</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="优化">优化</h4>
+<ol>
+<li>
+<p>尽量不要有重复代码。 一发现有重复代码，就要进行重构，抽取出一个公有类 / 方法</p>
+</li>
+<li>
+<p>有大量 if/else 时，考虑是否能用策略模式、模板方法模式、面向接口编程来消除这种大量的 if/else</p>
+</li>
+<li>
+<p>一个 JavaBean 类， 比如就是存一些数据的一个 Response 类，如果是要开放一个成员给别人用， 这个成员又有 getter，又有 setter， 那就直接声明为 public。</p>
+</li>
+<li>
+<p>layout 文件中， 层数不要过多， 尽量控制在 6 层以内。 当然，层数越少越好。</p>
+</li>
+<li>
+<p>对于一个布局文件中的控件具备大量相同的属性的时候，考虑将这些共同属性提取为 style 进行使用</p>
+</li>
+<li>
+<p>写布局文件需要观察布局的效果的时候，使用 tools:xxx，不要直接使用 android:xxx</p>
+</li>
+<li>
+<p>对于 activity 中常用的自己定义的 initView、initData 这些方法抽象出来放到对应的基类当中</p>
+</li>
+<li>
+<p>在设计某些功能、逻辑复杂的类或模块的时候，建议另外写一份设计文档，方便后人理解。</p>
+</li>
+</ol>
+<h4 id="适配">适配</h4>
+<ul>
+<li>长宽用 dp 做单位， 一般不推荐用 px。 如果有特殊理由， 可以用 px，比如一条分隔线就只有 1px 宽。</li>
+</ul>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2019-06-14</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://foezzy.github.io/posts/%E4%B8%83%E5%A4%95/">
+			Next<br>七夕
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://foezzy.github.io/posts/glide%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
+			Previous<br>Glide遇到的问题
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2020 Blog
+	
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script>
+    </body>
+</html>
