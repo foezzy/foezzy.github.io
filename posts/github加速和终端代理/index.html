@@ -1,57 +1,33 @@
 <!DOCTYPE html>
-<html><head>
-<title>github加速和终端代理</title>
+<html lang="en-us">
+  <head>
+    <title>github加速和终端代理 | Blog</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="github加速： 🔗解决github在访问和clone时速度太慢的问题
+下载一个可以设置host的软件，比如mac上可以用iHost
+然后设置下面的host
+https://gitee.com/Mosiki/github/raw/master/github_hosts.txt
+设置完刷新dns，就可以加速github的访问和clone了
+终端代理： 🔗就是在iterm2里要能访问到外网数据
+比如在拉取某一个仓库时，如果这个仓库需要fq，就要用到这个东西
+参考链接：https://zhuanlan.zhihu.com/p/46973701
+最后是用v2ray-u加zshrc设置alias简写来简化操作，每次要用的时候输入setproxy，不用了就unsetproxy。
+alias setproxy=&ldquo;export ALL_PROXY=socks5://127.0.0.1:1080&rdquo;
+alias unsetproxy=&ldquo;unset ALL_PROXY&rdquo;">
+<meta name="generator" content="Hugo 0.121.2">
+
+
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
 
 
 
-
-<meta charset="utf-8">
-<meta name="X-UA-Compatible" content="IE=edge">
-<meta name="google-site-verification" content="">
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-<meta content="telephone=no" name="format-detection">
-<meta name="description" content="">
-<meta name="renderer" content="webkit">
-<meta name="theme-color" content="#ffffff">
-
-
-
-
-
-
-
-
-
-
-
-<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
-
-
-  
-
-
-
-
-
-
-<link rel="stylesheet" href="https://foezzy.github.io/scss/journal.min.c5d92f380bf10f6849c7ac487c7df2b22c081e0851e5339224f1ae29210b20d2.css" integrity="sha256-xdkvOAvxD2hJx6xIfH3ysiwIHghR5TOSJPGuKSELINI=" media="screen">
-
-
-
-<link rel="stylesheet" href="https://foezzy.github.io/scss/dark-mode.min.9f8d8c2df9285089d141edd4a50cb7506c7948e6ab79a29968dced1bd0ab7d22.css" integrity="sha256-n42MLfkoUInRQe3UpQy3UGx5SOareaKZaNztG9CrfSI=" media="screen">
-
-
-<script src="/vendor/js/loadCSS.js"></script>
-<script>
-  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
-</script>
-
-
-
-
-
-
-  <script src="/js/toc.js"></script>
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
 
 
 
@@ -60,336 +36,105 @@
 
 
 
+  </head>
 
-
-
-
-
-
-</head>
-<body>
-    	<div id="app"><div id="sideContainer" class="side-container">
-    
-    <a class="a-block nav-head false" href="https://foezzy.github.io/">
-    
-        <div class="nav-title">
-            Blog
-        </div>
-        
-    </a>
-
-    <div class="nav-link-list">
-        
-        
-    </div>
-
-    
-
-    <div class="nav-footer">
-        
-Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
-<br>
-Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
-<br>
-
-&copy;
+  <body>
+    <nav class="navigation">
 	
-	2020 Blog
+		<a href="/"> <span class="arrow">←</span>Home</a>
+	
+	<a href="/posts">Archive</a>
+	<a href="/tags">Tags</a>
+	<a href="/about">About</a>
+
 	
 
-    </div>
-    
-</div><div id="extraContainer" class="extra-container">
-    
-    
-    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
-
-
-	<div class="toc-content">
 	
-		
-		
-		
-		<center>- CATALOG -</center>
-		
-		
-		<ul>
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#github%e5%8a%a0%e9%80%9f" onclick="onNavClick(`#github加速-nav`)" id="github加速-nav">
-									github加速：
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e7%bb%88%e7%ab%af%e4%bb%a3%e7%90%86" onclick="onNavClick(`#终端代理-nav`)" id="终端代理-nav">
-									终端代理：
-								</a>
-							</li>
-						
-						
-					
-				
-			
-		</ul>
-	</div>
-
-</div>
-    
-    <div class="pagination">
-        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
-            <i class="material-icons pagination-action-icon">
-                keyboard_arrow_up
-            </i>
-        </a>
-        
-        <a type="button" class="pagination-action" id="darkModeToggleButton">
-            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
-                dark_mode
-            </span>
-        </a>
-        
-        
-    </div>
-</div>
-<div class="single-column-drawer-container" id="drawer"
-     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
-    <div class="drawer-content">
-        <div class="drawer-menu">
-            
-            
-            
-            
-            <div class="toc">
-
-
-	<div class="toc-content">
-	
-		
-		
-		
-		<center>- CATALOG -</center>
-		
-		
-		<ul>
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#github%e5%8a%a0%e9%80%9f" onclick="onNavClick(`#github加速-nav`)" id="github加速-nav">
-									github加速：
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e7%bb%88%e7%ab%af%e4%bb%a3%e7%90%86" onclick="onNavClick(`#终端代理-nav`)" id="终端代理-nav">
-									终端代理：
-								</a>
-							</li>
-						
-						
-					
-				
-			
-		</ul>
-	</div>
-
-</div>
-            
-        </div>
-    </div>
-</div>
-<transition name="fade">
-    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
-</transition>
-<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
-    <div id="navBackground" class="nav-background"></div>
-    <div class="container container-narrow nav-content">
-        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
-            <i class="material-icons">
-                menu
-            </i>
-        </button>
-        <a id="navTitle" class="navbar-brand" href="https://foezzy.github.io/">
-            Blog
-        </a>
-        
-        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
-            <i class="material-icons" id="darkModeToggleIcon2">
-                dark_mode
-            </i>
-        </button>
-        
-    </div>
 </nav>
-<div class="single-column-header-container" id="pageHead"
-     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
-    <a href="https://foezzy.github.io/">
-        <div class="single-column-header-title">Blog</div>
-        
 
-    </a>
-</div>
 
-            <div id="content">
-                <div id="streamContainer" class="stream-container">
+    <main class="main">
+      
 
-    <div class="post-list-container post-list-container-shadow">
-        <div class="post">
-            
-            
-            
+<section id="single">
+    <h1 class="title">github加速和终端代理</h1>
 
-            <div class="post-head-wrapper-text-only"
-                
-            >
-                <div class="post-title">
-                    github加速和终端代理
-                    
-                    <div class="post-meta">
-                        
-                        <time itemprop="datePublished">
-                            2019-10-09 10:16
-                        </time>
-                        
+    <div class="tip">
+        <time datetime="2019-10-09 10:16:24 &#43;0000 UTC">Oct 9, 2019</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          17 words
+        </span>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          1 minute read
+        </span>
+    </div>
 
-                        
+    
+    
 
-                        
-                        
-                    </div>
-                </div>
-            </div>
-            
-            <div class="post-body-wrapper">
-                
-                <div class="post-body" v-pre>
-                
-                    <h3 id="github加速">github加速：</h3>
-<p>解决github在访问和clone时速度太慢的问题</p>
+
+    <div class="content">
+      <h3 id="github加速">github加速： <a href="#github%e5%8a%a0%e9%80%9f" class="anchor">🔗</a></h3><p>解决github在访问和clone时速度太慢的问题</p>
 <p>下载一个可以设置host的软件，比如mac上可以用iHost</p>
 <p>然后设置下面的host</p>
-<p><a href="https://gitee.com/Mosiki/github/raw/master/github_hosts.txt">https://gitee.com/Mosiki/github/raw/master/github_hosts.txt</a></p>
+<p><a href="https://gitee.com/Mosiki/github/raw/master/github_hosts.txt" target="_blank" rel="noopener">https://gitee.com/Mosiki/github/raw/master/github_hosts.txt</a></p>
 <p>设置完刷新dns，就可以加速github的访问和clone了</p>
-<h3 id="终端代理">终端代理：</h3>
-<p>就是在iterm2里要能访问到外网数据</p>
+<h3 id="终端代理">终端代理： <a href="#%e7%bb%88%e7%ab%af%e4%bb%a3%e7%90%86" class="anchor">🔗</a></h3><p>就是在iterm2里要能访问到外网数据</p>
 <p>比如在拉取某一个仓库时，如果这个仓库需要fq，就要用到这个东西</p>
 <p>参考链接：https://zhuanlan.zhihu.com/p/46973701</p>
 <p>最后是用v2ray-u加zshrc设置alias简写来简化操作，每次要用的时候输入setproxy，不用了就unsetproxy。</p>
 <p>alias setproxy=&ldquo;export ALL_PROXY=socks5://127.0.0.1:1080&rdquo;</p>
 <p>alias unsetproxy=&ldquo;unset ALL_PROXY&rdquo;</p>
 
-                    
-                    <HR width="100%" id="EOF">
-		    <p style="color:#777;">Last modified on 2019-10-09</p>
-                    
-                </div>
-            </div>
-            
-            
-            <nav class="post-pagination">
-
-                
-                <a class="newer-posts" href="https://foezzy.github.io/posts/%E5%9F%BA%E6%9C%AC%E5%8D%95%E4%BD%8D%E8%AE%B0%E5%BD%95-%E6%98%93%E6%B7%B7/">
-			Next<br>基本单位记录-易混
-                </a>
-                
-                
-                
-                <a class="older-posts" href="https://foezzy.github.io/posts/%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%9C%80%E8%BF%91%E7%83%AD%E7%82%B9android%E9%98%85%E8%AF%BB%E5%99%A8/">
-			Previous<br>一个简单的最近热点Android阅读器
-                </a>
-                
-            </nav>
-            <div class="post-comment-wrapper">
-                
-
-
-
-
-
-
-
-
-
-
-            </div>
-        </div>
     </div>
 
-
-                    </div>
-            </div><div id="single-column-footer">
-Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
-<br>
-Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
-<br>
-
-&copy;
-	
-	2020 Blog
-	
-</div>
-            </div>
     
-    <script src="/js/journal.js"></script>
-    </body>
+        <div class="tags">
+            
+                <a href="https://foezzy.github.io/tags/%E5%8A%A0%E9%80%9F">加速</a>
+            
+                <a href="https://foezzy.github.io/tags/%E4%BB%A3%E7%90%86">代理</a>
+            
+        </div>
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+
+    <div class="copyright">
+    
+       © Copyright 
+       2024 
+       <span class="split">
+        <svg fill="#bbbbbb" width="15" height="15" version="1.1" id="heart-15" xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 15 15">
+  <path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75&#xA;&#x9;C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z"/>
+</svg>
+       </span>
+       
+    
+    </div>
+
+    
+      <div class="powerby">
+        Powered by <a href='http://www.gohugo.io/'>Hugo</a> Theme By <a href='https://github.com/nodejh/hugo-theme-mini'>nodejh</a>
+      </div>
+    
+</footer>
+
+
+
+  </body>
 </html>

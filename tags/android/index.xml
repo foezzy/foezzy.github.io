@@ -6,36 +6,21 @@
     <description>Recent content in Android on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Dec 2019 15:26:42 +0000</lastBuildDate><atom:link href="https://foezzy.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Dec 2019 15:26:42 +0000</lastBuildDate>
+    <atom:link href="https://foezzy.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Android音频焦点归纳整理</title>
       <link>https://foezzy.github.io/posts/android%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9%E5%BD%92%E7%BA%B3/</link>
       <pubDate>Sat, 14 Dec 2019 15:26:42 +0000</pubDate>
-      
       <guid>https://foezzy.github.io/posts/android%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9%E5%BD%92%E7%BA%B3/</guid>
-      <description>前言 音频焦点是 API 8 中引入的一个概念，它主要作用于用户在同一个时刻只能关注单个音频流，或者用来降低背景声音，使用户只关注要主要的声音。在不同Android版本中，对应的代码也有区别。主要三个节点为
- 2.2 (API level 8) 5.0 (API level 21) 8.0 (API level 26)  2.2-5.0 申请焦点：
-private void requestAudioFocus() { audioManager = (AudioManager) getContext().getSystemService(Context.AUDIO_SERVICE); if (audioManager != null) { audioManager.requestAudioFocus(mAudioFocusListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT); } } requestAudioFocus中，有3个参数，先说参数2，参数2是多种声音类型，如下：
-  AudioManager.STREAM_VOICE_CALL
-  AudioManager.STREAM_SYSTEM
-  AudioManager.STREAM_RING
-  AudioManager.STREAM_MUSIC
-  AudioManager.STREAM_ALARM
-  AudioManager.STREAM_NOTIFICATION
-  AudioManager.STREAM_BLUETOOTH_SCO
-  AudioManager.STREAM_SYSTEM_ENFORCED
-  AudioManager.STREAM_DTMF
-  AudioManager.STREAM_TTS</description>
+      <description>前言 🔗音频焦点是 API 8 中引入的一个概念，它主要作用于用户在同一个时刻只能关注单个音频流，或者用来降低背景声音，使用户只关注要主要的声音。在不同Android版本中，对应的代码也有区别。主要三个节点为&#xA;2.2 (API level 8) 5.0 (API level 21) 8.0 (API level 26) 2.2-5.0 🔗申请焦点：&#xA;private void requestAudioFocus() { audioManager = (AudioManager) getContext().getSystemService(Context.AUDIO_SERVICE); if (audioManager != null) { audioManager.requestAudioFocus(mAudioFocusListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT); } } requestAudioFocus中，有3个参数，先说参数2，参数2是多种声音类型，如下：&#xA;AudioManager.STREAM_VOICE_CALL&#xA;AudioManager.STREAM_SYSTEM&#xA;AudioManager.STREAM_RING&#xA;AudioManager.STREAM_MUSIC&#xA;AudioManager.STREAM_ALARM&#xA;AudioManager.STREAM_NOTIFICATION&#xA;AudioManager.STREAM_BLUETOOTH_SCO&#xA;AudioManager.STREAM_SYSTEM_ENFORCED&#xA;AudioManager.STREAM_DTMF&#xA;AudioManager.STREAM_TTS&#xA;然后是参数3，也是有多个声明类型，如下：&#xA;AudioManager.AUDIOFOCUS_GAIN：想要长期占有焦点，失去焦点者stop播放和释放 AudioManager.AUDIOFOCUS_GAIN_TRANSIENT：想要短暂占有焦点，失去焦点者pause播放 AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK：想要短暂占有焦点，失去焦点者可以继续播放但是音量需要调低 AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_EXCLUSIVE：想要短暂占有焦点，但希望失去焦点者不要有声音播放 最后是参数1，参数1要自己写个回调：&#xA;private AudioManager.OnAudioFocusChangeListener mAudioFocusListener = new AudioManager.OnAudioFocusChangeListener() { @Override public void onAudioFocusChange(int focusChange) { switch (focusChange) { case AudioManager.</description>
     </item>
-    
     <item>
       <title>Android依赖相问题</title>
       <link>https://foezzy.github.io/posts/android%E4%BE%9D%E8%B5%96%E7%9B%B8%E9%97%AE%E9%A2%98/</link>
       <pubDate>Thu, 29 Aug 2019 10:20:29 +0000</pubDate>
-      
       <guid>https://foezzy.github.io/posts/android%E4%BE%9D%E8%B5%96%E7%9B%B8%E9%97%AE%E9%A2%98/</guid>
-      <description>Android依赖第三方库引起一个报错 uses-sdk:minSdkVersion 1 cannot be smaller than version 14 declared in library [com.android.support:appcompat-v7:28.0.0] 谷歌查了一下说是依赖库版本比主模块版本低，要提高依赖库的版本， 但是找了发现没有低，主要是没有找到是哪个依赖库，最终是在报错信息里发现了那个库没有minSdkVersion字段，在该模块的build.gradle文件下的defaultConfig加上对应的minSdkVersion即可，要不低于主模块的版本</description>
+      <description>Android依赖第三方库引起一个报错 🔗uses-sdk:minSdkVersion 1 cannot be smaller than version 14 declared in library [com.android.support:appcompat-v7:28.0.0] 谷歌查了一下说是依赖库版本比主模块版本低，要提高依赖库的版本， 但是找了发现没有低，主要是没有找到是哪个依赖库，最终是在报错信息里发现了那个库没有minSdkVersion字段，在该模块的build.gradle文件下的defaultConfig加上对应的minSdkVersion即可，要不低于主模块的版本</description>
     </item>
-    
   </channel>
 </rss>

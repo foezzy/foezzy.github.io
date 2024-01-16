@@ -1,57 +1,38 @@
 <!DOCTYPE html>
-<html><head>
-<title>Android音频焦点归纳整理</title>
+<html lang="en-us">
+  <head>
+    <title>Android音频焦点归纳整理 | Blog</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="前言 🔗音频焦点是 API 8 中引入的一个概念，它主要作用于用户在同一个时刻只能关注单个音频流，或者用来降低背景声音，使用户只关注要主要的声音。在不同Android版本中，对应的代码也有区别。主要三个节点为
+2.2 (API level 8) 5.0 (API level 21) 8.0 (API level 26) 2.2-5.0 🔗申请焦点：
+private void requestAudioFocus() { audioManager = (AudioManager) getContext().getSystemService(Context.AUDIO_SERVICE); if (audioManager != null) { audioManager.requestAudioFocus(mAudioFocusListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT); } } requestAudioFocus中，有3个参数，先说参数2，参数2是多种声音类型，如下：
+AudioManager.STREAM_VOICE_CALL
+AudioManager.STREAM_SYSTEM
+AudioManager.STREAM_RING
+AudioManager.STREAM_MUSIC
+AudioManager.STREAM_ALARM
+AudioManager.STREAM_NOTIFICATION
+AudioManager.STREAM_BLUETOOTH_SCO
+AudioManager.STREAM_SYSTEM_ENFORCED
+AudioManager.STREAM_DTMF
+AudioManager.STREAM_TTS
+然后是参数3，也是有多个声明类型，如下：
+AudioManager.AUDIOFOCUS_GAIN：想要长期占有焦点，失去焦点者stop播放和释放 AudioManager.AUDIOFOCUS_GAIN_TRANSIENT：想要短暂占有焦点，失去焦点者pause播放 AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK：想要短暂占有焦点，失去焦点者可以继续播放但是音量需要调低 AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_EXCLUSIVE：想要短暂占有焦点，但希望失去焦点者不要有声音播放 最后是参数1，参数1要自己写个回调：
+private AudioManager.OnAudioFocusChangeListener mAudioFocusListener = new AudioManager.OnAudioFocusChangeListener() { @Override public void onAudioFocusChange(int focusChange) { switch (focusChange) { case AudioManager.">
+<meta name="generator" content="Hugo 0.121.2">
+
+
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
 
 
 
-
-<meta charset="utf-8">
-<meta name="X-UA-Compatible" content="IE=edge">
-<meta name="google-site-verification" content="">
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-<meta content="telephone=no" name="format-detection">
-<meta name="description" content="">
-<meta name="renderer" content="webkit">
-<meta name="theme-color" content="#ffffff">
-
-
-
-
-
-
-
-
-
-
-
-<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
-
-
-  
-
-
-
-
-
-
-<link rel="stylesheet" href="https://foezzy.github.io/scss/journal.min.c5d92f380bf10f6849c7ac487c7df2b22c081e0851e5339224f1ae29210b20d2.css" integrity="sha256-xdkvOAvxD2hJx6xIfH3ysiwIHghR5TOSJPGuKSELINI=" media="screen">
-
-
-
-<link rel="stylesheet" href="https://foezzy.github.io/scss/dark-mode.min.9f8d8c2df9285089d141edd4a50cb7506c7948e6ab79a29968dced1bd0ab7d22.css" integrity="sha256-n42MLfkoUInRQe3UpQy3UGx5SOareaKZaNztG9CrfSI=" media="screen">
-
-
-<script src="/vendor/js/loadCSS.js"></script>
-<script>
-  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
-</script>
-
-
-
-
-
-
-  <script src="/js/toc.js"></script>
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
 
 
 
@@ -60,387 +41,57 @@
 
 
 
+  </head>
 
-
-
-
-
-
-</head>
-<body>
-    	<div id="app"><div id="sideContainer" class="side-container">
-    
-    <a class="a-block nav-head false" href="https://foezzy.github.io/">
-    
-        <div class="nav-title">
-            Blog
-        </div>
-        
-    </a>
-
-    <div class="nav-link-list">
-        
-        
-    </div>
-
-    
-
-    <div class="nav-footer">
-        
-Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
-<br>
-Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
-<br>
-
-&copy;
+  <body>
+    <nav class="navigation">
 	
-	2020 Blog
+		<a href="/"> <span class="arrow">←</span>Home</a>
+	
+	<a href="/posts">Archive</a>
+	<a href="/tags">Tags</a>
+	<a href="/about">About</a>
+
 	
 
-    </div>
-    
-</div><div id="extraContainer" class="extra-container">
-    
-    
-    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
-
-
-	<div class="toc-content">
 	
-		
-		
-		
-		<center>- CATALOG -</center>
-		
-		
-		<ul>
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#%e5%89%8d%e8%a8%80" onclick="onNavClick(`#前言-nav`)" id="前言-nav">
-									前言
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#22-50" onclick="onNavClick(`#22-50-nav`)" id="22-50-nav">
-									2.2-5.0
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e4%ba%8c%e7%ba%a7%e6%a0%87%e9%a2%98-50" onclick="onNavClick(`#二级标题-50-nav`)" id="二级标题-50-nav">
-									二级标题 5.0
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#80" onclick="onNavClick(`#80-nav`)" id="80-nav">
-									8.0
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e5%8f%82%e8%80%83%e9%93%be%e6%8e%a5" onclick="onNavClick(`#参考链接-nav`)" id="参考链接-nav">
-									参考链接
-								</a>
-							</li>
-						
-						
-					
-				
-			
-		</ul>
-	</div>
-
-</div>
-    
-    <div class="pagination">
-        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
-            <i class="material-icons pagination-action-icon">
-                keyboard_arrow_up
-            </i>
-        </a>
-        
-        <a type="button" class="pagination-action" id="darkModeToggleButton">
-            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
-                dark_mode
-            </span>
-        </a>
-        
-        
-    </div>
-</div>
-<div class="single-column-drawer-container" id="drawer"
-     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
-    <div class="drawer-content">
-        <div class="drawer-menu">
-            
-            
-            
-            
-            <div class="toc">
-
-
-	<div class="toc-content">
-	
-		
-		
-		
-		<center>- CATALOG -</center>
-		
-		
-		<ul>
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#%e5%89%8d%e8%a8%80" onclick="onNavClick(`#前言-nav`)" id="前言-nav">
-									前言
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#22-50" onclick="onNavClick(`#22-50-nav`)" id="22-50-nav">
-									2.2-5.0
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e4%ba%8c%e7%ba%a7%e6%a0%87%e9%a2%98-50" onclick="onNavClick(`#二级标题-50-nav`)" id="二级标题-50-nav">
-									二级标题 5.0
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#80" onclick="onNavClick(`#80-nav`)" id="80-nav">
-									8.0
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e5%8f%82%e8%80%83%e9%93%be%e6%8e%a5" onclick="onNavClick(`#参考链接-nav`)" id="参考链接-nav">
-									参考链接
-								</a>
-							</li>
-						
-						
-					
-				
-			
-		</ul>
-	</div>
-
-</div>
-            
-        </div>
-    </div>
-</div>
-<transition name="fade">
-    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
-</transition>
-<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
-    <div id="navBackground" class="nav-background"></div>
-    <div class="container container-narrow nav-content">
-        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
-            <i class="material-icons">
-                menu
-            </i>
-        </button>
-        <a id="navTitle" class="navbar-brand" href="https://foezzy.github.io/">
-            Blog
-        </a>
-        
-        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
-            <i class="material-icons" id="darkModeToggleIcon2">
-                dark_mode
-            </i>
-        </button>
-        
-    </div>
 </nav>
-<div class="single-column-header-container" id="pageHead"
-     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
-    <a href="https://foezzy.github.io/">
-        <div class="single-column-header-title">Blog</div>
-        
 
-    </a>
-</div>
 
-            <div id="content">
-                <div id="streamContainer" class="stream-container">
+    <main class="main">
+      
 
-    <div class="post-list-container post-list-container-shadow">
-        <div class="post">
-            
-            
-            
+<section id="single">
+    <h1 class="title">Android音频焦点归纳整理</h1>
 
-            <div class="post-head-wrapper-text-only"
-                
-            >
-                <div class="post-title">
-                    Android音频焦点归纳整理
-                    
-                    <div class="post-meta">
-                        
-                        <time itemprop="datePublished">
-                            2019-12-14 15:26
-                        </time>
-                        
+    <div class="tip">
+        <time datetime="2019-12-14 15:26:42 &#43;0000 UTC">Dec 14, 2019</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          219 words
+        </span>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          2 minute read
+        </span>
+    </div>
 
-                        
+    
+    
 
-                        
-                            <i class="material-icons" style="">label</i>
-                            
-                                <a href="/tags/android">Android</a>
-                                &nbsp;
-                            
-                                <a href="/tags/%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9">音频焦点</a>
-                                &nbsp;
-                            
-                        
-                        
-                    </div>
-                </div>
-            </div>
-            
-            <div class="post-body-wrapper">
-                
-                <div class="post-body" v-pre>
-                
-                    <h2 id="前言">前言</h2>
-<p>音频焦点是 API 8 中引入的一个概念，它主要作用于用户在同一个时刻只能关注单个音频流，或者用来降低背景声音，使用户只关注要主要的声音。在不同Android版本中，对应的代码也有区别。主要三个节点为</p>
+
+    <div class="content">
+      <h2 id="前言">前言 <a href="#%e5%89%8d%e8%a8%80" class="anchor">🔗</a></h2><p>音频焦点是 API 8 中引入的一个概念，它主要作用于用户在同一个时刻只能关注单个音频流，或者用来降低背景声音，使用户只关注要主要的声音。在不同Android版本中，对应的代码也有区别。主要三个节点为</p>
 <ul>
 <li>2.2 (API level 8)</li>
 <li>5.0 (API level 21)</li>
 <li>8.0 (API level 26)</li>
 </ul>
-<h2 id="22-50">2.2-5.0</h2>
-<p>申请焦点：</p>
+<h2 id="22-50">2.2-5.0 <a href="#22-50" class="anchor">🔗</a></h2><p>申请焦点：</p>
 <pre tabindex="0"><code>private void requestAudioFocus() {
         audioManager = (AudioManager) getContext().getSystemService(Context.AUDIO_SERVICE);
         if (audioManager != null) {
@@ -520,116 +171,103 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
             audioManager.abandonAudioFocus(mAudioFocusListener);
         }
     }
-</code></pre><h2 id="二级标题-50">二级标题 5.0</h2>
-<p>对于 Android 5.0 (API level 21) 或更高版本的应用程序，音频应用程序应该使用 AudioAttributes 来描述你的应用程序正在播放的音频类型。例如，播放语音的应用程序应该指定 CONTENT_TYPE_SPEECH，其实就是需要加个声明，申请焦点的方式还是没变。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">preparePlayer</span><span style="color:#f92672">(</span>File audioFile<span style="color:#f92672">,</span> <span style="color:#66d9ef">boolean</span> frontSpeaker<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>mPlayer <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        mPlayer <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> MediaPlayer<span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>        mPlayer<span style="color:#f92672">.</span><span style="color:#a6e22e">setOnCompletionListener</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        mPlayer<span style="color:#f92672">.</span><span style="color:#a6e22e">setOnErrorListener</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</code></pre><h2 id="二级标题-50">二级标题 5.0 <a href="#%e4%ba%8c%e7%ba%a7%e6%a0%87%e9%a2%98-50" class="anchor">🔗</a></h2><p>对于 Android 5.0 (API level 21) 或更高版本的应用程序，音频应用程序应该使用 AudioAttributes 来描述你的应用程序正在播放的音频类型。例如，播放语音的应用程序应该指定 CONTENT_TYPE_SPEECH，其实就是需要加个声明，申请焦点的方式还是没变。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">preparePlayer</span>(File audioFile, <span style="color:#66d9ef">boolean</span> frontSpeaker) <span style="color:#66d9ef">throws</span> IOException {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (mPlayer <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) {
+</span></span><span style="display:flex;"><span>        mPlayer <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> MediaPlayer();
+</span></span><span style="display:flex;"><span>        mPlayer.<span style="color:#a6e22e">setOnCompletionListener</span>(<span style="color:#66d9ef">this</span>);
+</span></span><span style="display:flex;"><span>        mPlayer.<span style="color:#a6e22e">setOnErrorListener</span>(<span style="color:#66d9ef">this</span>);
+</span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//5.0要setAudioAttributes
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>Build<span style="color:#f92672">.</span><span style="color:#a6e22e">VERSION</span><span style="color:#f92672">.</span><span style="color:#a6e22e">SDK_INT</span> <span style="color:#f92672">&gt;=</span> Build<span style="color:#f92672">.</span><span style="color:#a6e22e">VERSION_CODES</span><span style="color:#f92672">.</span><span style="color:#a6e22e">LOLLIPOP</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        mPlayer<span style="color:#f92672">.</span><span style="color:#a6e22e">setAudioAttributes</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> AudioAttributes<span style="color:#f92672">.</span><span style="color:#a6e22e">Builder</span><span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">setContentType</span><span style="color:#f92672">(</span>frontSpeaker <span style="color:#f92672">?</span> AudioAttributes<span style="color:#f92672">.</span><span style="color:#a6e22e">CONTENT_TYPE_SPEECH</span> <span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>                AudioAttributes<span style="color:#f92672">.</span><span style="color:#a6e22e">CONTENT_TYPE_MUSIC</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">setUsage</span><span style="color:#f92672">(</span>frontSpeaker <span style="color:#f92672">?</span> AudioAttributes<span style="color:#f92672">.</span><span style="color:#a6e22e">USAGE_VOICE_COMMUNICATION</span> <span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>                AudioAttributes<span style="color:#f92672">.</span><span style="color:#a6e22e">USAGE_MEDIA</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">());</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        mPlayer<span style="color:#f92672">.</span><span style="color:#a6e22e">setAudioStreamType</span><span style="color:#f92672">(</span>frontSpeaker <span style="color:#f92672">?</span> AudioManager<span style="color:#f92672">.</span><span style="color:#a6e22e">STREAM_VOICE_CALL</span> <span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>            AudioManager<span style="color:#f92672">.</span><span style="color:#a6e22e">STREAM_MUSIC</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//5.0要setAudioAttributes</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (Build.<span style="color:#a6e22e">VERSION</span>.<span style="color:#a6e22e">SDK_INT</span> <span style="color:#f92672">&gt;=</span> Build.<span style="color:#a6e22e">VERSION_CODES</span>.<span style="color:#a6e22e">LOLLIPOP</span>) {
+</span></span><span style="display:flex;"><span>        mPlayer.<span style="color:#a6e22e">setAudioAttributes</span>(<span style="color:#66d9ef">new</span> AudioAttributes.<span style="color:#a6e22e">Builder</span>()
+</span></span><span style="display:flex;"><span>            .<span style="color:#a6e22e">setContentType</span>(frontSpeaker <span style="color:#f92672">?</span> AudioAttributes.<span style="color:#a6e22e">CONTENT_TYPE_SPEECH</span> :
+</span></span><span style="display:flex;"><span>                AudioAttributes.<span style="color:#a6e22e">CONTENT_TYPE_MUSIC</span>)
+</span></span><span style="display:flex;"><span>            .<span style="color:#a6e22e">setUsage</span>(frontSpeaker <span style="color:#f92672">?</span> AudioAttributes.<span style="color:#a6e22e">USAGE_VOICE_COMMUNICATION</span> :
+</span></span><span style="display:flex;"><span>                AudioAttributes.<span style="color:#a6e22e">USAGE_MEDIA</span>)
+</span></span><span style="display:flex;"><span>            .<span style="color:#a6e22e">build</span>());
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        mPlayer.<span style="color:#a6e22e">setAudioStreamType</span>(frontSpeaker <span style="color:#f92672">?</span> AudioManager.<span style="color:#a6e22e">STREAM_VOICE_CALL</span> :
+</span></span><span style="display:flex;"><span>            AudioManager.<span style="color:#a6e22e">STREAM_MUSIC</span>);
+</span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    mPlayer<span style="color:#f92672">.</span><span style="color:#a6e22e">setDataSource</span><span style="color:#f92672">(</span>audioFile<span style="color:#f92672">.</span><span style="color:#a6e22e">getAbsolutePath</span><span style="color:#f92672">());</span>
-</span></span><span style="display:flex;"><span>    mPlayer<span style="color:#f92672">.</span><span style="color:#a6e22e">prepare</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><h2 id="80">8.0</h2>
-<p>和之前一样，Android8.0中也使用了requestAudioFocus()来请求音频焦点，不一样的是，使用abandonAudioFocusRequest()释放音频焦点，并且请求和释放都需要传入同一个AudioFocusRequest实例。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>mAudioFocusRequest <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> AudioFocusRequest<span style="color:#f92672">.</span><span style="color:#a6e22e">Builder</span><span style="color:#f92672">(</span>AudioManager<span style="color:#f92672">.</span><span style="color:#a6e22e">AUDIOFOCUS_GAIN</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">.</span><span style="color:#a6e22e">setAudioAttributes</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> AudioAttributes<span style="color:#f92672">.</span><span style="color:#a6e22e">Builder</span><span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#f92672">.</span><span style="color:#a6e22e">setUsage</span><span style="color:#f92672">(</span>AudioAttributes<span style="color:#f92672">.</span><span style="color:#a6e22e">USAGE_MEDIA</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#f92672">.</span><span style="color:#a6e22e">setContentType</span><span style="color:#f92672">(</span>AudioAttributes<span style="color:#f92672">.</span><span style="color:#a6e22e">CONTENT_TYPE_MOVIE</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">())</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">.</span><span style="color:#a6e22e">setAcceptsDelayedFocusGain</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">.</span><span style="color:#a6e22e">setOnAudioFocusChangeListener</span><span style="color:#f92672">(</span>mAudioFocusChangeListener<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">//请求音频焦点      
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>requestFocusResult <span style="color:#f92672">=</span> mAudioManager<span style="color:#f92672">.</span><span style="color:#a6e22e">requestAudioFocus</span><span style="color:#f92672">(</span>mAudioFocusRequest<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">//释放音频焦点
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>abandonFocusResult <span style="color:#f92672">=</span> mAudioManager<span style="color:#f92672">.</span><span style="color:#a6e22e">abandonAudioFocusRequest</span><span style="color:#f92672">(</span>mAudioFocusRequest<span style="color:#f92672">);</span>
-</span></span></code></pre></div><h2 id="参考链接">参考链接</h2>
-<ul>
+</span></span><span style="display:flex;"><span>    mPlayer.<span style="color:#a6e22e">setDataSource</span>(audioFile.<span style="color:#a6e22e">getAbsolutePath</span>());
+</span></span><span style="display:flex;"><span>    mPlayer.<span style="color:#a6e22e">prepare</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="80">8.0 <a href="#80" class="anchor">🔗</a></h2><p>和之前一样，Android8.0中也使用了requestAudioFocus()来请求音频焦点，不一样的是，使用abandonAudioFocusRequest()释放音频焦点，并且请求和释放都需要传入同一个AudioFocusRequest实例。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>mAudioFocusRequest <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> AudioFocusRequest.<span style="color:#a6e22e">Builder</span>(AudioManager.<span style="color:#a6e22e">AUDIOFOCUS_GAIN</span>)
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">setAudioAttributes</span>(<span style="color:#66d9ef">new</span> AudioAttributes.<span style="color:#a6e22e">Builder</span>()
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">setUsage</span>(AudioAttributes.<span style="color:#a6e22e">USAGE_MEDIA</span>)
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">setContentType</span>(AudioAttributes.<span style="color:#a6e22e">CONTENT_TYPE_MOVIE</span>)
+</span></span><span style="display:flex;"><span>                .<span style="color:#a6e22e">build</span>())
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">setAcceptsDelayedFocusGain</span>(<span style="color:#66d9ef">true</span>)
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">setOnAudioFocusChangeListener</span>(mAudioFocusChangeListener)
+</span></span><span style="display:flex;"><span>        .<span style="color:#a6e22e">build</span>();
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//请求音频焦点      </span>
+</span></span><span style="display:flex;"><span>requestFocusResult <span style="color:#f92672">=</span> mAudioManager.<span style="color:#a6e22e">requestAudioFocus</span>(mAudioFocusRequest);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//释放音频焦点</span>
+</span></span><span style="display:flex;"><span>abandonFocusResult <span style="color:#f92672">=</span> mAudioManager.<span style="color:#a6e22e">abandonAudioFocusRequest</span>(mAudioFocusRequest);
+</span></span></code></pre></div><h2 id="参考链接">参考链接 <a href="#%e5%8f%82%e8%80%83%e9%93%be%e6%8e%a5" class="anchor">🔗</a></h2><ul>
 <li>
-<p><!-- raw HTML omitted --><a href="https://blog.csdn.net/u014296677/article/details/79643380">Android 音频焦点 AudioFocus 分析</a><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><a href="https://blog.csdn.net/u014296677/article/details/79643380" target="_blank" rel="noopener">Android 音频焦点 AudioFocus 分析</a><!-- raw HTML omitted --></p>
 </li>
 <li>
-<p><!-- raw HTML omitted --><a href="https://blog.csdn.net/jacksinrow/article/details/84139585">Android 音频焦点 AudioFocus 介绍和使用</a><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><a href="https://blog.csdn.net/jacksinrow/article/details/84139585" target="_blank" rel="noopener">Android 音频焦点 AudioFocus 介绍和使用</a><!-- raw HTML omitted --></p>
 </li>
 <li>
-<p><!-- raw HTML omitted --><a href="https://juejin.im/post/5bda9c15f265da395a1dd57c">android音视频指南-管理音频焦点</a><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><a href="https://juejin.im/post/5bda9c15f265da395a1dd57c" target="_blank" rel="noopener">android音视频指南-管理音频焦点</a><!-- raw HTML omitted --></p>
 </li>
 <li>
-<p><!-- raw HTML omitted --><a href="https://haohaozaici.github.io/2018/04/24/Android%20Sound%20overlap/index.html">「播放器」Android音频焦点</a><!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted --><a href="https://haohaozaici.github.io/2018/04/24/Android%20Sound%20overlap/index.html" target="_blank" rel="noopener">「播放器」Android音频焦点</a><!-- raw HTML omitted --></p>
 </li>
 </ul>
 
-                    
-                    <HR width="100%" id="EOF">
-		    <p style="color:#777;">Last modified on 2019-12-14</p>
-                    
-                </div>
-            </div>
-            
-            
-            <nav class="post-pagination">
-
-                
-                <a class="newer-posts" href="https://foezzy.github.io/posts/gitignore%E6%80%BB%E7%BB%93/">
-			Next<br>gitignore总结
-                </a>
-                
-                
-                
-                <a class="older-posts" href="https://foezzy.github.io/posts/%E5%9F%BA%E6%9C%AC%E5%8D%95%E4%BD%8D%E8%AE%B0%E5%BD%95-%E6%98%93%E6%B7%B7/">
-			Previous<br>基本单位记录-易混
-                </a>
-                
-            </nav>
-            <div class="post-comment-wrapper">
-                
-
-
-
-
-
-
-
-
-
-
-            </div>
-        </div>
     </div>
 
-
-                    </div>
-            </div><div id="single-column-footer">
-Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
-<br>
-Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
-<br>
-
-&copy;
-	
-	2020 Blog
-	
-</div>
-            </div>
     
-    <script src="/js/journal.js"></script>
-    </body>
+        <div class="tags">
+            
+                <a href="https://foezzy.github.io/tags/android">Android</a>
+            
+                <a href="https://foezzy.github.io/tags/%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9">音频焦点</a>
+            
+        </div>
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+
+    <div class="copyright">
+    
+       © Copyright 
+       2024 
+       <span class="split">
+        <svg fill="#bbbbbb" width="15" height="15" version="1.1" id="heart-15" xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 15 15">
+  <path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75&#xA;&#x9;C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z"/>
+</svg>
+       </span>
+       
+    
+    </div>
+
+    
+      <div class="powerby">
+        Powered by <a href='http://www.gohugo.io/'>Hugo</a> Theme By <a href='https://github.com/nodejh/hugo-theme-mini'>nodejh</a>
+      </div>
+    
+</footer>
+
+
+
+  </body>
 </html>

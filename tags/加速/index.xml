@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>加速 on Blog</title>
+    <link>https://foezzy.github.io/tags/%E5%8A%A0%E9%80%9F/</link>
+    <description>Recent content in 加速 on Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Oct 2019 10:16:24 +0000</lastBuildDate>
+    <atom:link href="https://foezzy.github.io/tags/%E5%8A%A0%E9%80%9F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>github加速和终端代理</title>
+      <link>https://foezzy.github.io/posts/github%E5%8A%A0%E9%80%9F%E5%92%8C%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86/</link>
+      <pubDate>Wed, 09 Oct 2019 10:16:24 +0000</pubDate>
+      <guid>https://foezzy.github.io/posts/github%E5%8A%A0%E9%80%9F%E5%92%8C%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86/</guid>
+      <description>github加速： 🔗解决github在访问和clone时速度太慢的问题&#xA;下载一个可以设置host的软件，比如mac上可以用iHost&#xA;然后设置下面的host&#xA;https://gitee.com/Mosiki/github/raw/master/github_hosts.txt&#xA;设置完刷新dns，就可以加速github的访问和clone了&#xA;终端代理： 🔗就是在iterm2里要能访问到外网数据&#xA;比如在拉取某一个仓库时，如果这个仓库需要fq，就要用到这个东西&#xA;参考链接：https://zhuanlan.zhihu.com/p/46973701&#xA;最后是用v2ray-u加zshrc设置alias简写来简化操作，每次要用的时候输入setproxy，不用了就unsetproxy。&#xA;alias setproxy=&amp;ldquo;export ALL_PROXY=socks5://127.0.0.1:1080&amp;rdquo;&#xA;alias unsetproxy=&amp;ldquo;unset ALL_PROXY&amp;rdquo;</description>
+    </item>
+  </channel>
+</rss>

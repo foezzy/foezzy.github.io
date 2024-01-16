@@ -1,57 +1,35 @@
 <!DOCTYPE html>
-<html><head>
-<title>Android编码规范</title>
+<html lang="en-us">
+  <head>
+    <title>Android编码规范 | Blog</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="Android编码规范 🔗命名规范 🔗 包命名及分包结构规范
+包名沿用 Java 编程的通用风格 类命名规范
+基本的类名沿用 Java 编程的通用风格（采用完整的英文描述符，所有单词第一个字母大写，采用驼峰式命名）
+android 特有的类，如 Activity、Fragment、Service、Provider、Adapter、View 等，则以对应的类型单词为后缀
+接口命名规范
+类命名以大写字母 I 为前缀，如果是监听接口以 Listener 结尾
+在自定义的监听接口里，监听事件以 on 开头, 如 onOpenMenu(), onRefresh()&hellip;
+方法命名规范
+方法命名沿用 Java 编程的通用风格（采用完整的英文描述符，函数名字以代表函数功能的英文单词组成，除首单词小写，其他单词首字母大写；一般的，函数第一个单词要求用动词） 变量命名规范
+boolean 成员要以 is 开头，或以 has 开头。如： isFirst, hasMore
+控件命名规范： 原则是 “view 的缩写 &#43; 功能描述”。 比如一个 TextView 缩写为 tv(驼峰命名抽取出来的缩写)， 这个 TextView 是显示用户名字的， 所以就可以命名为: tvUserName。
+常量的名字全部大写，单词之间用’_’分开
+控件命名规范： 原则是 “view 的缩写 &#43; 功能描述”。 比如一个 TextView 缩写为 tv(驼峰命名抽取出来的缩写)， 这个 TextView 是显示用户名字的， 所以就可以命名为: tvUserName">
+<meta name="generator" content="Hugo 0.121.2">
+
+
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
 
 
 
-
-<meta charset="utf-8">
-<meta name="X-UA-Compatible" content="IE=edge">
-<meta name="google-site-verification" content="">
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-<meta content="telephone=no" name="format-detection">
-<meta name="description" content="">
-<meta name="renderer" content="webkit">
-<meta name="theme-color" content="#ffffff">
-
-
-
-
-
-
-
-
-
-
-
-<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
-
-
-  
-
-
-
-
-
-
-<link rel="stylesheet" href="https://foezzy.github.io/scss/journal.min.c5d92f380bf10f6849c7ac487c7df2b22c081e0851e5339224f1ae29210b20d2.css" integrity="sha256-xdkvOAvxD2hJx6xIfH3ysiwIHghR5TOSJPGuKSELINI=" media="screen">
-
-
-
-<link rel="stylesheet" href="https://foezzy.github.io/scss/dark-mode.min.9f8d8c2df9285089d141edd4a50cb7506c7948e6ab79a29968dced1bd0ab7d22.css" integrity="sha256-n42MLfkoUInRQe3UpQy3UGx5SOareaKZaNztG9CrfSI=" media="screen">
-
-
-<script src="/vendor/js/loadCSS.js"></script>
-<script>
-  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
-</script>
-
-
-
-
-
-
-  <script src="/js/toc.js"></script>
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
 
 
 
@@ -60,392 +38,51 @@
 
 
 
+  </head>
 
-
-
-
-
-
-</head>
-<body>
-    	<div id="app"><div id="sideContainer" class="side-container">
-    
-    <a class="a-block nav-head false" href="https://foezzy.github.io/">
-    
-        <div class="nav-title">
-            Blog
-        </div>
-        
-    </a>
-
-    <div class="nav-link-list">
-        
-        
-    </div>
-
-    
-
-    <div class="nav-footer">
-        
-Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
-<br>
-Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
-<br>
-
-&copy;
+  <body>
+    <nav class="navigation">
 	
-	2020 Blog
+		<a href="/"> <span class="arrow">←</span>Home</a>
+	
+	<a href="/posts">Archive</a>
+	<a href="/tags">Tags</a>
+	<a href="/about">About</a>
+
 	
 
-    </div>
-    
-</div><div id="extraContainer" class="extra-container">
-    
-    
-    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
-
-
-	<div class="toc-content">
 	
-		
-		
-		
-		<center>- CATALOG -</center>
-		
-		
-		<ul>
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#android%e7%bc%96%e7%a0%81%e8%a7%84%e8%8c%83" onclick="onNavClick(`#android编码规范-nav`)" id="android编码规范-nav">
-									Android编码规范
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#%e5%91%bd%e5%90%8d%e8%a7%84%e8%8c%83" onclick="onNavClick(`#命名规范-nav`)" id="命名规范-nav">
-									命名规范
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e6%a0%bc%e5%bc%8f%e8%a7%84%e8%8c%83" onclick="onNavClick(`#格式规范-nav`)" id="格式规范-nav">
-									格式规范
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e4%bc%98%e5%8c%96" onclick="onNavClick(`#优化-nav`)" id="优化-nav">
-									优化
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e9%80%82%e9%85%8d" onclick="onNavClick(`#适配-nav`)" id="适配-nav">
-									适配
-								</a>
-							</li>
-						
-						
-					
-				
-			
-		</ul>
-	</div>
-
-</div>
-    
-    <div class="pagination">
-        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
-            <i class="material-icons pagination-action-icon">
-                keyboard_arrow_up
-            </i>
-        </a>
-        
-        <a type="button" class="pagination-action" id="darkModeToggleButton">
-            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
-                dark_mode
-            </span>
-        </a>
-        
-        
-    </div>
-</div>
-<div class="single-column-drawer-container" id="drawer"
-     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
-    <div class="drawer-content">
-        <div class="drawer-menu">
-            
-            
-            
-            
-            <div class="toc">
-
-
-	<div class="toc-content">
-	
-		
-		
-		
-		<center>- CATALOG -</center>
-		
-		
-		<ul>
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#android%e7%bc%96%e7%a0%81%e8%a7%84%e8%8c%83" onclick="onNavClick(`#android编码规范-nav`)" id="android编码规范-nav">
-									Android编码规范
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#%e5%91%bd%e5%90%8d%e8%a7%84%e8%8c%83" onclick="onNavClick(`#命名规范-nav`)" id="命名规范-nav">
-									命名规范
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e6%a0%bc%e5%bc%8f%e8%a7%84%e8%8c%83" onclick="onNavClick(`#格式规范-nav`)" id="格式规范-nav">
-									格式规范
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e4%bc%98%e5%8c%96" onclick="onNavClick(`#优化-nav`)" id="优化-nav">
-									优化
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e9%80%82%e9%85%8d" onclick="onNavClick(`#适配-nav`)" id="适配-nav">
-									适配
-								</a>
-							</li>
-						
-						
-					
-				
-			
-		</ul>
-	</div>
-
-</div>
-            
-        </div>
-    </div>
-</div>
-<transition name="fade">
-    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
-</transition>
-<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
-    <div id="navBackground" class="nav-background"></div>
-    <div class="container container-narrow nav-content">
-        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
-            <i class="material-icons">
-                menu
-            </i>
-        </button>
-        <a id="navTitle" class="navbar-brand" href="https://foezzy.github.io/">
-            Blog
-        </a>
-        
-        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
-            <i class="material-icons" id="darkModeToggleIcon2">
-                dark_mode
-            </i>
-        </button>
-        
-    </div>
 </nav>
-<div class="single-column-header-container" id="pageHead"
-     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
-    <a href="https://foezzy.github.io/">
-        <div class="single-column-header-title">Blog</div>
-        
 
-    </a>
-</div>
 
-            <div id="content">
-                <div id="streamContainer" class="stream-container">
+    <main class="main">
+      
 
-    <div class="post-list-container post-list-container-shadow">
-        <div class="post">
-            
-            
-            
+<section id="single">
+    <h1 class="title">Android编码规范</h1>
 
-            <div class="post-head-wrapper-text-only"
-                
-            >
-                <div class="post-title">
-                    Android编码规范
-                    
-                    <div class="post-meta">
-                        
-                        <time itemprop="datePublished">
-                            2019-06-14 10:07
-                        </time>
-                        
+    <div class="tip">
+        <time datetime="2019-06-14 10:07:09 &#43;0000 UTC">Jun 14, 2019</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          258 words
+        </span>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          2 minute read
+        </span>
+    </div>
 
-                        
+    
+    
 
-                        
-                        
-                    </div>
-                </div>
-            </div>
-            
-            <div class="post-body-wrapper">
-                
-                <div class="post-body" v-pre>
-                
-                    <h3 id="android编码规范">Android编码规范</h3>
-<h4 id="命名规范">命名规范</h4>
-<ol>
+
+    <div class="content">
+      <h3 id="android编码规范">Android编码规范 <a href="#android%e7%bc%96%e7%a0%81%e8%a7%84%e8%8c%83" class="anchor">🔗</a></h3><h4 id="命名规范">命名规范 <a href="#%e5%91%bd%e5%90%8d%e8%a7%84%e8%8c%83" class="anchor">🔗</a></h4><ol>
 <li>
 <p>包命名及分包结构规范</p>
 <ul>
@@ -528,8 +165,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 </tr>
 </tbody>
 </table>
-<h4 id="格式规范">格式规范</h4>
-<ol>
+<h4 id="格式规范">格式规范 <a href="#%e6%a0%bc%e5%bc%8f%e8%a7%84%e8%8c%83" class="anchor">🔗</a></h4><ol>
 <li>
 <p>注释规范</p>
 <ul>
@@ -611,8 +247,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 </ul>
 </li>
 </ol>
-<h4 id="优化">优化</h4>
-<ol>
+<h4 id="优化">优化 <a href="#%e4%bc%98%e5%8c%96" class="anchor">🔗</a></h4><ol>
 <li>
 <p>尽量不要有重复代码。 一发现有重复代码，就要进行重构，抽取出一个公有类 / 方法</p>
 </li>
@@ -638,64 +273,51 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <p>在设计某些功能、逻辑复杂的类或模块的时候，建议另外写一份设计文档，方便后人理解。</p>
 </li>
 </ol>
-<h4 id="适配">适配</h4>
-<ul>
+<h4 id="适配">适配 <a href="#%e9%80%82%e9%85%8d" class="anchor">🔗</a></h4><ul>
 <li>长宽用 dp 做单位， 一般不推荐用 px。 如果有特殊理由， 可以用 px，比如一条分隔线就只有 1px 宽。</li>
 </ul>
 
-                    
-                    <HR width="100%" id="EOF">
-		    <p style="color:#777;">Last modified on 2019-06-14</p>
-                    
-                </div>
-            </div>
-            
-            
-            <nav class="post-pagination">
-
-                
-                <a class="newer-posts" href="https://foezzy.github.io/posts/%E4%B8%83%E5%A4%95/">
-			Next<br>七夕
-                </a>
-                
-                
-                
-                <a class="older-posts" href="https://foezzy.github.io/posts/glide%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
-			Previous<br>Glide遇到的问题
-                </a>
-                
-            </nav>
-            <div class="post-comment-wrapper">
-                
-
-
-
-
-
-
-
-
-
-
-            </div>
-        </div>
     </div>
 
-
-                    </div>
-            </div><div id="single-column-footer">
-Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
-<br>
-Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
-<br>
-
-&copy;
-	
-	2020 Blog
-	
-</div>
-            </div>
     
-    <script src="/js/journal.js"></script>
-    </body>
+        <div class="tags">
+            
+                <a href="https://foezzy.github.io/tags/%E8%A7%84%E8%8C%83">规范</a>
+            
+        </div>
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+
+    <div class="copyright">
+    
+       © Copyright 
+       2024 
+       <span class="split">
+        <svg fill="#bbbbbb" width="15" height="15" version="1.1" id="heart-15" xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 15 15">
+  <path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75&#xA;&#x9;C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z"/>
+</svg>
+       </span>
+       
+    
+    </div>
+
+    
+      <div class="powerby">
+        Powered by <a href='http://www.gohugo.io/'>Hugo</a> Theme By <a href='https://github.com/nodejh/hugo-theme-mini'>nodejh</a>
+      </div>
+    
+</footer>
+
+
+
+  </body>
 </html>

@@ -1,4 +1,4 @@
-<?xml-stylesheet href="/rss.xsl" type="text/xsl"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog</title>
@@ -7,661 +7,139 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 25 Jun 2020 17:11:45 +0000</lastBuildDate>
-    
-        <atom:link href="https://foezzy.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-        <item>
-        <title>clashX使用说明</title>
-        <link>https://foezzy.github.io/posts/clashx%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</link>
-        <pubDate>Thu, 25 Jun 2020 17:11:45 +0000</pubDate>
-        
-        <guid>https://foezzy.github.io/posts/clashx%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</guid>
-        <description>Blog https://foezzy.github.io/posts/clashx%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/ -&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;Clash 是一个使用 Go 语言编写，基于规则的跨平台代理软件核心程序。
-ClashX 是运行在 macOS 上的一款科学上网工具。
-也就是ClashX是套着Clash程序的MacOS平台的科学上网外壳。&lt;/p&gt;
-&lt;h2 id=&#34;下载&#34;&gt;下载&lt;/h2&gt;
-&lt;p&gt;ClashX下载地址：
-&lt;a href=&#34;https://github.com/yichengchen/clashX/releases&#34;&gt;https://github.com/yichengchen/clashX/releases&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;选择最新的dmg版本下载，然后安装到MacOS系统&lt;/p&gt;
-&lt;p&gt;如果速度太慢，可以选择蓝奏盘下载，蓝奏盘的版本是1.20.4，地址如下：
-&lt;a href=&#34;https://wwa.lanzous.com/iPf0pe0zfsh&#34;&gt;https://wwa.lanzous.com/iPf0pe0zfsh&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
-&lt;p&gt;下载dmg文件后打开，直接把clash.app拖动到Application文件夹&lt;/p&gt;
-&lt;h2 id=&#34;使用&#34;&gt;使用&lt;/h2&gt;
-&lt;p&gt;打开Clash,如果第一次打开失败可以在进程管理器杀掉ClashX进程再打开一次
-在状态栏发现一个小猫的图标，说明启动完成&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/osc_hh/pics/raw/master/uPic/zz1MYC.png&#34; alt=&#34;p1&#34;&gt;&lt;/p&gt;
-&lt;p&gt;1.添加配置，最好使用订阅连接，也可以自己手动添加节点，从机场服务商获取到订阅连接后可以直接添加到Clash，目前Clash支持SS、V2ray节点两种方式&lt;/p&gt;
-&lt;p&gt;添加订阅节点方式：单击小猫图标 - 配置 - 托管配置 - 管理
-然后添加订阅连接。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/osc_hh/pics/raw/master/uPic/SWtTS6.png&#34; alt=&#34;picname&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;重要说明&#34;&gt;重要说明：&lt;/h3&gt;
-&lt;p&gt;自己手动配置节点还是比较麻烦，推荐还是通过添加配置自动生成
-自动生成涉及到订阅的转化，因为机场商提供的不是yaml格式的配置，所以要转换一下，把ss或者v2ray节点转换为ClashX支持的格式&lt;/p&gt;
-&lt;p&gt;可以通过：&lt;a href=&#34;https://acl4ssr.netlify.app/&#34;&gt;https://acl4ssr.netlify.app/&lt;/a&gt;  这个地址转换，比如复制了Surge3的订阅连接，然后打开上面，把地址添加到ClashX中，客户端选择Clash，点击生成订阅连接，就得到了Clash客户端的订阅连接，添加到ClashX里，就可以看到生成的yaml文件&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/osc_hh/pics/raw/master/uPic/Yb9cir.png&#34; alt=&#34;picname&#34;&gt;&lt;/p&gt;
-&lt;p&gt;注意：该地址需要科学上网，而且打开速度有点慢，如果打开不了需要自己搜索：clash 订阅转换  找到合适的替代品&lt;/p&gt;
-&lt;p&gt;2.同时需要注意的是,要勾选上设置为系统代理，这个表示ClashX是否工作，勾上就开始工作
-&lt;img src=&#34;https://gitee.com/osc_hh/pics/raw/master/uPic/BzgGRz.png&#34; alt=&#34;picname&#34;&gt;&lt;/p&gt;
-&lt;p&gt;3.节点添加完成后就可以测速是否正常，选择某个节点，就可以愉快地上网了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/osc_hh/pics/raw/master/uPic/hpc0qM.png&#34; alt=&#34;picname&#34;&gt;&lt;/p&gt;
-- https://foezzy.github.io/posts/clashx%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>不用数据线连接adb,需要root权限</title>
-        <link>https://foezzy.github.io/posts/%E4%B8%8D%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BA%BF%E8%BF%9E%E6%8E%A5adb-%E9%9C%80%E8%A6%81root%E6%9D%83%E9%99%90/</link>
-        <pubDate>Fri, 15 May 2020 11:34:05 +0000</pubDate>
-        
-        <guid>https://foezzy.github.io/posts/%E4%B8%8D%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BA%BF%E8%BF%9E%E6%8E%A5adb-%E9%9C%80%E8%A6%81root%E6%9D%83%E9%99%90/</guid>
-        <description>Blog https://foezzy.github.io/posts/%E4%B8%8D%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BA%BF%E8%BF%9E%E6%8E%A5adb-%E9%9C%80%E8%A6%81root%E6%9D%83%E9%99%90/ -&lt;p&gt;有 2 种方法开启无线调试，其中一种需要 USB 线先连接，这里只介绍另一种不借助 USB 线的&lt;/p&gt;
-&lt;p&gt;过程很简单，手机需要有 ROOT 权限&lt;/p&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;手机端下载 终端模拟器 或其他终端 &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;手机终端输入如下命令&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;su&lt;/p&gt;
-&lt;p&gt;setprop service.adb.tcp.port 5555&lt;/p&gt;
-&lt;p&gt;stop adbd&lt;/p&gt;
-&lt;p&gt;start adbd&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;查看本机 ip&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;ifconfig&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;http://upload-images.jianshu.io/upload_images/18974911-6d579288a337e95e.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;
-&lt;p&gt;在开发者选项中打开 USB 调试（否则连接后会显示未授权）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;电脑端输入&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;adb connect Phone_ip:5555 (Phone_ip 为你自己手机 ip) &lt;/p&gt;
-&lt;p&gt;adb devices&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol start=&#34;6&#34;&gt;
-&lt;li&gt;若成功 此时你便能看到自己的设备了&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;List of devices attached&lt;/p&gt;
-&lt;p&gt;192.168.1.59:5555      device&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;可能遇到的问题&#34;&gt;可能遇到的问题&lt;/h3&gt;
-&lt;p&gt;问题：unable to connect to 192.168.199.248:5555: Connection refused
-解决办法 (设置监听端口)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ setprop service&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;adb&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;tcp&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;port&lt;/span&gt; 5555  &lt;span style=&#34;color:#75715e&#34;&gt;//设置监听端口
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;$ stop adbd
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ start adbd
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://foezzy.github.io/posts/%E4%B8%8D%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BA%BF%E8%BF%9E%E6%8E%A5adb-%E9%9C%80%E8%A6%81root%E6%9D%83%E9%99%90/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Glide用到的代码记录</title>
-        <link>https://foezzy.github.io/posts/glide%E7%94%A8%E5%88%B0%E7%9A%84%E4%BB%A3%E7%A0%81%E8%AE%B0%E5%BD%95/</link>
-        <pubDate>Tue, 12 May 2020 10:32:00 +0000</pubDate>
-        
-        <guid>https://foezzy.github.io/posts/glide%E7%94%A8%E5%88%B0%E7%9A%84%E4%BB%A3%E7%A0%81%E8%AE%B0%E5%BD%95/</guid>
-        <description>Blog https://foezzy.github.io/posts/glide%E7%94%A8%E5%88%B0%E7%9A%84%E4%BB%A3%E7%A0%81%E8%AE%B0%E5%BD%95/ -&lt;h3 id=&#34;同步加载&#34;&gt;同步加载&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;loadImgSync&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Context context&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; String url&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Thread&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Runnable&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;run&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                FutureTarget&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Bitmap&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; futureBitmap &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Glide&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;with&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;context&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;asBitmap&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;load&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;url&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;submit&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    Bitmap myBitmap &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; futureBitmap&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    LogUtils&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;d&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;hei:&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; myBitmap&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getHeight&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;());&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    LogUtils&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;d&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;wid:&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; myBitmap&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getWidth&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;());&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;catch&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;ExecutionException e&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    e&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;printStackTrace&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;catch&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;InterruptedException e&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    e&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;printStackTrace&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;}).&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;start&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;获取宽高&#34;&gt;获取宽高&lt;/h3&gt;
-&lt;h4 id=&#34;方式1&#34;&gt;方式1：&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Glide&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;with&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;getContext&lt;span style=&#34;color:#f92672&#34;&gt;().&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getApplicationContext&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;())&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;asBitmap&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;load&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;path&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;into&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; SimpleTarget&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Bitmap&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;onResourceReady&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Bitmap bitmap&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                                     Transition&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;?&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;super&lt;/span&gt; Bitmap&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; transition&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                                     
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;             &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; w &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; bitmap&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getWidth&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;             &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; h &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; bitmap&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getHeight&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &lt;span style=&#34;color:#f92672&#34;&gt;});&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;方式2&#34;&gt;方式2：&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Glide&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;with&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;getContext&lt;span style=&#34;color:#f92672&#34;&gt;()).&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;load&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;imageUrl&lt;span style=&#34;color:#f92672&#34;&gt;).&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;listener&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; RequestListener&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; GlideDrawable&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;onException&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Exception e&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; String model&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; Target&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;GlideDrawable&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; target&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; isFirstResource&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;onResourceReady&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;GlideDrawable resource&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; String model&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; Target&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;GlideDrawable&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; target&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; isFromMemoryCache&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; isFirstResource&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#75715e&#34;&gt;//This returns 0,0
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            Log&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;e&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;TAG&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;_width: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; resource&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getBounds&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;().&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;width&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; _height:&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;resource&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getBounds&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;().&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;height&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;());&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;}).&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;into&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;ivImage&lt;span style=&#34;color:#f92672&#34;&gt;).&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getSize&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; SizeReadyCallback&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;onSizeReady&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; width&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; height&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#75715e&#34;&gt;//This returns size of imageview.
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            Log&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;e&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;TAG&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;width: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; width &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; height: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; height&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;});&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;宽度适应屏幕高度自适应&#34;&gt;宽度适应屏幕，高度自适应&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;loadPicsFitWidth&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Context context&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; String imageUrl&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; ImageView imageView&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                ViewGroup&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;LayoutParams&lt;/span&gt; params &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; imageView&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getLayoutParams&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;//        params.width = ScreenUtils.getScreenWidth(context) - DensityUtil.dp2px(7) * 2;//减去图片两边距,在item_classify_ad.xml的CardView里
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        params&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;width&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; ScreenUtils&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getScreenWidth&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;context&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; DensityUtil&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;dp2px&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;7&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; 2&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;//左右边距
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        params&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;height&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 100&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        imageView&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setLayoutParams&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;params&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Glide&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;with&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;context&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;load&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;imageUrl&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;apply&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;RequestOptions&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;bitmapTransform&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; RoundedCorners&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;10&lt;span style=&#34;color:#f92672&#34;&gt;)))&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;listener&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; RequestListener&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Drawable&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;onLoadFailed&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@Nullable&lt;/span&gt; GlideException e&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; Object model&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; Target&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Drawable&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; target&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; isFirstResource&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;onResourceReady&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Drawable resource&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; Object model&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; Target&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Drawable&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; target&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; DataSource dataSource&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; isFirstResource&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;imageView &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#75715e&#34;&gt;// 首先设置 imageView 的 ScaleType 属性为 ScaleType.FIT_XY，让图片不按比例缩放，把图片塞满整个 View。
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;                        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;imageView&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getScaleType&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; ImageView&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ScaleType&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;FIT_XY&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                            imageView&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setScaleType&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;ImageView&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ScaleType&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;FIT_XY&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#75715e&#34;&gt;// 得到当前 imageView 的宽度（我设置的是屏幕宽度），获取到 imageView 与图片宽的比例，然后通过这个比例去设置 imageView 的高
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;                        ViewGroup&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;LayoutParams&lt;/span&gt; params &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; imageView&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getLayoutParams&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; vw &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; params&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;width&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt; scale &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; vw &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; resource&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getIntrinsicWidth&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; vh &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Math&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;round&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;resource&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getIntrinsicHeight&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; scale&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        params&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;height&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; vh &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; imageView&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getPaddingTop&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; imageView&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getPaddingBottom&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        imageView&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setLayoutParams&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;params&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#f92672&#34;&gt;})&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;into&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;imageView&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;监听请求&#34;&gt;监听请求&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Glide&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;with&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;context&lt;span style=&#34;color:#f92672&#34;&gt;).&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;load&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;url&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;listener&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; RequestListener&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Drawable&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;onLoadFailed&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@Nullable&lt;/span&gt; GlideException e&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; Object model&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; Target&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Drawable&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; target&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; isFirstResource&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;onResourceReady&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Drawable resource&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; Object model&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; Target&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Drawable&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; target&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; DataSource dataSource&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; isFirstResource&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#75715e&#34;&gt;//dosomething
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;                        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#f92672&#34;&gt;})&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;into&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;imageView&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;带圆角的图片&#34;&gt;带圆角的图片&lt;/h3&gt;
-&lt;h4 id=&#34;类型1圆形图片&#34;&gt;类型1：圆形图片&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Glide&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;with&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;).&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;load&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;imgUrl&lt;span style=&#34;color:#f92672&#34;&gt;).&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;apply&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;RequestOptions&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;bitmapTransform&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; CircleCrop&lt;span style=&#34;color:#f92672&#34;&gt;())).&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;into&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;image&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;类型2圆角图片&#34;&gt;类型2：圆角图片&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Glide&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;with&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;).&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;load&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;imgUrl&lt;span style=&#34;color:#f92672&#34;&gt;).&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;apply&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;RequestOptions&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;bitmapTransform&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; RoundedCorners&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;20&lt;span style=&#34;color:#f92672&#34;&gt;))).&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;into&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;image&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://foezzy.github.io/posts/glide%E7%94%A8%E5%88%B0%E7%9A%84%E4%BB%A3%E7%A0%81%E8%AE%B0%E5%BD%95/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Charles快速配置安卓手机Proxy</title>
-        <link>https://foezzy.github.io/posts/charles%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BAproxy/</link>
-        <pubDate>Mon, 11 May 2020 15:02:58 +0000</pubDate>
-        
-        <guid>https://foezzy.github.io/posts/charles%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BAproxy/</guid>
-        <description>Blog https://foezzy.github.io/posts/charles%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BAproxy/ -&lt;h3 id=&#34;前言&#34;&gt;前言&lt;/h3&gt;
-&lt;p&gt;Charles可以实现很多功能，比如抓包，修改返回结果，限速，真是一个神器，但是每次手机配置代理，真是逆天的操作&lt;/p&gt;
-&lt;p&gt;1.进入设置
-2.进入 WLAN
-3.找对应 wifi 连接
-4.进入详情
-5.找到代理
-6.选择手动
-7.输入主机名
-8.输入端口号
-9.最后保存&lt;/p&gt;
-&lt;p&gt;所以这篇文章就是为了把这么多步简化的过程，在网上搜索了一些方式，发现有两篇有很好的参考价值
-&lt;a href=&#34;http://tao93.top/2018/10/31/%E4%B8%80%E9%94%AE%E8%AE%BE%E7%BD%AE%20Android%20http%20proxy%20%E7%9A%84%E5%B0%9D%E8%AF%95/&#34;&gt;一键设置 Android http proxy 的尝试&lt;/a&gt;
-&lt;a href=&#34;https://zhuanlan.zhihu.com/p/134136375&#34;&gt;Android自动设置HTTP代理
-&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;主要方式&#34;&gt;主要方式&lt;/h3&gt;
-&lt;p&gt;方式一：安装一个app,然后用adb shell发送给app，代码进行wifi连接与配置，这种方式在 Api &amp;gt; 23 就会失效，目前大部分都是8.0以上的手机，这种方式就不好用了&lt;/p&gt;
-&lt;p&gt;方式二：用adb shell settings put global进行配置，但是这种方式是临时的，不用的话还要手动关一下&lt;/p&gt;
-&lt;h3 id=&#34;目前做法&#34;&gt;目前做法&lt;/h3&gt;
-&lt;p&gt;参考知乎上那位大神的做法，直接写个sh脚本，再加上zsh的alias，就能比较方便的配置proxy了&lt;/p&gt;
-&lt;h3 id=&#34;步骤&#34;&gt;步骤&lt;/h3&gt;
-&lt;p&gt;新建 easy_proxy.sh 的文本，把以下代码贴进去即可&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/bin/bash
-
-echo &amp;#34;\n---------------- Support ------------------&amp;#34;
-echo &amp;#34;设置本机IP代理    ./easy_proxy.sh set&amp;#34;
-echo &amp;#34;设置自定义代理  ./easy_proxy.sh set ****:8888&amp;#34;
-echo &amp;#34;删除代理       ./easy_proxy.sh clean&amp;#34;
-echo &amp;#34;--------------------------------------------\n&amp;#34;
-
-# 获取当前IP
-ip=$(ifconfig en0 | grep -E &amp;#39;inet \d{3}.&amp;#39; | awk &amp;#39;{print $2}&amp;#39;)
-default_proxy=${ip}&amp;#34;:8888&amp;#34;
-
-echo &amp;#34;本机IP为: $default_proxy\n&amp;#34;
-if [ &amp;#34;$1&amp;#34; == &amp;#34;set&amp;#34; ];then
-    if [ -n &amp;#34;$2&amp;#34; ];then
-        echo &amp;#34;设置自定义代理 $2&amp;#34;
-        adb shell settings put global http_proxy $2
-    else
-        echo &amp;#34;设置本机IP代理 $default_proxy&amp;#34;
-        adb shell settings put global http_proxy $default_proxy
-    fi
-elif [ &amp;#34;$1&amp;#34; == &amp;#34;clean&amp;#34; ];then
-    echo &amp;#34;清除代理成功&amp;#34;
-    adb shell settings put global http_proxy :0
-else
-    echo &amp;#34;!!! 请输入合法的操作符 !!!&amp;#34;
-fi
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;设置代理&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ ./easy_proxy.sh set
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;删除代理&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ ./easy_proxy.sh clean
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;遇到的坑&#34;&gt;遇到的坑&lt;/h3&gt;
-&lt;p&gt;小米手机要打开一个设置：
-开发者选项 - 调试 - USB调试要打开&lt;/p&gt;
-&lt;p&gt;不然会报java.lang.SecurityException: Permission denial: writing to settings requires:android.permission.WRITE_SECURE_SETTINGS 的错误&lt;/p&gt;
-&lt;p&gt;其他品牌的手机没试过，可能也会有类似的坑&lt;/p&gt;
-- https://foezzy.github.io/posts/charles%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BAproxy/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Java碰到的奇怪问题汇总</title>
-        <link>https://foezzy.github.io/posts/java%E7%A2%B0%E5%88%B0%E7%9A%84%E5%A5%87%E6%80%AA%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</link>
-        <pubDate>Thu, 23 Apr 2020 19:12:21 +0000</pubDate>
-        
-        <guid>https://foezzy.github.io/posts/java%E7%A2%B0%E5%88%B0%E7%9A%84%E5%A5%87%E6%80%AA%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
-        <description>Blog https://foezzy.github.io/posts/java%E7%A2%B0%E5%88%B0%E7%9A%84%E5%A5%87%E6%80%AA%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/ -&lt;h2 id=&#34;1除法返回00&#34;&gt;1.除法返回0.0&lt;/h2&gt;
-&lt;h3 id=&#34;情景展示&#34;&gt;情景展示&lt;/h3&gt;
-&lt;p&gt;　　double d = 1/10;&lt;/p&gt;
-&lt;p&gt;　　System.out.println(d);&lt;/p&gt;
-&lt;p&gt;　　返回的结果居然是 0.0 &lt;/p&gt;
-&lt;h3 id=&#34;原因分析&#34;&gt;原因分析&lt;/h3&gt;
-&lt;p&gt;　　第一步：你会发现用运算结果也可以用 int 类型接收&lt;/p&gt;
-&lt;p&gt;　　&lt;strong&gt;在 Java 语言中，整数之间的除法运算，不管你的小数位有多少位，小数是几，统统舍弃，只返回整数位数字！&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;　　第二步：用 double 类型接收为什么也可以？&lt;/p&gt;
-&lt;p&gt;　　因为 double 类型的取值返回要大于 int 类型，所以属于向上类型转换，当然可以用比它大的容器接收。
-　　
-　　第三步：为什么整数之间的除法运算，只返回整数位？&lt;/p&gt;
-&lt;p&gt;　　因为在 Java 中，由运算结果，由被运算数的最高数据类型决定，也就是说：整数之间的运算，数据类型都为 int 类型，所以，返回的结果也为 int 类型。 &lt;/p&gt;
-&lt;h3 id=&#34;3-解决方案&#34;&gt;3. 解决方案&lt;/h3&gt;
-&lt;p&gt;　　如果我们想要返回完整的运算结果 ，我们就需要将其中一个的数据类型转换成 double 类型或者 float 类型，而不是只改变接收运算结果的数据类型！&lt;/p&gt;
-&lt;p&gt;　　方式一：将被除数转换成 double 类型&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;double d4 = 100d/235886;
-System.out.println(d4);//4.2393359504167265E-4
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;　　方式二：将除数转换成 double 类型&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;double d5 = 100/235886d;
-System.out.println(d5);//4.2393359504167265E-4
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;　　方式三：将被除数转换成 float 类型&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;float f4 = 2358861f/235886;
-System.out.println(f4);//10.000004
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;　　方式四：将除数转换成 float 类型&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;float f5 = 2358861/235886f;
-System.out.println(f5);//10.000004
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;　　连续运算&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;// 连续运算也是如此
-int i4 = 1234567/1000/3600;
-System.out.println(i4);//0
-double d = 1234567d/1000/3600;
-System.out.println(d);//0.34293527777777777
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;　　转换成 long 类型没用哦！&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;long l = 100L/235886;
-System.out.println(l);// 0
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;　　两个 Long 类型的数值进行除法运算&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;System.out.println(&amp;#34;long类型除法运算：&amp;#34; + 12345678910L/98765432110L);//0
-System.out.println(&amp;#34;上升为double类型运算：&amp;#34; + 12345678910L/98765432110D);//0.12499999894953125
-System.out.println(&amp;#34;上升为float类型运算：&amp;#34; + 12345678910L/98765432110F);//0.125
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;js-的整数间的运算会返回实际运算结果&#34;&gt;js 的整数间的运算，会返回实际运算结果&lt;/h3&gt;
-&lt;p&gt;console.log(1/10);  //0.1&lt;/p&gt;
-- https://foezzy.github.io/posts/java%E7%A2%B0%E5%88%B0%E7%9A%84%E5%A5%87%E6%80%AA%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Java正则之坑</title>
-        <link>https://foezzy.github.io/posts/java%E6%AD%A3%E5%88%99%E4%B9%8B%E5%9D%91/</link>
-        <pubDate>Fri, 06 Mar 2020 19:45:20 +0000</pubDate>
-        
-        <guid>https://foezzy.github.io/posts/java%E6%AD%A3%E5%88%99%E4%B9%8B%E5%9D%91/</guid>
-        <description>Blog https://foezzy.github.io/posts/java%E6%AD%A3%E5%88%99%E4%B9%8B%E5%9D%91/ -&lt;p&gt;首先说明需求&lt;/p&gt;
-&lt;p&gt;有个xxx.api.abc.com需要替换成config.abc.com&lt;/p&gt;
-&lt;p&gt;这个是可以用正则做到的，如下&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String oldUrl &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;xxx.api.abc.com&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String newUrl &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; oldUrl&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;replaceAll&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.*\.api&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;config&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;//报错
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;查了下，发现正则要用两个斜杆\\，所以改成&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String newUrl &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; oldUrl&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;replaceAll&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.*\\.api&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;config&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;//OK
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;//或者下面的更简单
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;String newUrl &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; oldUrl&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;replaceAll&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.*api&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;config&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;//OK
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;之所以有坑，是因为java里的&lt;code&gt;\&lt;/code&gt;有一定含义，反斜杠 &lt;code&gt;\&lt;/code&gt; 在 Java 中表示转义字符&lt;/p&gt;
-&lt;p&gt;这里例举两个特别重要的用法：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;在匹配 &lt;code&gt;.&lt;/code&gt; 或 &lt;code&gt;{&lt;/code&gt; 或 &lt;code&gt;[&lt;/code&gt; 或 &lt;code&gt;(&lt;/code&gt; 或 &lt;code&gt;?&lt;/code&gt; 或 &lt;code&gt;$&lt;/code&gt; 或 &lt;code&gt;^&lt;/code&gt; 或 &lt;code&gt;*&lt;/code&gt; 这些特殊字符时，需要在前面加上 &lt;code&gt;\\&lt;/code&gt;，比如匹配 &lt;code&gt;.&lt;/code&gt; 时，Java 中要写为 &lt;code&gt;\\.&lt;/code&gt;，但对于正则表达式来说就是 &lt;code&gt;\.&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;在匹配 &lt;code&gt;\&lt;/code&gt; 时，Java 中要写为 &lt;code&gt;\\\\&lt;/code&gt;，但对于正则表达式来说就是 &lt;code&gt;\\&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;其他类似&lt;code&gt;\d&lt;/code&gt;在Java里要写成&lt;code&gt;\\d&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Java 中的正则表达式字符串有两层含义，首先 Java 字符串转义出符合正则表达式语法的字符串，然后再由转义后的正则表达式进行模式匹配&lt;/p&gt;
-- https://foezzy.github.io/posts/java%E6%AD%A3%E5%88%99%E4%B9%8B%E5%9D%91/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>gitignore总结</title>
-        <link>https://foezzy.github.io/posts/gitignore%E6%80%BB%E7%BB%93/</link>
-        <pubDate>Thu, 16 Jan 2020 11:45:22 +0000</pubDate>
-        
-        <guid>https://foezzy.github.io/posts/gitignore%E6%80%BB%E7%BB%93/</guid>
-        <description>Blog https://foezzy.github.io/posts/gitignore%E6%80%BB%E7%BB%93/ -&lt;p&gt;##gitignore生效操作&lt;/p&gt;
-&lt;p&gt;###场景一：某个文件已经被追踪
-比如Android项目下.idea文件夹，里面已经有某些文件提交过，要忽略.idea文件夹下所有文件
-先在.gitignore文件夹添加/.idea，表示忽略.idea下所有文件&lt;/p&gt;
-&lt;p&gt;接着删除缓存&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git rm -r --cached ./.idea
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这个命令把之前跟踪的.idea目录下所有文件的缓存给删了，然后需要push到远程项目地址就OK了，本地.idea下有修改都不会被检测到了&lt;/p&gt;
-&lt;p&gt;说明：所有文件指的是多级目录，git update-index &amp;ndash;assume-unchanged 这个命令也能清除追踪，但是只能指定文件，所以不用这个命令&lt;/p&gt;
-&lt;h4 id=&#34;场景二未提交项目要忽略的文件夹下的文件还未被追踪&#34;&gt;场景二：未提交项目，要忽略的文件夹下的文件还未被追踪&lt;/h4&gt;
-&lt;p&gt;直接在.gitignore文件夹添加/.idea，表示忽略.idea下所有文件，然后直接push就可以了&lt;/p&gt;
-- https://foezzy.github.io/posts/gitignore%E6%80%BB%E7%BB%93/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Android音频焦点归纳整理</title>
-        <link>https://foezzy.github.io/posts/android%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9%E5%BD%92%E7%BA%B3/</link>
-        <pubDate>Sat, 14 Dec 2019 15:26:42 +0000</pubDate>
-        
-        <guid>https://foezzy.github.io/posts/android%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9%E5%BD%92%E7%BA%B3/</guid>
-        <description>Blog https://foezzy.github.io/posts/android%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9%E5%BD%92%E7%BA%B3/ -&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;音频焦点是 API 8 中引入的一个概念，它主要作用于用户在同一个时刻只能关注单个音频流，或者用来降低背景声音，使用户只关注要主要的声音。在不同Android版本中，对应的代码也有区别。主要三个节点为&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;2.2 (API level 8)&lt;/li&gt;
-&lt;li&gt;5.0 (API level 21)&lt;/li&gt;
-&lt;li&gt;8.0 (API level 26)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;22-50&#34;&gt;2.2-5.0&lt;/h2&gt;
-&lt;p&gt;申请焦点：&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;private void requestAudioFocus() {
-        audioManager = (AudioManager) getContext().getSystemService(Context.AUDIO_SERVICE);
-        if (audioManager != null) {
-            audioManager.requestAudioFocus(mAudioFocusListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
-        }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;requestAudioFocus中，有3个参数，先说参数2，参数2是多种声音类型，如下：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;AudioManager.STREAM_VOICE_CALL&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;AudioManager.STREAM_SYSTEM&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;AudioManager.STREAM_RING&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;AudioManager.STREAM_MUSIC&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;AudioManager.STREAM_ALARM&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;AudioManager.STREAM_NOTIFICATION&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;AudioManager.STREAM_BLUETOOTH_SCO&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;AudioManager.STREAM_SYSTEM_ENFORCED&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;AudioManager.STREAM_DTMF&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;AudioManager.STREAM_TTS&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;然后是参数3，也是有多个声明类型，如下：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;AudioManager.AUDIOFOCUS_GAIN：想要长期占有焦点，失去焦点者stop播放和释放&lt;/li&gt;
-&lt;li&gt;AudioManager.AUDIOFOCUS_GAIN_TRANSIENT：想要短暂占有焦点，失去焦点者pause播放&lt;/li&gt;
-&lt;li&gt;AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK：想要短暂占有焦点，失去焦点者可以继续播放但是音量需要调低&lt;/li&gt;
-&lt;li&gt;AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_EXCLUSIVE：想要短暂占有焦点，但希望失去焦点者不要有声音播放&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;最后是参数1，参数1要自己写个回调：&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;private AudioManager.OnAudioFocusChangeListener mAudioFocusListener = new AudioManager.OnAudioFocusChangeListener() {
-        @Override
-        public void onAudioFocusChange(int focusChange) {
-            switch (focusChange) {
-                case AudioManager.AUDIOFOCUS_LOSS:
-                    //对应AUDIOFOCUS_GAIN 表示音频焦点请求者需要长期占有焦点，这里一般需要stop播放和释放
-                    // pauseMediaPlayer();
-                    break;
-                case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT:
-                    //对应AUDIOFOCUS_GAIN_TRANSIENT 表示音频焦点请求者需要短暂占有焦点，这里一般需要pause播放
-                    //pauseMediaPlayer();
-                    break;
-                case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK:
-                    //对应AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK 表示音频焦点请求者需要占有焦点，但是我也可以继续播放，只是需要降低音量或音量置为0
-                    break;
-                case AudioManager.AUDIOFOCUS_GAIN:
-                    //获得焦点，这里可以进行恢复播放
-                    if (mediaPlayer != null) {
-                       //  startMediaPlayer();
-                    }
-                    break;
-                default:
-            }
-        }
-    };
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;丢弃焦点：&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;private void abandonAudioFocus() {
-        audioManager = (AudioManager) getContext().getSystemService(Context.AUDIO_SERVICE);
-        if (audioManager != null) {
-            audioManager.abandonAudioFocus(mAudioFocusListener);
-        }
-    }
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;二级标题-50&#34;&gt;二级标题 5.0&lt;/h2&gt;
-&lt;p&gt;对于 Android 5.0 (API level 21) 或更高版本的应用程序，音频应用程序应该使用 AudioAttributes 来描述你的应用程序正在播放的音频类型。例如，播放语音的应用程序应该指定 CONTENT_TYPE_SPEECH，其实就是需要加个声明，申请焦点的方式还是没变。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;preparePlayer&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;File audioFile&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; frontSpeaker&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;throws&lt;/span&gt; IOException &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;mPlayer &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        mPlayer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; MediaPlayer&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        mPlayer&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setOnCompletionListener&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        mPlayer&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setOnErrorListener&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;//5.0要setAudioAttributes
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Build&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;VERSION&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;SDK_INT&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; Build&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;VERSION_CODES&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;LOLLIPOP&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        mPlayer&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setAudioAttributes&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; AudioAttributes&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Builder&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setContentType&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;frontSpeaker &lt;span style=&#34;color:#f92672&#34;&gt;?&lt;/span&gt; AudioAttributes&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;CONTENT_TYPE_SPEECH&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                AudioAttributes&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;CONTENT_TYPE_MUSIC&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setUsage&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;frontSpeaker &lt;span style=&#34;color:#f92672&#34;&gt;?&lt;/span&gt; AudioAttributes&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;USAGE_VOICE_COMMUNICATION&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                AudioAttributes&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;USAGE_MEDIA&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;build&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;());&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        mPlayer&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setAudioStreamType&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;frontSpeaker &lt;span style=&#34;color:#f92672&#34;&gt;?&lt;/span&gt; AudioManager&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;STREAM_VOICE_CALL&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            AudioManager&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;STREAM_MUSIC&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mPlayer&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setDataSource&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;audioFile&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getAbsolutePath&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;());&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    mPlayer&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;prepare&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;80&#34;&gt;8.0&lt;/h2&gt;
-&lt;p&gt;和之前一样，Android8.0中也使用了requestAudioFocus()来请求音频焦点，不一样的是，使用abandonAudioFocusRequest()释放音频焦点，并且请求和释放都需要传入同一个AudioFocusRequest实例。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mAudioFocusRequest &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; AudioFocusRequest&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Builder&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;AudioManager&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;AUDIOFOCUS_GAIN&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setAudioAttributes&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; AudioAttributes&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Builder&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setUsage&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;AudioAttributes&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;USAGE_MEDIA&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setContentType&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;AudioAttributes&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;CONTENT_TYPE_MOVIE&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;build&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;())&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setAcceptsDelayedFocusGain&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setOnAudioFocusChangeListener&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;mAudioFocusChangeListener&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;build&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;//请求音频焦点      
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;requestFocusResult &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; mAudioManager&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;requestAudioFocus&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;mAudioFocusRequest&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;//释放音频焦点
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;abandonFocusResult &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; mAudioManager&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;abandonAudioFocusRequest&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;mAudioFocusRequest&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;参考链接&#34;&gt;参考链接&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;https://blog.csdn.net/u014296677/article/details/79643380&#34;&gt;Android 音频焦点 AudioFocus 分析&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;https://blog.csdn.net/jacksinrow/article/details/84139585&#34;&gt;Android 音频焦点 AudioFocus 介绍和使用&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;https://juejin.im/post/5bda9c15f265da395a1dd57c&#34;&gt;android音视频指南-管理音频焦点&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;https://haohaozaici.github.io/2018/04/24/Android%20Sound%20overlap/index.html&#34;&gt;「播放器」Android音频焦点&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-- https://foezzy.github.io/posts/android%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9%E5%BD%92%E7%BA%B3/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>基本单位记录-易混</title>
-        <link>https://foezzy.github.io/posts/%E5%9F%BA%E6%9C%AC%E5%8D%95%E4%BD%8D%E8%AE%B0%E5%BD%95-%E6%98%93%E6%B7%B7/</link>
-        <pubDate>Wed, 27 Nov 2019 17:51:20 +0000</pubDate>
-        
-        <guid>https://foezzy.github.io/posts/%E5%9F%BA%E6%9C%AC%E5%8D%95%E4%BD%8D%E8%AE%B0%E5%BD%95-%E6%98%93%E6%B7%B7/</guid>
-        <description>Blog https://foezzy.github.io/posts/%E5%9F%BA%E6%9C%AC%E5%8D%95%E4%BD%8D%E8%AE%B0%E5%BD%95-%E6%98%93%E6%B7%B7/ -&lt;h2 id=&#34;数据传输存储的单位及换算&#34;&gt;数据传输、存储的单位及换算&lt;/h2&gt;
-&lt;h3 id=&#34;bit与byte的区别&#34;&gt;bit与byte的区别&lt;/h3&gt;
-&lt;p&gt;bit意为“位”或“比特”，是计算机运算的基础；
-byte意为“字节”，是计算机文件大小的基本计算单位；&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;1 byte = 8 bit&lt;/li&gt;
-&lt;li&gt;宽带运营商说的下载速度、路由器的标明速度Mbps其实就是Mbit per second，也就是兆比特每秒&lt;/li&gt;
-&lt;li&gt;下载速度要换成存储大小单位，就要除以8，也就是 1Mbit/s 的文件传输速度 可以转化为 1MByte/s 的文件下载速度&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;说到usb2.0标准接口传输速率。许多人都将“480mbps”误解为480兆/秒。其实，这是错误的，事实上“480mbps”应为“480兆比特/秒”或“480兆位/秒”，它等于“60兆字节/秒”，大家看到差距了吧。
-这要从bit和byte说起：bit和byte同译为&amp;quot;比特&amp;quot;，都是数据量度单位，bit=“比特”或“位”。
-byte=字节即1byte=8bits,两者换算是1：8的关系。
-mbps=mega bits per second(兆位/秒)是速率单位，所以正确的说法应该是说usb2.0的传输速度是480兆位/秒,即480mbps。
-mb=mega bytes(兆比、兆字节)是量单位，1mb/s（兆字节/秒）=8mbps（兆位/秒）。
-我们所说的硬盘容量是40gb、80gb、100gb，这里的b指是的byte也就是“字节”。
-1 kb = 1024 bytes =2^10 bytes
-1 mb = 1024 kb = 2^20 bytes
-1 gb = 1024 mb = 2^30 bytes
-比如以前所谓的56kb的modem换算过来56kbps除以8也就是7kbyte，所以真正从网上下载文件存在硬盘上的速度也就是每秒7kbyte，网卡，ADSL等都应该以此来计算！
-也就是说与传输速度有关的b一般指的是bit。
-与容量有关的b一般指的是byte。
-最后再说一点: usb2.0 480mbps=60mb/s的传输速率还只是理论值，它还要受到系统环境的制约（cpu、硬盘和内存等），其实际读、取写入硬盘的速度约在11～16mb/s。但这也比usb1.1的12mbps(1.5m/s)快了近10倍。
-比如网速4080Kbps的真实速度换算是:(要注意Kbps还是KBps)
-K=1000(或1024)
-4080Kbps(小b)=4080000bps 也可以把4080Kbps(位)看成4080000个&amp;quot;位&amp;quot;或&amp;quot;比特&amp;quot;
-那么4080000位等于多少字节呢,因8个位等于1个字节,所以4080000/8=510000字节
-那么51000字节等于多少KB呢,因1024个字节等于1KB,所以51000/1024=498.04KB(约等于500KB)
-有时候看到 500K字节/秒其实也是500000字节/秒也可以说成是500K每秒..一个意思&lt;/p&gt;
-&lt;h2 id=&#34;其他常用单位&#34;&gt;其他常用单位&lt;/h2&gt;
-&lt;p&gt;Bit 位
-Byte (字节)
-1Byte=8Bits
-1KB=1024Byte
-1KB=1024Byte=8192Bits
-1Byte(字节)=8Bit(位)
-1 kB = 1024 Byte 千
-1 MB = 1024 kB 兆
-1 GB = 1024 MB 吉
-1 TB = 1024 GB 太
-1 PB = 1024 TB 拍
-1 EB = 1024 PB 艾
-1 ZB = 1024 EB 皆
-1 YB = 1024 ZB 佑&lt;/p&gt;
-- https://foezzy.github.io/posts/%E5%9F%BA%E6%9C%AC%E5%8D%95%E4%BD%8D%E8%AE%B0%E5%BD%95-%E6%98%93%E6%B7%B7/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>github加速和终端代理</title>
-        <link>https://foezzy.github.io/posts/github%E5%8A%A0%E9%80%9F%E5%92%8C%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86/</link>
-        <pubDate>Wed, 09 Oct 2019 10:16:24 +0000</pubDate>
-        
-        <guid>https://foezzy.github.io/posts/github%E5%8A%A0%E9%80%9F%E5%92%8C%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86/</guid>
-        <description>Blog https://foezzy.github.io/posts/github%E5%8A%A0%E9%80%9F%E5%92%8C%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86/ -&lt;h3 id=&#34;github加速&#34;&gt;github加速：&lt;/h3&gt;
-&lt;p&gt;解决github在访问和clone时速度太慢的问题&lt;/p&gt;
-&lt;p&gt;下载一个可以设置host的软件，比如mac上可以用iHost&lt;/p&gt;
-&lt;p&gt;然后设置下面的host&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://gitee.com/Mosiki/github/raw/master/github_hosts.txt&#34;&gt;https://gitee.com/Mosiki/github/raw/master/github_hosts.txt&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;设置完刷新dns，就可以加速github的访问和clone了&lt;/p&gt;
-&lt;h3 id=&#34;终端代理&#34;&gt;终端代理：&lt;/h3&gt;
-&lt;p&gt;就是在iterm2里要能访问到外网数据&lt;/p&gt;
-&lt;p&gt;比如在拉取某一个仓库时，如果这个仓库需要fq，就要用到这个东西&lt;/p&gt;
-&lt;p&gt;参考链接：https://zhuanlan.zhihu.com/p/46973701&lt;/p&gt;
-&lt;p&gt;最后是用v2ray-u加zshrc设置alias简写来简化操作，每次要用的时候输入setproxy，不用了就unsetproxy。&lt;/p&gt;
-&lt;p&gt;alias setproxy=&amp;ldquo;export ALL_PROXY=socks5://127.0.0.1:1080&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;alias unsetproxy=&amp;ldquo;unset ALL_PROXY&amp;rdquo;&lt;/p&gt;
-- https://foezzy.github.io/posts/github%E5%8A%A0%E9%80%9F%E5%92%8C%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86/ - </description>
-        </item>
-    
-    
+    <atom:link href="https://foezzy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>clashX使用说明</title>
+      <link>https://foezzy.github.io/posts/clashx%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</link>
+      <pubDate>Thu, 25 Jun 2020 17:11:45 +0000</pubDate>
+      <guid>https://foezzy.github.io/posts/clashx%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</guid>
+      <description>前言 🔗Clash 是一个使用 Go 语言编写，基于规则的跨平台代理软件核心程序。 ClashX 是运行在 macOS 上的一款科学上网工具。 也就是ClashX是套着Clash程序的MacOS平台的科学上网外壳。&#xA;下载 🔗ClashX下载地址： https://github.com/yichengchen/clashX/releases&#xA;选择最新的dmg版本下载，然后安装到MacOS系统&#xA;如果速度太慢，可以选择蓝奏盘下载，蓝奏盘的版本是1.20.4，地址如下： https://wwa.lanzous.com/iPf0pe0zfsh&#xA;安装 🔗下载dmg文件后打开，直接把clash.app拖动到Application文件夹&#xA;使用 🔗打开Clash,如果第一次打开失败可以在进程管理器杀掉ClashX进程再打开一次 在状态栏发现一个小猫的图标，说明启动完成&#xA;1.添加配置，最好使用订阅连接，也可以自己手动添加节点，从机场服务商获取到订阅连接后可以直接添加到Clash，目前Clash支持SS、V2ray节点两种方式&#xA;添加订阅节点方式：单击小猫图标 - 配置 - 托管配置 - 管理 然后添加订阅连接。&#xA;重要说明： 🔗自己手动配置节点还是比较麻烦，推荐还是通过添加配置自动生成 自动生成涉及到订阅的转化，因为机场商提供的不是yaml格式的配置，所以要转换一下，把ss或者v2ray节点转换为ClashX支持的格式&#xA;可以通过：https://acl4ssr.netlify.app/ 这个地址转换，比如复制了Surge3的订阅连接，然后打开上面，把地址添加到ClashX中，客户端选择Clash，点击生成订阅连接，就得到了Clash客户端的订阅连接，添加到ClashX里，就可以看到生成的yaml文件&#xA;注意：该地址需要科学上网，而且打开速度有点慢，如果打开不了需要自己搜索：clash 订阅转换 找到合适的替代品&#xA;2.同时需要注意的是,要勾选上设置为系统代理，这个表示ClashX是否工作，勾上就开始工作 3.节点添加完成后就可以测速是否正常，选择某个节点，就可以愉快地上网了。</description>
+    </item>
+    <item>
+      <title>不用数据线连接adb,需要root权限</title>
+      <link>https://foezzy.github.io/posts/%E4%B8%8D%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BA%BF%E8%BF%9E%E6%8E%A5adb-%E9%9C%80%E8%A6%81root%E6%9D%83%E9%99%90/</link>
+      <pubDate>Fri, 15 May 2020 11:34:05 +0000</pubDate>
+      <guid>https://foezzy.github.io/posts/%E4%B8%8D%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BA%BF%E8%BF%9E%E6%8E%A5adb-%E9%9C%80%E8%A6%81root%E6%9D%83%E9%99%90/</guid>
+      <description>有 2 种方法开启无线调试，其中一种需要 USB 线先连接，这里只介绍另一种不借助 USB 线的&#xA;过程很简单，手机需要有 ROOT 权限&#xA;手机端下载 终端模拟器 或其他终端 手机终端输入如下命令&#xA;su&#xA;setprop service.adb.tcp.port 5555&#xA;stop adbd&#xA;start adbd&#xA;查看本机 ip ifconfig&#xA;在开发者选项中打开 USB 调试（否则连接后会显示未授权）&#xA;电脑端输入&#xA;adb connect Phone_ip:5555 (Phone_ip 为你自己手机 ip) adb devices&#xA;若成功 此时你便能看到自己的设备了 List of devices attached&#xA;192.168.1.59:5555 device&#xA;可能遇到的问题 🔗问题：unable to connect to 192.168.199.248:5555: Connection refused 解决办法 (设置监听端口)&#xA;$ setprop service.adb.tcp.port 5555 //设置监听端口 $ stop adbd $ start adbd </description>
+    </item>
+    <item>
+      <title>Glide用到的代码记录</title>
+      <link>https://foezzy.github.io/posts/glide%E7%94%A8%E5%88%B0%E7%9A%84%E4%BB%A3%E7%A0%81%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Tue, 12 May 2020 10:32:00 +0000</pubDate>
+      <guid>https://foezzy.github.io/posts/glide%E7%94%A8%E5%88%B0%E7%9A%84%E4%BB%A3%E7%A0%81%E8%AE%B0%E5%BD%95/</guid>
+      <description>同步加载 🔗public static void loadImgSync(Context context, String url) { new Thread(new Runnable() { @Override public void run() { FutureTarget&amp;lt;Bitmap&amp;gt; futureBitmap = Glide.with(context) .asBitmap() .load(url) .submit(); try { Bitmap myBitmap = futureBitmap.get(); LogUtils.d(&amp;#34;hei:&amp;#34; + myBitmap.getHeight()); LogUtils.d(&amp;#34;wid:&amp;#34; + myBitmap.getWidth()); } catch (ExecutionException e) { e.printStackTrace(); } catch (InterruptedException e) { e.printStackTrace(); } } }).start(); } 获取宽高 🔗方式1： 🔗Glide.with(getContext().getApplicationContext()) .asBitmap() .load(path) .into(new SimpleTarget&amp;lt;Bitmap&amp;gt;() { @Override public void onResourceReady(Bitmap bitmap, Transition&amp;lt;? super Bitmap&amp;gt; transition) { int w = bitmap.</description>
+    </item>
+    <item>
+      <title>Charles快速配置安卓手机Proxy</title>
+      <link>https://foezzy.github.io/posts/charles%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BAproxy/</link>
+      <pubDate>Mon, 11 May 2020 15:02:58 +0000</pubDate>
+      <guid>https://foezzy.github.io/posts/charles%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BAproxy/</guid>
+      <description>前言 🔗Charles可以实现很多功能，比如抓包，修改返回结果，限速，真是一个神器，但是每次手机配置代理，真是逆天的操作&#xA;1.进入设置 2.进入 WLAN 3.找对应 wifi 连接 4.进入详情 5.找到代理 6.选择手动 7.输入主机名 8.输入端口号 9.最后保存&#xA;所以这篇文章就是为了把这么多步简化的过程，在网上搜索了一些方式，发现有两篇有很好的参考价值 一键设置 Android http proxy 的尝试 Android自动设置HTTP代理 主要方式 🔗方式一：安装一个app,然后用adb shell发送给app，代码进行wifi连接与配置，这种方式在 Api &amp;gt; 23 就会失效，目前大部分都是8.0以上的手机，这种方式就不好用了&#xA;方式二：用adb shell settings put global进行配置，但是这种方式是临时的，不用的话还要手动关一下&#xA;目前做法 🔗参考知乎上那位大神的做法，直接写个sh脚本，再加上zsh的alias，就能比较方便的配置proxy了&#xA;步骤 🔗新建 easy_proxy.sh 的文本，把以下代码贴进去即可&#xA;#!/bin/bash echo &amp;#34;\n---------------- Support ------------------&amp;#34; echo &amp;#34;设置本机IP代理 ./easy_proxy.sh set&amp;#34; echo &amp;#34;设置自定义代理 ./easy_proxy.sh set ****:8888&amp;#34; echo &amp;#34;删除代理 ./easy_proxy.sh clean&amp;#34; echo &amp;#34;--------------------------------------------\n&amp;#34; # 获取当前IP ip=$(ifconfig en0 | grep -E &amp;#39;inet \d{3}.&amp;#39; | awk &amp;#39;{print $2}&amp;#39;) default_proxy=${ip}&amp;#34;:8888&amp;#34; echo &amp;#34;本机IP为: $default_proxy\n&amp;#34; if [ &amp;#34;$1&amp;#34; == &amp;#34;set&amp;#34; ];then if [ -n &amp;#34;$2&amp;#34; ];then echo &amp;#34;设置自定义代理 $2&amp;#34; adb shell settings put global http_proxy $2 else echo &amp;#34;设置本机IP代理 $default_proxy&amp;#34; adb shell settings put global http_proxy $default_proxy fi elif [ &amp;#34;$1&amp;#34; == &amp;#34;clean&amp;#34; ];then echo &amp;#34;清除代理成功&amp;#34; adb shell settings put global http_proxy :0 else echo &amp;#34;!</description>
+    </item>
+    <item>
+      <title>Java碰到的奇怪问题汇总</title>
+      <link>https://foezzy.github.io/posts/java%E7%A2%B0%E5%88%B0%E7%9A%84%E5%A5%87%E6%80%AA%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Thu, 23 Apr 2020 19:12:21 +0000</pubDate>
+      <guid>https://foezzy.github.io/posts/java%E7%A2%B0%E5%88%B0%E7%9A%84%E5%A5%87%E6%80%AA%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
+      <description>1.除法返回0.0 🔗情景展示 🔗　double d = 1/10;&#xA;System.out.println(d);&#xA;返回的结果居然是 0.0 原因分析 🔗　第一步：你会发现用运算结果也可以用 int 类型接收&#xA;在 Java 语言中，整数之间的除法运算，不管你的小数位有多少位，小数是几，统统舍弃，只返回整数位数字！&#xA;第二步：用 double 类型接收为什么也可以？&#xA;因为 double 类型的取值返回要大于 int 类型，所以属于向上类型转换，当然可以用比它大的容器接收。 第三步：为什么整数之间的除法运算，只返回整数位？&#xA;因为在 Java 中，由运算结果，由被运算数的最高数据类型决定，也就是说：整数之间的运算，数据类型都为 int 类型，所以，返回的结果也为 int 类型。 3. 解决方案 🔗　如果我们想要返回完整的运算结果 ，我们就需要将其中一个的数据类型转换成 double 类型或者 float 类型，而不是只改变接收运算结果的数据类型！&#xA;方式一：将被除数转换成 double 类型&#xA;double d4 = 100d/235886; System.out.println(d4);//4.2393359504167265E-4 方式二：将除数转换成 double 类型&#xA;double d5 = 100/235886d; System.out.println(d5);//4.2393359504167265E-4 方式三：将被除数转换成 float 类型&#xA;float f4 = 2358861f/235886; System.out.println(f4);//10.000004 方式四：将除数转换成 float 类型</description>
+    </item>
+    <item>
+      <title>Java正则之坑</title>
+      <link>https://foezzy.github.io/posts/java%E6%AD%A3%E5%88%99%E4%B9%8B%E5%9D%91/</link>
+      <pubDate>Fri, 06 Mar 2020 19:45:20 +0000</pubDate>
+      <guid>https://foezzy.github.io/posts/java%E6%AD%A3%E5%88%99%E4%B9%8B%E5%9D%91/</guid>
+      <description>首先说明需求&#xA;有个xxx.api.abc.com需要替换成config.abc.com&#xA;这个是可以用正则做到的，如下&#xA;String oldUrl = &amp;#34;xxx.api.abc.com&amp;#34;; String newUrl = oldUrl.replaceAll(&amp;#34;.*\.api&amp;#34;, &amp;#34;config&amp;#34;); //报错 查了下，发现正则要用两个斜杆\\，所以改成&#xA;String newUrl = oldUrl.replaceAll(&amp;#34;.*\\.api&amp;#34;, &amp;#34;config&amp;#34;) //OK //或者下面的更简单 String newUrl = oldUrl.replaceAll(&amp;#34;.*api&amp;#34;, &amp;#34;config&amp;#34;) //OK 之所以有坑，是因为java里的\有一定含义，反斜杠 \ 在 Java 中表示转义字符&#xA;这里例举两个特别重要的用法：&#xA;在匹配 . 或 { 或 [ 或 ( 或 ? 或 $ 或 ^ 或 * 这些特殊字符时，需要在前面加上 \\，比如匹配 . 时，Java 中要写为 \\.，但对于正则表达式来说就是 \. 在匹配 \ 时，Java 中要写为 \\\\，但对于正则表达式来说就是 \\ 其他类似\d在Java里要写成\\d Java 中的正则表达式字符串有两层含义，首先 Java 字符串转义出符合正则表达式语法的字符串，然后再由转义后的正则表达式进行模式匹配</description>
+    </item>
+    <item>
+      <title>gitignore总结</title>
+      <link>https://foezzy.github.io/posts/gitignore%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Thu, 16 Jan 2020 11:45:22 +0000</pubDate>
+      <guid>https://foezzy.github.io/posts/gitignore%E6%80%BB%E7%BB%93/</guid>
+      <description>##gitignore生效操作&#xA;###场景一：某个文件已经被追踪 比如Android项目下.idea文件夹，里面已经有某些文件提交过，要忽略.idea文件夹下所有文件 先在.gitignore文件夹添加/.idea，表示忽略.idea下所有文件&#xA;接着删除缓存&#xA;git rm -r --cached ./.idea 这个命令把之前跟踪的.idea目录下所有文件的缓存给删了，然后需要push到远程项目地址就OK了，本地.idea下有修改都不会被检测到了&#xA;说明：所有文件指的是多级目录，git update-index &amp;ndash;assume-unchanged 这个命令也能清除追踪，但是只能指定文件，所以不用这个命令&#xA;场景二：未提交项目，要忽略的文件夹下的文件还未被追踪 🔗直接在.gitignore文件夹添加/.idea，表示忽略.idea下所有文件，然后直接push就可以了</description>
+    </item>
+    <item>
+      <title>Android音频焦点归纳整理</title>
+      <link>https://foezzy.github.io/posts/android%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9%E5%BD%92%E7%BA%B3/</link>
+      <pubDate>Sat, 14 Dec 2019 15:26:42 +0000</pubDate>
+      <guid>https://foezzy.github.io/posts/android%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9%E5%BD%92%E7%BA%B3/</guid>
+      <description>前言 🔗音频焦点是 API 8 中引入的一个概念，它主要作用于用户在同一个时刻只能关注单个音频流，或者用来降低背景声音，使用户只关注要主要的声音。在不同Android版本中，对应的代码也有区别。主要三个节点为&#xA;2.2 (API level 8) 5.0 (API level 21) 8.0 (API level 26) 2.2-5.0 🔗申请焦点：&#xA;private void requestAudioFocus() { audioManager = (AudioManager) getContext().getSystemService(Context.AUDIO_SERVICE); if (audioManager != null) { audioManager.requestAudioFocus(mAudioFocusListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT); } } requestAudioFocus中，有3个参数，先说参数2，参数2是多种声音类型，如下：&#xA;AudioManager.STREAM_VOICE_CALL&#xA;AudioManager.STREAM_SYSTEM&#xA;AudioManager.STREAM_RING&#xA;AudioManager.STREAM_MUSIC&#xA;AudioManager.STREAM_ALARM&#xA;AudioManager.STREAM_NOTIFICATION&#xA;AudioManager.STREAM_BLUETOOTH_SCO&#xA;AudioManager.STREAM_SYSTEM_ENFORCED&#xA;AudioManager.STREAM_DTMF&#xA;AudioManager.STREAM_TTS&#xA;然后是参数3，也是有多个声明类型，如下：&#xA;AudioManager.AUDIOFOCUS_GAIN：想要长期占有焦点，失去焦点者stop播放和释放 AudioManager.AUDIOFOCUS_GAIN_TRANSIENT：想要短暂占有焦点，失去焦点者pause播放 AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK：想要短暂占有焦点，失去焦点者可以继续播放但是音量需要调低 AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_EXCLUSIVE：想要短暂占有焦点，但希望失去焦点者不要有声音播放 最后是参数1，参数1要自己写个回调：&#xA;private AudioManager.OnAudioFocusChangeListener mAudioFocusListener = new AudioManager.OnAudioFocusChangeListener() { @Override public void onAudioFocusChange(int focusChange) { switch (focusChange) { case AudioManager.</description>
+    </item>
+    <item>
+      <title>基本单位记录-易混</title>
+      <link>https://foezzy.github.io/posts/%E5%9F%BA%E6%9C%AC%E5%8D%95%E4%BD%8D%E8%AE%B0%E5%BD%95-%E6%98%93%E6%B7%B7/</link>
+      <pubDate>Wed, 27 Nov 2019 17:51:20 +0000</pubDate>
+      <guid>https://foezzy.github.io/posts/%E5%9F%BA%E6%9C%AC%E5%8D%95%E4%BD%8D%E8%AE%B0%E5%BD%95-%E6%98%93%E6%B7%B7/</guid>
+      <description>数据传输、存储的单位及换算 🔗bit与byte的区别 🔗bit意为“位”或“比特”，是计算机运算的基础； byte意为“字节”，是计算机文件大小的基本计算单位；&#xA;1 byte = 8 bit 宽带运营商说的下载速度、路由器的标明速度Mbps其实就是Mbit per second，也就是兆比特每秒 下载速度要换成存储大小单位，就要除以8，也就是 1Mbit/s 的文件传输速度 可以转化为 1MByte/s 的文件下载速度 说到usb2.0标准接口传输速率。许多人都将“480mbps”误解为480兆/秒。其实，这是错误的，事实上“480mbps”应为“480兆比特/秒”或“480兆位/秒”，它等于“60兆字节/秒”，大家看到差距了吧。 这要从bit和byte说起：bit和byte同译为&amp;quot;比特&amp;quot;，都是数据量度单位，bit=“比特”或“位”。 byte=字节即1byte=8bits,两者换算是1：8的关系。 mbps=mega bits per second(兆位/秒)是速率单位，所以正确的说法应该是说usb2.0的传输速度是480兆位/秒,即480mbps。 mb=mega bytes(兆比、兆字节)是量单位，1mb/s（兆字节/秒）=8mbps（兆位/秒）。 我们所说的硬盘容量是40gb、80gb、100gb，这里的b指是的byte也就是“字节”。 1 kb = 1024 bytes =2^10 bytes 1 mb = 1024 kb = 2^20 bytes 1 gb = 1024 mb = 2^30 bytes 比如以前所谓的56kb的modem换算过来56kbps除以8也就是7kbyte，所以真正从网上下载文件存在硬盘上的速度也就是每秒7kbyte，网卡，ADSL等都应该以此来计算！ 也就是说与传输速度有关的b一般指的是bit。 与容量有关的b一般指的是byte。 最后再说一点: usb2.0 480mbps=60mb/s的传输速率还只是理论值，它还要受到系统环境的制约（cpu、硬盘和内存等），其实际读、取写入硬盘的速度约在11～16mb/s。但这也比usb1.1的12mbps(1.5m/s)快了近10倍。 比如网速4080Kbps的真实速度换算是:(要注意Kbps还是KBps) K=1000(或1024) 4080Kbps(小b)=4080000bps 也可以把4080Kbps(位)看成4080000个&amp;quot;位&amp;quot;或&amp;quot;比特&amp;quot; 那么4080000位等于多少字节呢,因8个位等于1个字节,所以4080000/8=510000字节 那么51000字节等于多少KB呢,因1024个字节等于1KB,所以51000/1024=498.04KB(约等于500KB) 有时候看到 500K字节/秒其实也是500000字节/秒也可以说成是500K每秒..一个意思&#xA;其他常用单位 🔗Bit 位 Byte (字节) 1Byte=8Bits 1KB=1024Byte 1KB=1024Byte=8192Bits 1Byte(字节)=8Bit(位) 1 kB = 1024 Byte 千 1 MB = 1024 kB 兆 1 GB = 1024 MB 吉 1 TB = 1024 GB 太 1 PB = 1024 TB 拍 1 EB = 1024 PB 艾 1 ZB = 1024 EB 皆 1 YB = 1024 ZB 佑</description>
+    </item>
+    <item>
+      <title>github加速和终端代理</title>
+      <link>https://foezzy.github.io/posts/github%E5%8A%A0%E9%80%9F%E5%92%8C%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86/</link>
+      <pubDate>Wed, 09 Oct 2019 10:16:24 +0000</pubDate>
+      <guid>https://foezzy.github.io/posts/github%E5%8A%A0%E9%80%9F%E5%92%8C%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86/</guid>
+      <description>github加速： 🔗解决github在访问和clone时速度太慢的问题&#xA;下载一个可以设置host的软件，比如mac上可以用iHost&#xA;然后设置下面的host&#xA;https://gitee.com/Mosiki/github/raw/master/github_hosts.txt&#xA;设置完刷新dns，就可以加速github的访问和clone了&#xA;终端代理： 🔗就是在iterm2里要能访问到外网数据&#xA;比如在拉取某一个仓库时，如果这个仓库需要fq，就要用到这个东西&#xA;参考链接：https://zhuanlan.zhihu.com/p/46973701&#xA;最后是用v2ray-u加zshrc设置alias简写来简化操作，每次要用的时候输入setproxy，不用了就unsetproxy。&#xA;alias setproxy=&amp;ldquo;export ALL_PROXY=socks5://127.0.0.1:1080&amp;rdquo;&#xA;alias unsetproxy=&amp;ldquo;unset ALL_PROXY&amp;rdquo;</description>
+    </item>
+    <item>
+      <title>一个简单的最近热点Android阅读器</title>
+      <link>https://foezzy.github.io/posts/%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%9C%80%E8%BF%91%E7%83%AD%E7%82%B9android%E9%98%85%E8%AF%BB%E5%99%A8/</link>
+      <pubDate>Mon, 30 Sep 2019 14:01:02 +0000</pubDate>
+      <guid>https://foezzy.github.io/posts/%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%9C%80%E8%BF%91%E7%83%AD%E7%82%B9android%E9%98%85%E8%AF%BB%E5%99%A8/</guid>
+      <description>V2EX上有人做了个热榜api，看着不错&#xA;https://www.v2ex.com/t/578957&#xA;有人拿来做了个网页&#xA;https://www.telami.cn/hot/&#xA;发现这个网页好是好，但是一下子数据太多，看不过来，于是看了下接口，发现可以自己随便定&#xA;在手机上我用的via浏览器，发现打开知乎或者一些会自动跳转的有scheme的网页，会出现找不到协议的错误，网页就没法看了&#xA;基于以上两点，自己加工了一下，做了个安卓端可以自己定义内容的查看器，其实就是内嵌个webview，截图如下&#xA;源码可以前往 https://github.com/foezzy/EasyNewsForAndroid&#xA;直接下载apk体验地址 https://www.lanzous.com/i6i60yj&#xA;使用说明：&#xA;1.点下面检查接口，在弹出框可以看到每个频道对应了一个id，记住这个id&#xA;2.点击add，然后名字随便自己定，id就填那个id，然后ok就添加了一个频道&#xA;3.点item就可以获取最新的新闻了&#xA;4.长按item会出现关闭按钮，可以自由添加删除&#xA;5.有时网络慢时，无任何反应，接口没返回时没做什么处理&#xA;6.觉得不错请给个star谢谢&#xA;其中webview最开始自己写了一个，发现一直有些奇怪的问题，后来找了一个开源的过来用，感谢这个作者&#xA;https://github.com/hylinux1024/BridgeWebView</description>
+    </item>
+    <item>
+      <title>.9图片设置无效问题</title>
+      <link>https://foezzy.github.io/posts/9%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE%E6%97%A0%E6%95%88%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Mon, 30 Sep 2019 13:43:08 +0000</pubDate>
+      <guid>https://foezzy.github.io/posts/9%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE%E6%97%A0%E6%95%88%E9%97%AE%E9%A2%98/</guid>
+      <description>最近在加.9图片的时候，发现用了一直没生效，最后搜到是说要放到xhdpi目录下，很奇葩的问题，特此记录一下&#xA;原文链接: https://blog.csdn.net/rrr9805/article/details/79165273&#xA;Android Studio中使用.9图片 🔗 Android Studio项目中对于.9图片的规范更加的严格,.9图片不能放到mipmap目录中,否则编译会报错,只能放到drawable目录中. Android Studio集成了draw9patch工具,所以如果你更新了最新的SDK的话,在tools目录下是找不到draw9patch.bat这个脚本执行文件的 使用Android Studio自带的draw9patch工具的步骤: 生成完.9图片后,切记要拷贝到drawable文件夹中 设置好.9图片不生效 🔗这里不赘述如何画一张.9图片,方法自行百度.可以参考 http://blog.csdn.net/lastwarmth/article/details/49991445&#xA;重点来了,当你绘制好.9图片,然后应用到View上的时候,怎么都不生效的话那么 \1. 确保.9图片在drawable目录下 \2. 确保你的mipmap目录下,没有和.9图片重名(此处的重名是指,排除文件后缀的重名,例如: back.png和back.9.png属于同名)的文件,如果有,删除掉mipmap目录下的同名文件 \3. 上面操作都做了还不生效的话,那么就在你的res目录下,新建一个drawable-xdpi的目录,把.9图片移动到这个目录中(楼主就是这么解决的),然后就可以完结撒花了;</description>
+    </item>
+    <item>
+      <title>Android依赖相问题</title>
+      <link>https://foezzy.github.io/posts/android%E4%BE%9D%E8%B5%96%E7%9B%B8%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Thu, 29 Aug 2019 10:20:29 +0000</pubDate>
+      <guid>https://foezzy.github.io/posts/android%E4%BE%9D%E8%B5%96%E7%9B%B8%E9%97%AE%E9%A2%98/</guid>
+      <description>Android依赖第三方库引起一个报错 🔗uses-sdk:minSdkVersion 1 cannot be smaller than version 14 declared in library [com.android.support:appcompat-v7:28.0.0] 谷歌查了一下说是依赖库版本比主模块版本低，要提高依赖库的版本， 但是找了发现没有低，主要是没有找到是哪个依赖库，最终是在报错信息里发现了那个库没有minSdkVersion字段，在该模块的build.gradle文件下的defaultConfig加上对应的minSdkVersion即可，要不低于主模块的版本</description>
+    </item>
+    <item>
+      <title>Android Studio 使用相关</title>
+      <link>https://foezzy.github.io/posts/android-studio-%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3/</link>
+      <pubDate>Mon, 12 Aug 2019 13:52:14 +0000</pubDate>
+      <guid>https://foezzy.github.io/posts/android-studio-%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3/</guid>
+      <description>记录Android Studio使用过程中，配置的快捷键，插件相关的东西（Mac平台） 🔗 快捷键 🔗在Finder快速打开某个文件或文件夹 🔗本来这个东西是挺简单的，结果找了有一会，特地记录下&#xA;直接右键有个选项 - Reveal in Finder&#xA;但是每次去找都是在一堆选择中找它，特别不方便&#xA;想找个什么插件也没有找到能直接打开的，后来突然想到可以设置快捷键&#xA;这个Reveal in Finder默认是没有快捷键的~ 有点奇葩&#xA;解决方法：&#xA;在Preferences - Keymap - 搜索 Reveal in Finder - 双击它 - Add Keyboard Shortcut&#xA;设置成上面这样，就是直接按F键就行了，然后Apply - 确定，以后在Finder里打开直接双击F键就行了，非常方便&#xA;勘误：&#xA;这种做法不太好，在开始使用后发现按F没反应，就是说不能直接用某个按键去操作，要加上功能键才行&#xA;目前改为 control + , 来实现打开文件夹目录的功能&#xA;自动保存 🔗在输入一行或者多行代码后按 command + s 自动格式化代码 🔗Android Studio默认是自动保存代码的，不需要按 command + s 按钮，但是每次代码都不能自动格式化，需要录制一个宏（相当于自动操作），然后给这个宏设置快捷键，然后就能实现自动格式化了 在mac上默认格式化的快捷键是option+command+l，所以本质是把这个快捷键映射成 command + s 而已，因为更符合操作习惯，具体操作见下面链接： 录制宏&#xA;其中设置代码风格的方式有默认的，也可以自己引入xml文件，参考链接： Android Studio 配置 Code Style&#xA;这样设置之后，在保存的时候，就默认已经格式化完成了&#xA;后文： 使用过程还发现xml文件也会格式化，但是还自动重新排序了，这样会导致布局文件异常，解决方案看下面链接： 格式化 xml 文件时代码错乱问题</description>
+    </item>
+    <item>
+      <title>七夕</title>
+      <link>https://foezzy.github.io/posts/%E4%B8%83%E5%A4%95/</link>
+      <pubDate>Wed, 07 Aug 2019 17:23:09 +0000</pubDate>
+      <guid>https://foezzy.github.io/posts/%E4%B8%83%E5%A4%95/</guid>
+      <description>今天七夕，突然想起N年前某个骚年骚里骚气的操作，截个图做个纪念&#xA;怀念QQ空间写说说，记日记的日记，好像过去好久了~&#xA;晚上世界之窗走起~</description>
+    </item>
+    <item>
+      <title>Android编码规范</title>
+      <link>https://foezzy.github.io/posts/android%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</link>
+      <pubDate>Fri, 14 Jun 2019 10:07:09 +0000</pubDate>
+      <guid>https://foezzy.github.io/posts/android%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</guid>
+      <description>Android编码规范 🔗命名规范 🔗 包命名及分包结构规范&#xA;包名沿用 Java 编程的通用风格 类命名规范&#xA;基本的类名沿用 Java 编程的通用风格（采用完整的英文描述符，所有单词第一个字母大写，采用驼峰式命名）&#xA;android 特有的类，如 Activity、Fragment、Service、Provider、Adapter、View 等，则以对应的类型单词为后缀&#xA;接口命名规范&#xA;类命名以大写字母 I 为前缀，如果是监听接口以 Listener 结尾&#xA;在自定义的监听接口里，监听事件以 on 开头, 如 onOpenMenu(), onRefresh()&amp;hellip;&#xA;方法命名规范&#xA;方法命名沿用 Java 编程的通用风格（采用完整的英文描述符，函数名字以代表函数功能的英文单词组成，除首单词小写，其他单词首字母大写；一般的，函数第一个单词要求用动词） 变量命名规范&#xA;boolean 成员要以 is 开头，或以 has 开头。如： isFirst, hasMore&#xA;控件命名规范： 原则是 “view 的缩写 + 功能描述”。 比如一个 TextView 缩写为 tv(驼峰命名抽取出来的缩写)， 这个 TextView 是显示用户名字的， 所以就可以命名为: tvUserName。&#xA;常量的名字全部大写，单词之间用’_’分开&#xA;控件命名规范： 原则是 “view 的缩写 + 功能描述”。 比如一个 TextView 缩写为 tv(驼峰命名抽取出来的缩写)， 这个 TextView 是显示用户名字的， 所以就可以命名为: tvUserName</description>
+    </item>
+    <item>
+      <title>Glide遇到的问题</title>
+      <link>https://foezzy.github.io/posts/glide%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sat, 13 Apr 2019 17:18:28 +0000</pubDate>
+      <guid>https://foezzy.github.io/posts/glide%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <description>在RecyclerView中notifyDataSetChangedd的时候闪烁 🔗这个问题是在item中某一项需要刷新的时候出现的，本来imageview不用刷新，结果还是刷新了，并且闪烁了一下，解决方法参考：链接&#xA;解决方法一：&#xA;RequestOptions options = new RequestOptions().transform(new GlideCircleTransform()).placeholder(view.getDrawable()); Glide.with(Utils.getContext()).load(url).apply(options).into(view); 解决方法二：&#xA;RequestOptions options = new RequestOptions().transform(new GlideCircleTransform()).dontAnimate().fitCenter(); Glide.with(Utils.getContext()).load(url).apply(options).into(view); </description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://foezzy.github.io/posts/android%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%B5%84%E6%BA%90%E7%9A%84%E6%A0%BC%E5%BC%8F%E5%8C%96/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foezzy.github.io/posts/android%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%B5%84%E6%BA%90%E7%9A%84%E6%A0%BC%E5%BC%8F%E5%8C%96/</guid>
+      <description>为什么要写这一篇随笔呢？最近做项目的过程中，遇到很多页面在要显示文本时，有一部分是固定的文本，有一部分是动态获取的，并且格式各式各样。一开始采取比较笨的办法，把他拆分成一个个文本控件，然后对不同的控件采用不同的样式。这样做效率&#xA;很低，并且文本之间的对齐是个很大的问题，后来到网上寻求帮助，找到一些有关Android字符串和字符串资源格式化的文章，在此做一个总结。&#xA;一.字符串格式化&#xA;Java的String类给我们提供了两个重载的格式化字符串的方法，可以通过占位符的方式，向固定字符串中传入参数。他们分别是：&#xA;format(String format, Object&amp;hellip; args) 新字符串使用本地语言环境，制定字符串格式和参数生成格式化的新字符串。&#xA;format(Locale locale, String format, Object&amp;hellip; args) 使用指定的语言环境，制定字符串格式和参数生成格式化的字符串。&#xA;例如：&#xA;字符串占位符%s ：System.out.println(&amp;ldquo;Hi,%s&amp;rdquo;, &amp;ldquo;王力&amp;rdquo;) 输出 Hi,王力&#xA;十进制整形占位符%d ：System.out.println(&amp;ldquo;我今年%d岁&amp;rdquo;, 20) 输出 我今年20岁&#xA;浮点型占位符%f：System.out.println(&amp;ldquo;荔枝的价格是 %f 元&amp;rdquo;, 3.5) 输出 荔枝的价格是3.5元&#xA;还有其他字符型，整形，日期格式等等格式化方法，再次就不一一举例了。&#xA;二.带HTML标签的字符串格式化&#xA;当我们需要对一段文字的部分文字进行字体颜色，字形，字体风格设置时，我们可以使用HTML标签，然后在输出的时候，通过Html.from方法解析为html字符串。&#xA;例如：&#xA;String str = &amp;#34;后面的文字是加粗的红色文字：&amp;#34; + &amp;#34;&amp;lt;font color=&amp;#39;#ff0000&amp;#39;&amp;gt;&amp;lt;b&amp;gt;加粗红色文字&amp;lt;/b&amp;gt;&amp;lt;/font&amp;gt;&amp;#34;; CharseQuence cq=Html.from(str); textView.setText(cq); 第一种情形和第二种情形可以结合起来使用：&#xA;String str = &amp;#34;后面的文字是加粗的红色文字：&amp;#34; + &amp;#34;&amp;lt;font color=&amp;#39;#ff0000&amp;#39;&amp;gt;&amp;lt;b&amp;gt;%s&amp;lt;/b&amp;gt;&amp;lt;/font&amp;gt;&amp;#34;; String str2=String.format(str,&amp;#34;红色加粗文字&amp;#34;); 输出与上面一样.&#xA;三.字符串资源的格式化&#xA;我们在字符串资源中同样可以通过占位符来给字符串传入参数，不过与第一种方式相比，占位符的格式略有不同&#xA;我们使用%[index]$[type]格式进行标记，index标记替换资源中第index个资源对应的位置，type则标示所要替换的资源的类型（s表示资源为字符串格式）&#xA;例如：&#xA;&amp;lt;resources&amp;gt; &amp;lt;string name=&amp;ldquo;hello&amp;rdquo;&amp;gt;Hello World, my name is %1$s!&amp;lt;/string&amp;gt; &amp;lt;string name=&amp;ldquo;app_name&amp;rdquo;&amp;gt;MyString&amp;lt;/string&amp;gt; &amp;lt;/resources&amp;gt;</description>
+    </item>
+    <item>
+      <title>Activity源头探究</title>
+      <link>https://foezzy.github.io/posts/activity%E6%BA%90%E5%A4%B4%E6%8E%A2%E7%A9%B6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://foezzy.github.io/posts/activity%E6%BA%90%E5%A4%B4%E6%8E%A2%E7%A9%B6/</guid>
+      <description>疑问 🔗 开发中通过 startActivity() 创建 Activity 对象到底被谁持有引用了？ 新启动的 Activity 对象在其生命周期中理应是一直被持有引用，不然系统 gc 的时候就会被回收掉，那么其中的引用关系是怎样的呢？ Activity 对象的创建 🔗Activity 的创建会回调到 ActivityThread 中的 handleLaunchActivity() 方法：&#xA;frameworks/base/core/java/android/app/ActivityThread.java:&#xA;@Override public Activity handleLaunchActivity(ActivityClientRecord r, PendingTransactionActions pendingActions, Intent customIntent){ ··· final Activity a = performLaunchActivity(r, customIntent); ··· return a; } 接着在 performLaunchActivity() 方法里找到了 Acitivity 实例的创建：&#xA;private Activity performLaunchActivity(ActivityClientRecord r, Intent customIntent) { ··· ContextImpl appContext = createBaseContextForActivity(r); Activity activity = null; try { // 注解1：通过 ClassLoader 以及目标 Activity 的类名来创建新的 Activity 实例 java.</description>
+    </item>
   </channel>
-</rss> 
+</rss>

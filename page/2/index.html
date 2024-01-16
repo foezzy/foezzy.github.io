@@ -1,434 +1,329 @@
 <!DOCTYPE html>
-<html><head>
-	<meta name="generator" content="Hugo 0.120.4">
-<title>Blog</title>
+<html lang="en-us">
+  <head>
+    <title>Blog</title>
 
-
-
-  
-
-
-<meta charset="utf-8">
-<meta name="X-UA-Compatible" content="IE=edge">
-<meta name="google-site-verification" content="">
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-<meta content="telephone=no" name="format-detection">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
 <meta name="description" content="">
-<meta name="renderer" content="webkit">
-<meta name="theme-color" content="#ffffff">
+<meta name="generator" content="Hugo 0.121.2">
+
+
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
 
 
 
 
 
 
-
-
-
-
-
-<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
-
-
+  
+    <link href="/index.xml" rel="alternate" type="application/rss+xml" title="Blog" />
+    <link href="/index.xml" rel="feed" type="application/rss+xml" title="Blog" />
   
 
 
 
+  </head>
 
-
-
-<link rel="stylesheet" href="https://foezzy.github.io/scss/journal.min.c5d92f380bf10f6849c7ac487c7df2b22c081e0851e5339224f1ae29210b20d2.css" integrity="sha256-xdkvOAvxD2hJx6xIfH3ysiwIHghR5TOSJPGuKSELINI=" media="screen">
-
-
-
-<link rel="stylesheet" href="https://foezzy.github.io/scss/dark-mode.min.9f8d8c2df9285089d141edd4a50cb7506c7948e6ab79a29968dced1bd0ab7d22.css" integrity="sha256-n42MLfkoUInRQe3UpQy3UGx5SOareaKZaNztG9CrfSI=" media="screen">
-
-
-<script src="/vendor/js/loadCSS.js"></script>
-<script>
-  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</head>
-<body>
-    	<div id="app"><div id="sideContainer" class="side-container">
-    
-    <a class="a-block nav-head active" href="https://foezzy.github.io/">
-    
-        <div class="nav-title">
-            Blog
-        </div>
-        
-    </a>
-
-    <div class="nav-link-list">
-        
-        
-    </div>
-
-    
-
-    <div class="nav-footer">
-        
-Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
-<br>
-Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
-<br>
-
-&copy;
+  <body>
+    <nav class="navigation">
 	
-	2020 Blog
+	<a href="/posts">Archive</a>
+	<a href="/tags">Tags</a>
+	<a href="/about">About</a>
+
 	
 
-    </div>
-    
-</div><div id="extraContainer" class="extra-container">
-    
-    
-    <div class="pagination">
-        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
-            <i class="material-icons pagination-action-icon">
-                keyboard_arrow_up
-            </i>
-        </a>
-        
-        <a type="button" class="pagination-action" id="darkModeToggleButton">
-            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
-                dark_mode
-            </span>
-        </a>
-        
-        
-        
-            <div class="pagination-indicator">
-                <span style="text-align: center">
-                    2<br><div style="display: inline-block; transform: rotate(-28deg)">-</div><br>2
-                </span>
-            </div>
-            
-            
-            <a class="pagination-action" href="/">
-                <i class="material-icons pagination-action-icon">
-                    chevron_left
-                </i>
-            </a>
-            
-
-            
-        
-        
-    </div>
-</div>
-<div class="single-column-drawer-container" id="drawer"
-     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
-    <div class="drawer-content">
-        <div class="drawer-menu">
-            
-            
-            
-            
-        </div>
-    </div>
-</div>
-<transition name="fade">
-    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
-</transition>
-<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
-    <div id="navBackground" class="nav-background"></div>
-    <div class="container container-narrow nav-content">
-        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
-            <i class="material-icons">
-                menu
-            </i>
-        </button>
-        <a id="navTitle" class="navbar-brand" href="https://foezzy.github.io/">
-            Blog
-        </a>
-        
-        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
-            <i class="material-icons" id="darkModeToggleIcon2">
-                dark_mode
-            </i>
-        </button>
-        
-    </div>
+	
 </nav>
-<div class="single-column-header-container" id="pageHead"
-     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
-    <a href="https://foezzy.github.io/">
-        <div class="single-column-header-title">Blog</div>
-        
 
-    </a>
+
+    <main class="main">
+      
+<header class="profile">
+    
+        <img class="avatar" alt="avatar" src="/images/avatar.png" />
+    
+
+    <h1>Blog</h1>
+    
+    
+</header>
+
+<div id="list-page">
+    
+    
+    
+        
+        
+        <section class="item">
+          <div>
+            <h1 class="title"><a href='/posts/%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%9C%80%E8%BF%91%E7%83%AD%E7%82%B9android%E9%98%85%E8%AF%BB%E5%99%A8/'>一个简单的最近热点Android阅读器</a></h1>
+            <div class ="date">
+                <time datetime="2019-09-30 14:01:02 &#43;0000 UTC">Sep 30, 2019</time>  
+            </div>
+          </div>
+
+          
+              <div class="summary">V2EX上有人做了个热榜api，看着不错
+https://www.v2ex.com/t/578957
+有人拿来做了个网页
+https://www.telami.cn/hot/
+发现这个网页好是好，但是一下子数据太多，看不过来，于是看了下接口，发现可以自己随便定
+在手机上我用的via浏览器，发现打开知乎或者一些会自动跳转的有scheme的网页，会出现找不到协议的错误，网页就没法看了
+基于以上两点，自己加工了一下，做了个安卓端可以自己定义内容的查看器，其实就是内嵌个webview，截图如下
+源码可以前往 https://github.com/foezzy/EasyNewsForAndroid
+直接下载apk体验地址 https://www.lanzous.com/i6i60yj
+使用说明：
+1.点下面检查接口，在弹出框可以看到每个频道对应了一个id，记住这个id
+2.点击add，然后名字随便自己定，id就填那个id，然后ok就添加了一个频道
+3.点item就可以获取最新的新闻了
+4.长按item会出现关闭按钮，可以自由添加删除
+5.有时网络慢时，无任何反应，接口没返回时没做什么处理
+6.觉得不错请给个star谢谢
+其中webview最开始自己写了一个，发现一直有些奇怪的问题，后来找了一个开源的过来用，感谢这个作者
+https://github.com/hylinux1024/BridgeWebView</div>
+          
+
+        </section>
+    
+        
+        
+        <section class="item">
+          <div>
+            <h1 class="title"><a href='/posts/9%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE%E6%97%A0%E6%95%88%E9%97%AE%E9%A2%98/'>.9图片设置无效问题</a></h1>
+            <div class ="date">
+                <time datetime="2019-09-30 13:43:08 &#43;0000 UTC">Sep 30, 2019</time>  
+            </div>
+          </div>
+
+          
+              <div class="summary">最近在加.9图片的时候，发现用了一直没生效，最后搜到是说要放到xhdpi目录下，很奇葩的问题，特此记录一下
+原文链接: https://blog.csdn.net/rrr9805/article/details/79165273
+Android Studio中使用.9图片 🔗 Android Studio项目中对于.9图片的规范更加的严格,.9图片不能放到mipmap目录中,否则编译会报错,只能放到drawable目录中. Android Studio集成了draw9patch工具,所以如果你更新了最新的SDK的话,在tools目录下是找不到draw9patch.bat这个脚本执行文件的 使用Android Studio自带的draw9patch工具的步骤: 生成完.9图片后,切记要拷贝到drawable文件夹中 设置好.9图片不生效 🔗这里不赘述如何画一张.9图片,方法自行百度.可以参考 http://blog.csdn.net/lastwarmth/article/details/49991445
+重点来了,当你绘制好.9图片,然后应用到View上的时候,怎么都不生效的话那么 \1. 确保.9图片在drawable目录下 \2. 确保你的mipmap目录下,没有和.9图片重名(此处的重名是指,排除文件后缀的重名,例如: back.png和back.9.png属于同名)的文件,如果有,删除掉mipmap目录下的同名文件 \3. 上面操作都做了还不生效的话,那么就在你的res目录下,新建一个drawable-xdpi的目录,把.9图片移动到这个目录中(楼主就是这么解决的),然后就可以完结撒花了;</div>
+          
+
+        </section>
+    
+        
+        
+        <section class="item">
+          <div>
+            <h1 class="title"><a href='/posts/android%E4%BE%9D%E8%B5%96%E7%9B%B8%E9%97%AE%E9%A2%98/'>Android依赖相问题</a></h1>
+            <div class ="date">
+                <time datetime="2019-08-29 10:20:29 &#43;0000 UTC">Aug 29, 2019</time>  
+            </div>
+          </div>
+
+          
+              <div class="summary">Android依赖第三方库引起一个报错 🔗uses-sdk:minSdkVersion 1 cannot be smaller than version 14 declared in library [com.android.support:appcompat-v7:28.0.0] 谷歌查了一下说是依赖库版本比主模块版本低，要提高依赖库的版本， 但是找了发现没有低，主要是没有找到是哪个依赖库，最终是在报错信息里发现了那个库没有minSdkVersion字段，在该模块的build.gradle文件下的defaultConfig加上对应的minSdkVersion即可，要不低于主模块的版本</div>
+          
+
+        </section>
+    
+        
+        
+        <section class="item">
+          <div>
+            <h1 class="title"><a href='/posts/android-studio-%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3/'>Android Studio 使用相关</a></h1>
+            <div class ="date">
+                <time datetime="2019-08-12 13:52:14 &#43;0000 UTC">Aug 12, 2019</time>  
+            </div>
+          </div>
+
+          
+              <div class="summary">记录Android Studio使用过程中，配置的快捷键，插件相关的东西（Mac平台） 🔗 快捷键 🔗在Finder快速打开某个文件或文件夹 🔗本来这个东西是挺简单的，结果找了有一会，特地记录下
+直接右键有个选项 - Reveal in Finder
+但是每次去找都是在一堆选择中找它，特别不方便
+想找个什么插件也没有找到能直接打开的，后来突然想到可以设置快捷键
+这个Reveal in Finder默认是没有快捷键的~ 有点奇葩
+解决方法：
+在Preferences - Keymap - 搜索 Reveal in Finder - 双击它 - Add Keyboard Shortcut
+设置成上面这样，就是直接按F键就行了，然后Apply - 确定，以后在Finder里打开直接双击F键就行了，非常方便
+勘误：
+这种做法不太好，在开始使用后发现按F没反应，就是说不能直接用某个按键去操作，要加上功能键才行
+目前改为 control &#43; , 来实现打开文件夹目录的功能
+自动保存 🔗在输入一行或者多行代码后按 command &#43; s 自动格式化代码 🔗Android Studio默认是自动保存代码的，不需要按 command &#43; s 按钮，但是每次代码都不能自动格式化，需要录制一个宏（相当于自动操作），然后给这个宏设置快捷键，然后就能实现自动格式化了 在mac上默认格式化的快捷键是option&#43;command&#43;l，所以本质是把这个快捷键映射成 command &#43; s 而已，因为更符合操作习惯，具体操作见下面链接： 录制宏
+其中设置代码风格的方式有默认的，也可以自己引入xml文件，参考链接： Android Studio 配置 Code Style
+这样设置之后，在保存的时候，就默认已经格式化完成了
+后文： 使用过程还发现xml文件也会格式化，但是还自动重新排序了，这样会导致布局文件异常，解决方案看下面链接： 格式化 xml 文件时代码错乱问题</div>
+          
+
+        </section>
+    
+        
+        
+        <section class="item">
+          <div>
+            <h1 class="title"><a href='/posts/%E4%B8%83%E5%A4%95/'>七夕</a></h1>
+            <div class ="date">
+                <time datetime="2019-08-07 17:23:09 &#43;0000 UTC">Aug 7, 2019</time>  
+            </div>
+          </div>
+
+          
+              <div class="summary">今天七夕，突然想起N年前某个骚年骚里骚气的操作，截个图做个纪念
+怀念QQ空间写说说，记日记的日记，好像过去好久了~
+晚上世界之窗走起~</div>
+          
+
+        </section>
+    
+        
+        
+        <section class="item">
+          <div>
+            <h1 class="title"><a href='/posts/android%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/'>Android编码规范</a></h1>
+            <div class ="date">
+                <time datetime="2019-06-14 10:07:09 &#43;0000 UTC">Jun 14, 2019</time>  
+            </div>
+          </div>
+
+          
+              <div class="summary">Android编码规范 🔗命名规范 🔗 包命名及分包结构规范
+包名沿用 Java 编程的通用风格 类命名规范
+基本的类名沿用 Java 编程的通用风格（采用完整的英文描述符，所有单词第一个字母大写，采用驼峰式命名）
+android 特有的类，如 Activity、Fragment、Service、Provider、Adapter、View 等，则以对应的类型单词为后缀
+接口命名规范
+类命名以大写字母 I 为前缀，如果是监听接口以 Listener 结尾
+在自定义的监听接口里，监听事件以 on 开头, 如 onOpenMenu(), onRefresh()…
+方法命名规范
+方法命名沿用 Java 编程的通用风格（采用完整的英文描述符，函数名字以代表函数功能的英文单词组成，除首单词小写，其他单词首字母大写；一般的，函数第一个单词要求用动词） 变量命名规范
+boolean 成员要以 is 开头，或以 has 开头。如： isFirst, hasMore
+控件命名规范： 原则是 “view 的缩写 &#43; 功能描述”。 比如一个 TextView 缩写为 tv(驼峰命名抽取出来的缩写)， 这个 TextView 是显示用户名字的， 所以就可以命名为: tvUserName。
+常量的名字全部大写，单词之间用’_’分开
+控件命名规范： 原则是 “view 的缩写 &#43; 功能描述”。 比如一个 TextView 缩写为 tv(驼峰命名抽取出来的缩写)， 这个 TextView 是显示用户名字的， 所以就可以命名为: tvUserName</div>
+          
+
+        </section>
+    
+        
+        
+        <section class="item">
+          <div>
+            <h1 class="title"><a href='/posts/glide%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/'>Glide遇到的问题</a></h1>
+            <div class ="date">
+                <time datetime="2019-04-13 17:18:28 &#43;0000 UTC">Apr 13, 2019</time>  
+            </div>
+          </div>
+
+          
+              <div class="summary">在RecyclerView中notifyDataSetChangedd的时候闪烁 🔗这个问题是在item中某一项需要刷新的时候出现的，本来imageview不用刷新，结果还是刷新了，并且闪烁了一下，解决方法参考：链接
+解决方法一：
+RequestOptions options = new RequestOptions().transform(new GlideCircleTransform()).placeholder(view.getDrawable()); Glide.with(Utils.getContext()).load(url).apply(options).into(view); 解决方法二：
+RequestOptions options = new RequestOptions().transform(new GlideCircleTransform()).dontAnimate().fitCenter(); Glide.with(Utils.getContext()).load(url).apply(options).into(view); </div>
+          
+
+        </section>
+    
+        
+        
+        <section class="item">
+          <div>
+            <h1 class="title"><a href='/posts/android%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%B5%84%E6%BA%90%E7%9A%84%E6%A0%BC%E5%BC%8F%E5%8C%96/'></a></h1>
+            <div class ="date">
+                <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">Jan 1, 0001</time>  
+            </div>
+          </div>
+
+          
+              <div class="summary">为什么要写这一篇随笔呢？最近做项目的过程中，遇到很多页面在要显示文本时，有一部分是固定的文本，有一部分是动态获取的，并且格式各式各样。一开始采取比较笨的办法，把他拆分成一个个文本控件，然后对不同的控件采用不同的样式。这样做效率
+很低，并且文本之间的对齐是个很大的问题，后来到网上寻求帮助，找到一些有关Android字符串和字符串资源格式化的文章，在此做一个总结。
+一.字符串格式化
+Java的String类给我们提供了两个重载的格式化字符串的方法，可以通过占位符的方式，向固定字符串中传入参数。他们分别是：
+format(String format, Object… args) 新字符串使用本地语言环境，制定字符串格式和参数生成格式化的新字符串。
+format(Locale locale, String format, Object… args) 使用指定的语言环境，制定字符串格式和参数生成格式化的字符串。
+例如：
+字符串占位符%s ：System.out.println(“Hi,%s”, “王力”) 输出 Hi,王力
+十进制整形占位符%d ：System.out.println(“我今年%d岁”, 20) 输出 我今年20岁
+浮点型占位符%f：System.out.println(“荔枝的价格是 %f 元”, 3.5) 输出 荔枝的价格是3.5元
+还有其他字符型，整形，日期格式等等格式化方法，再次就不一一举例了。
+二.带HTML标签的字符串格式化
+当我们需要对一段文字的部分文字进行字体颜色，字形，字体风格设置时，我们可以使用HTML标签，然后在输出的时候，通过Html.from方法解析为html字符串。
+例如：
+String str = &#34;后面的文字是加粗的红色文字：&#34; &#43; &#34;&lt;font color=&#39;#ff0000&#39;&gt;&lt;b&gt;加粗红色文字&lt;/b&gt;&lt;/font&gt;&#34;; CharseQuence cq=Html.from(str); textView.setText(cq); 第一种情形和第二种情形可以结合起来使用：
+String str = &#34;后面的文字是加粗的红色文字：&#34; &#43; &#34;&lt;font color=&#39;#ff0000&#39;&gt;&lt;b&gt;%s&lt;/b&gt;&lt;/font&gt;&#34;; String str2=String.format(str,&#34;红色加粗文字&#34;); 输出与上面一样.
+三.字符串资源的格式化
+我们在字符串资源中同样可以通过占位符来给字符串传入参数，不过与第一种方式相比，占位符的格式略有不同
+我们使用%[index]$[type]格式进行标记，index标记替换资源中第index个资源对应的位置，type则标示所要替换的资源的类型（s表示资源为字符串格式）
+例如：
+&lt;resources&gt; &lt;string name=“hello”&gt;Hello World, my name is %1$s!&lt;/string&gt; &lt;string name=“app_name”&gt;MyString&lt;/string&gt; &lt;/resources&gt;</div>
+          
+
+        </section>
+    
+        
+        
+        <section class="item">
+          <div>
+            <h1 class="title"><a href='/posts/activity%E6%BA%90%E5%A4%B4%E6%8E%A2%E7%A9%B6/'>Activity源头探究</a></h1>
+            <div class ="date">
+                <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">Jan 1, 0001</time>  
+            </div>
+          </div>
+
+          
+              <div class="summary">疑问 🔗 开发中通过 startActivity() 创建 Activity 对象到底被谁持有引用了？ 新启动的 Activity 对象在其生命周期中理应是一直被持有引用，不然系统 gc 的时候就会被回收掉，那么其中的引用关系是怎样的呢？ Activity 对象的创建 🔗Activity 的创建会回调到 ActivityThread 中的 handleLaunchActivity() 方法：
+frameworks/base/core/java/android/app/ActivityThread.java:
+@Override public Activity handleLaunchActivity(ActivityClientRecord r, PendingTransactionActions pendingActions, Intent customIntent){ ··· final Activity a = performLaunchActivity(r, customIntent); ··· return a; } 接着在 performLaunchActivity() 方法里找到了 Acitivity 实例的创建：
+private Activity performLaunchActivity(ActivityClientRecord r, Intent customIntent) { ··· ContextImpl appContext = createBaseContextForActivity(r); Activity activity = null; try { // 注解1：通过 ClassLoader 以及目标 Activity 的类名来创建新的 Activity 实例 java.</div>
+          
+
+        </section>
+    
+
+    
+        <div class="pagination">
+          
+              <span class="prev">
+                  <a href="/">
+                      <span class="arrow">←</span> Newer posts
+                  </a>
+            </span>
+          
+          
+          
+        </div>
+    
+
+
 </div>
 
-            <div id="content">
-                <div id="streamContainer" class="stream-container">
+    </main>
+    
+    <footer id="footer">
+    
 
-
-    <div class="post-list-container post-list-container-no-background">
-        
-            
-            <a href="https://foezzy.github.io/posts/%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%9C%80%E8%BF%91%E7%83%AD%E7%82%B9android%E9%98%85%E8%AF%BB%E5%99%A8/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                一个简单的最近热点Android阅读器
-                            </div>
-                            <div class="post-item-summary">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    2019-09-30
-    &emsp;
+    <div class="copyright">
     
+       © Copyright 
+       2024 
+       <span class="split">
+        <svg fill="#bbbbbb" width="15" height="15" version="1.1" id="heart-15" xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 15 15">
+  <path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75&#xA;&#x9;C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z"/>
+</svg>
+       </span>
+       
     
-    
-    &emsp;
-    
-</div>
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://foezzy.github.io/posts/9%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE%E6%97%A0%E6%95%88%E9%97%AE%E9%A2%98/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                .9图片设置无效问题
-                            </div>
-                            <div class="post-item-summary">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    2019-09-30
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://foezzy.github.io/posts/android%E4%BE%9D%E8%B5%96%E7%9B%B8%E9%97%AE%E9%A2%98/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                Android依赖相问题
-                            </div>
-                            <div class="post-item-summary">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    2019-08-29
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://foezzy.github.io/posts/android-studio-%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                Android Studio 使用相关
-                            </div>
-                            <div class="post-item-summary">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    2019-08-12
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://foezzy.github.io/posts/%E4%B8%83%E5%A4%95/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                七夕
-                            </div>
-                            <div class="post-item-summary">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    2019-08-07
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://foezzy.github.io/posts/android%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                Android编码规范
-                            </div>
-                            <div class="post-item-summary">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    2019-06-14
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://foezzy.github.io/posts/glide%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                Glide遇到的问题
-                            </div>
-                            <div class="post-item-summary">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    2019-04-13
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-            
-        
-            
-        
-        </a>
     </div>
 
-
-                    </div>
-            </div>
-
-<div class="pagination">
     
-    <a class="pagination-action" href="/" style="opacity:1">
+      <div class="powerby">
+        Powered by <a href='http://www.gohugo.io/'>Hugo</a> Theme By <a href='https://github.com/nodejh/hugo-theme-mini'>nodejh</a>
+      </div>
     
-        <i class="material-icons pagination-action-icon">
-            chevron_left
-        </i>
-    </a>
-
-        <div class="pagination-indicator">
-            <span>2/2</span>
-        </div>
-
-        
-            <a class="pagination-action" style="opacity:0">
-        
-                <i class="material-icons pagination-action-icon">
-                    chevron_right
-                </i>
-            </a>
-</div>
+</footer>
 
 
-<div id="single-column-footer">
-Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
-<br>
-Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
-<br>
 
-&copy;
-	
-	2020 Blog
-	
-</div>
-            </div>
-    
-    <script src="/js/journal.js"></script>
-    </body>
+  </body>
 </html>

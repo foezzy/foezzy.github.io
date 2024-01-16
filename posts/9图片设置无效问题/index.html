@@ -1,57 +1,26 @@
 <!DOCTYPE html>
-<html><head>
-<title>.9图片设置无效问题</title>
+<html lang="en-us">
+  <head>
+    <title>.9图片设置无效问题 | Blog</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="最近在加.9图片的时候，发现用了一直没生效，最后搜到是说要放到xhdpi目录下，很奇葩的问题，特此记录一下
+原文链接: https://blog.csdn.net/rrr9805/article/details/79165273
+Android Studio中使用.9图片 🔗 Android Studio项目中对于.9图片的规范更加的严格,.9图片不能放到mipmap目录中,否则编译会报错,只能放到drawable目录中. Android Studio集成了draw9patch工具,所以如果你更新了最新的SDK的话,在tools目录下是找不到draw9patch.bat这个脚本执行文件的 使用Android Studio自带的draw9patch工具的步骤: 生成完.9图片后,切记要拷贝到drawable文件夹中 设置好.9图片不生效 🔗这里不赘述如何画一张.9图片,方法自行百度.可以参考 http://blog.csdn.net/lastwarmth/article/details/49991445
+重点来了,当你绘制好.9图片,然后应用到View上的时候,怎么都不生效的话那么 \1. 确保.9图片在drawable目录下 \2. 确保你的mipmap目录下,没有和.9图片重名(此处的重名是指,排除文件后缀的重名,例如: back.png和back.9.png属于同名)的文件,如果有,删除掉mipmap目录下的同名文件 \3. 上面操作都做了还不生效的话,那么就在你的res目录下,新建一个drawable-xdpi的目录,把.9图片移动到这个目录中(楼主就是这么解决的),然后就可以完结撒花了;">
+<meta name="generator" content="Hugo 0.121.2">
+
+
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
 
 
 
-
-<meta charset="utf-8">
-<meta name="X-UA-Compatible" content="IE=edge">
-<meta name="google-site-verification" content="">
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-<meta content="telephone=no" name="format-detection">
-<meta name="description" content="">
-<meta name="renderer" content="webkit">
-<meta name="theme-color" content="#ffffff">
-
-
-
-
-
-
-
-
-
-
-
-<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
-
-
-  
-
-
-
-
-
-
-<link rel="stylesheet" href="https://foezzy.github.io/scss/journal.min.c5d92f380bf10f6849c7ac487c7df2b22c081e0851e5339224f1ae29210b20d2.css" integrity="sha256-xdkvOAvxD2hJx6xIfH3ysiwIHghR5TOSJPGuKSELINI=" media="screen">
-
-
-
-<link rel="stylesheet" href="https://foezzy.github.io/scss/dark-mode.min.9f8d8c2df9285089d141edd4a50cb7506c7948e6ab79a29968dced1bd0ab7d22.css" integrity="sha256-n42MLfkoUInRQe3UpQy3UGx5SOareaKZaNztG9CrfSI=" media="screen">
-
-
-<script src="/vendor/js/loadCSS.js"></script>
-<script>
-  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
-</script>
-
-
-
-
-
-
-  <script src="/js/toc.js"></script>
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
 
 
 
@@ -60,332 +29,109 @@
 
 
 
+  </head>
 
-
-
-
-
-
-</head>
-<body>
-    	<div id="app"><div id="sideContainer" class="side-container">
-    
-    <a class="a-block nav-head false" href="https://foezzy.github.io/">
-    
-        <div class="nav-title">
-            Blog
-        </div>
-        
-    </a>
-
-    <div class="nav-link-list">
-        
-        
-    </div>
-
-    
-
-    <div class="nav-footer">
-        
-Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
-<br>
-Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
-<br>
-
-&copy;
+  <body>
+    <nav class="navigation">
 	
-	2020 Blog
+		<a href="/"> <span class="arrow">←</span>Home</a>
+	
+	<a href="/posts">Archive</a>
+	<a href="/tags">Tags</a>
+	<a href="/about">About</a>
+
 	
 
-    </div>
-    
-</div><div id="extraContainer" class="extra-container">
-    
-    
-    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
-
-
-	<div class="toc-content">
 	
-		
-		
-		
-		<center>- CATALOG -</center>
-		
-		
-		<ul>
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#android-studio%e4%b8%ad%e4%bd%bf%e7%94%a89%e5%9b%be%e7%89%87" onclick="onNavClick(`#android-studio中使用9图片-nav`)" id="android-studio中使用9图片-nav">
-									Android Studio中使用.9图片
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e8%ae%be%e7%bd%ae%e5%a5%bd9%e5%9b%be%e7%89%87%e4%b8%8d%e7%94%9f%e6%95%88" onclick="onNavClick(`#设置好9图片不生效-nav`)" id="设置好9图片不生效-nav">
-									设置好.9图片不生效
-								</a>
-							</li>
-						
-						
-					
-				
-			
-		</ul>
-	</div>
-
-</div>
-    
-    <div class="pagination">
-        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
-            <i class="material-icons pagination-action-icon">
-                keyboard_arrow_up
-            </i>
-        </a>
-        
-        <a type="button" class="pagination-action" id="darkModeToggleButton">
-            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
-                dark_mode
-            </span>
-        </a>
-        
-        
-    </div>
-</div>
-<div class="single-column-drawer-container" id="drawer"
-     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
-    <div class="drawer-content">
-        <div class="drawer-menu">
-            
-            
-            
-            
-            <div class="toc">
-
-
-	<div class="toc-content">
-	
-		
-		
-		
-		<center>- CATALOG -</center>
-		
-		
-		<ul>
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#android-studio%e4%b8%ad%e4%bd%bf%e7%94%a89%e5%9b%be%e7%89%87" onclick="onNavClick(`#android-studio中使用9图片-nav`)" id="android-studio中使用9图片-nav">
-									Android Studio中使用.9图片
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e8%ae%be%e7%bd%ae%e5%a5%bd9%e5%9b%be%e7%89%87%e4%b8%8d%e7%94%9f%e6%95%88" onclick="onNavClick(`#设置好9图片不生效-nav`)" id="设置好9图片不生效-nav">
-									设置好.9图片不生效
-								</a>
-							</li>
-						
-						
-					
-				
-			
-		</ul>
-	</div>
-
-</div>
-            
-        </div>
-    </div>
-</div>
-<transition name="fade">
-    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
-</transition>
-<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
-    <div id="navBackground" class="nav-background"></div>
-    <div class="container container-narrow nav-content">
-        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
-            <i class="material-icons">
-                menu
-            </i>
-        </button>
-        <a id="navTitle" class="navbar-brand" href="https://foezzy.github.io/">
-            Blog
-        </a>
-        
-        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
-            <i class="material-icons" id="darkModeToggleIcon2">
-                dark_mode
-            </i>
-        </button>
-        
-    </div>
 </nav>
-<div class="single-column-header-container" id="pageHead"
-     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
-    <a href="https://foezzy.github.io/">
-        <div class="single-column-header-title">Blog</div>
-        
 
-    </a>
-</div>
 
-            <div id="content">
-                <div id="streamContainer" class="stream-container">
+    <main class="main">
+      
 
-    <div class="post-list-container post-list-container-shadow">
-        <div class="post">
-            
-            
-            
+<section id="single">
+    <h1 class="title">.9图片设置无效问题</h1>
 
-            <div class="post-head-wrapper-text-only"
-                
-            >
-                <div class="post-title">
-                    .9图片设置无效问题
-                    
-                    <div class="post-meta">
-                        
-                        <time itemprop="datePublished">
-                            2019-09-30 13:43
-                        </time>
-                        
+    <div class="tip">
+        <time datetime="2019-09-30 13:43:08 &#43;0000 UTC">Sep 30, 2019</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          24 words
+        </span>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          1 minute read
+        </span>
+    </div>
 
-                        
+    
+    
 
-                        
-                        
-                    </div>
-                </div>
-            </div>
-            
-            <div class="post-body-wrapper">
-                
-                <div class="post-body" v-pre>
-                
-                    <p>最近在加.9图片的时候，发现用了一直没生效，最后搜到是说要放到xhdpi目录下，很奇葩的问题，特此记录一下</p>
-<p>原文链接: <a href="https://blog.csdn.net/rrr9805/article/details/79165273">https://blog.csdn.net/rrr9805/article/details/79165273</a></p>
-<h2 id="android-studio中使用9图片">Android Studio中使用.9图片</h2>
-<ol>
+
+    <div class="content">
+      <p>最近在加.9图片的时候，发现用了一直没生效，最后搜到是说要放到xhdpi目录下，很奇葩的问题，特此记录一下</p>
+<p>原文链接: <a href="https://blog.csdn.net/rrr9805/article/details/79165273" target="_blank" rel="noopener">https://blog.csdn.net/rrr9805/article/details/79165273</a></p>
+<h2 id="android-studio中使用9图片">Android Studio中使用.9图片 <a href="#android-studio%e4%b8%ad%e4%bd%bf%e7%94%a89%e5%9b%be%e7%89%87" class="anchor">🔗</a></h2><ol>
 <li>Android Studio项目中对于.9图片的规范更加的严格,.9图片不能放到mipmap目录中,否则编译会报错,只能放到drawable目录中.</li>
 <li>Android Studio集成了draw9patch工具,所以如果你更新了最新的SDK的话,在tools目录下是找不到draw9patch.bat这个脚本执行文件的
 <strong>使用Android Studio自带的draw9patch工具的步骤:</strong>
-<img src="https://img-blog.csdn.net/20180125181023506?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcnJyOTgwNQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述">
+<p class="markdown-image">
+  <img src="https://img-blog.csdn.net/20180125181023506?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcnJyOTgwNQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"  />
+</p>
 生成完.9图片后,切记要<strong>拷贝到drawable文件夹中</strong></li>
 </ol>
-<h2 id="设置好9图片不生效">设置好.9图片不生效</h2>
-<p>这里不赘述如何画一张.9图片,方法自行百度.可以参考
-<a href="http://blog.csdn.net/lastwarmth/article/details/49991445">http://blog.csdn.net/lastwarmth/article/details/49991445</a></p>
+<h2 id="设置好9图片不生效">设置好.9图片不生效 <a href="#%e8%ae%be%e7%bd%ae%e5%a5%bd9%e5%9b%be%e7%89%87%e4%b8%8d%e7%94%9f%e6%95%88" class="anchor">🔗</a></h2><p>这里不赘述如何画一张.9图片,方法自行百度.可以参考
+<a href="http://blog.csdn.net/lastwarmth/article/details/49991445" target="_blank" rel="noopener">http://blog.csdn.net/lastwarmth/article/details/49991445</a></p>
 <p><strong>重点来了,当你绘制好.9图片,然后应用到View上的时候,怎么都不生效的话那么</strong>
 \1. 确保.9图片在drawable目录下
 \2. 确保你的mipmap目录下,没有和.9图片重名(<strong>此处的重名是指,排除文件后缀的重名,例如: back.png和back.9.png属于同名</strong>)的文件,如果有,删除掉mipmap目录下的同名文件
 \3. 上面操作都做了还不生效的话,那么就在你的<strong>res目录下,新建一个drawable-xdpi的目录</strong>,把.9图片移动到这个目录中(楼主就是这么解决的),然后就可以完结撒花了;</p>
 
-                    
-                    <HR width="100%" id="EOF">
-		    <p style="color:#777;">Last modified on 2019-09-30</p>
-                    
-                </div>
-            </div>
-            
-            
-            <nav class="post-pagination">
-
-                
-                <a class="newer-posts" href="https://foezzy.github.io/posts/%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%9C%80%E8%BF%91%E7%83%AD%E7%82%B9android%E9%98%85%E8%AF%BB%E5%99%A8/">
-			Next<br>一个简单的最近热点Android阅读器
-                </a>
-                
-                
-                
-                <a class="older-posts" href="https://foezzy.github.io/posts/android%E4%BE%9D%E8%B5%96%E7%9B%B8%E9%97%AE%E9%A2%98/">
-			Previous<br>Android依赖相问题
-                </a>
-                
-            </nav>
-            <div class="post-comment-wrapper">
-                
-
-
-
-
-
-
-
-
-
-
-            </div>
-        </div>
     </div>
 
-
-                    </div>
-            </div><div id="single-column-footer">
-Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
-<br>
-Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
-<br>
-
-&copy;
-	
-	2020 Blog
-	
-</div>
-            </div>
     
-    <script src="/js/journal.js"></script>
-    </body>
+        <div class="tags">
+            
+                <a href="https://foezzy.github.io/tags/bug%E5%A4%84%E7%90%86">bug处理</a>
+            
+        </div>
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+
+    <div class="copyright">
+    
+       © Copyright 
+       2024 
+       <span class="split">
+        <svg fill="#bbbbbb" width="15" height="15" version="1.1" id="heart-15" xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 15 15">
+  <path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75&#xA;&#x9;C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z"/>
+</svg>
+       </span>
+       
+    
+    </div>
+
+    
+      <div class="powerby">
+        Powered by <a href='http://www.gohugo.io/'>Hugo</a> Theme By <a href='https://github.com/nodejh/hugo-theme-mini'>nodejh</a>
+      </div>
+    
+</footer>
+
+
+
+  </body>
 </html>

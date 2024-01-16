@@ -6,150 +6,126 @@
     <description>Recent content in Tags on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Jun 2020 17:11:45 +0000</lastBuildDate><atom:link href="https://foezzy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Jun 2020 17:11:45 +0000</lastBuildDate>
+    <atom:link href="https://foezzy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>clashX</title>
       <link>https://foezzy.github.io/tags/clashx/</link>
       <pubDate>Thu, 25 Jun 2020 17:11:45 +0000</pubDate>
-      
       <guid>https://foezzy.github.io/tags/clashx/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>adb连接</title>
       <link>https://foezzy.github.io/tags/adb%E8%BF%9E%E6%8E%A5/</link>
       <pubDate>Fri, 15 May 2020 11:34:05 +0000</pubDate>
-      
       <guid>https://foezzy.github.io/tags/adb%E8%BF%9E%E6%8E%A5/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Glide</title>
       <link>https://foezzy.github.io/tags/glide/</link>
       <pubDate>Tue, 12 May 2020 10:32:00 +0000</pubDate>
-      
       <guid>https://foezzy.github.io/tags/glide/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>工具</title>
       <link>https://foezzy.github.io/tags/%E5%B7%A5%E5%85%B7/</link>
       <pubDate>Mon, 11 May 2020 15:02:58 +0000</pubDate>
-      
       <guid>https://foezzy.github.io/tags/%E5%B7%A5%E5%85%B7/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Java</title>
       <link>https://foezzy.github.io/tags/java/</link>
       <pubDate>Thu, 23 Apr 2020 19:12:21 +0000</pubDate>
-      
       <guid>https://foezzy.github.io/tags/java/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Java使用正则替换时遇到的坑</title>
       <link>https://foezzy.github.io/tags/java%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E6%9B%BF%E6%8D%A2%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</link>
       <pubDate>Fri, 06 Mar 2020 19:45:20 +0000</pubDate>
-      
       <guid>https://foezzy.github.io/tags/java%E4%BD%BF%E7%94%A8%E6%AD%A3%E5%88%99%E6%9B%BF%E6%8D%A2%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>gitignore</title>
       <link>https://foezzy.github.io/tags/gitignore/</link>
       <pubDate>Thu, 16 Jan 2020 11:45:22 +0000</pubDate>
-      
       <guid>https://foezzy.github.io/tags/gitignore/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Android</title>
       <link>https://foezzy.github.io/tags/android/</link>
       <pubDate>Sat, 14 Dec 2019 15:26:42 +0000</pubDate>
-      
       <guid>https://foezzy.github.io/tags/android/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>音频焦点</title>
       <link>https://foezzy.github.io/tags/%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9/</link>
       <pubDate>Sat, 14 Dec 2019 15:26:42 +0000</pubDate>
-      
       <guid>https://foezzy.github.io/tags/%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>单位</title>
       <link>https://foezzy.github.io/tags/%E5%8D%95%E4%BD%8D/</link>
       <pubDate>Wed, 27 Nov 2019 17:51:20 +0000</pubDate>
-      
       <guid>https://foezzy.github.io/tags/%E5%8D%95%E4%BD%8D/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>加速 代理</title>
-      <link>https://foezzy.github.io/tags/%E5%8A%A0%E9%80%9F-%E4%BB%A3%E7%90%86/</link>
+      <title>代理</title>
+      <link>https://foezzy.github.io/tags/%E4%BB%A3%E7%90%86/</link>
       <pubDate>Wed, 09 Oct 2019 10:16:24 +0000</pubDate>
-      
-      <guid>https://foezzy.github.io/tags/%E5%8A%A0%E9%80%9F-%E4%BB%A3%E7%90%86/</guid>
+      <guid>https://foezzy.github.io/tags/%E4%BB%A3%E7%90%86/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>加速</title>
+      <link>https://foezzy.github.io/tags/%E5%8A%A0%E9%80%9F/</link>
+      <pubDate>Wed, 09 Oct 2019 10:16:24 +0000</pubDate>
+      <guid>https://foezzy.github.io/tags/%E5%8A%A0%E9%80%9F/</guid>
+      <description></description>
+    </item>
     <item>
       <title>bug处理</title>
       <link>https://foezzy.github.io/tags/bug%E5%A4%84%E7%90%86/</link>
       <pubDate>Mon, 30 Sep 2019 13:43:08 +0000</pubDate>
-      
       <guid>https://foezzy.github.io/tags/bug%E5%A4%84%E7%90%86/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Android Studio</title>
       <link>https://foezzy.github.io/tags/android-studio/</link>
       <pubDate>Mon, 12 Aug 2019 13:52:14 +0000</pubDate>
-      
       <guid>https://foezzy.github.io/tags/android-studio/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>回忆</title>
       <link>https://foezzy.github.io/tags/%E5%9B%9E%E5%BF%86/</link>
       <pubDate>Wed, 07 Aug 2019 17:23:09 +0000</pubDate>
-      
       <guid>https://foezzy.github.io/tags/%E5%9B%9E%E5%BF%86/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>规范</title>
       <link>https://foezzy.github.io/tags/%E8%A7%84%E8%8C%83/</link>
       <pubDate>Fri, 14 Jun 2019 10:07:09 +0000</pubDate>
-      
       <guid>https://foezzy.github.io/tags/%E8%A7%84%E8%8C%83/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Activity源头</title>
       <link>https://foezzy.github.io/tags/activity%E6%BA%90%E5%A4%B4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://foezzy.github.io/tags/activity%E6%BA%90%E5%A4%B4/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

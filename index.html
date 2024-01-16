@@ -1,515 +1,350 @@
 <!DOCTYPE html>
-<html><head>
-	<meta name="generator" content="Hugo 0.120.4">
-<title>Blog</title>
+<html lang="en-us">
+  <head>
+    <title>Blog</title>
 
-
-
-  
-
-
-<meta charset="utf-8">
-<meta name="X-UA-Compatible" content="IE=edge">
-<meta name="google-site-verification" content="">
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-<meta content="telephone=no" name="format-detection">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
 <meta name="description" content="">
-<meta name="renderer" content="webkit">
-<meta name="theme-color" content="#ffffff">
+<meta name="generator" content="Hugo 0.121.2">
+
+
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
 
 
 
 
 
 
-
-
-
-
-
-<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
-
-
+  
+    <link href="/index.xml" rel="alternate" type="application/rss+xml" title="Blog" />
+    <link href="/index.xml" rel="feed" type="application/rss+xml" title="Blog" />
   
 
 
 
+  </head>
 
-
-
-<link rel="stylesheet" href="https://foezzy.github.io/scss/journal.min.c5d92f380bf10f6849c7ac487c7df2b22c081e0851e5339224f1ae29210b20d2.css" integrity="sha256-xdkvOAvxD2hJx6xIfH3ysiwIHghR5TOSJPGuKSELINI=" media="screen">
-
-
-
-<link rel="stylesheet" href="https://foezzy.github.io/scss/dark-mode.min.9f8d8c2df9285089d141edd4a50cb7506c7948e6ab79a29968dced1bd0ab7d22.css" integrity="sha256-n42MLfkoUInRQe3UpQy3UGx5SOareaKZaNztG9CrfSI=" media="screen">
-
-
-<script src="/vendor/js/loadCSS.js"></script>
-<script>
-  loadCSS("https://fonts.googleapis.com/css?family=Fira+Mono|Material+Icons");
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</head>
-<body>
-    	<div id="app"><div id="sideContainer" class="side-container">
-    
-    <a class="a-block nav-head active" href="https://foezzy.github.io/">
-    
-        <div class="nav-title">
-            Blog
-        </div>
-        
-    </a>
-
-    <div class="nav-link-list">
-        
-        
-    </div>
-
-    
-
-    <div class="nav-footer">
-        
-Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
-<br>
-Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
-<br>
-
-&copy;
+  <body>
+    <nav class="navigation">
 	
-	2020 Blog
+	<a href="/posts">Archive</a>
+	<a href="/tags">Tags</a>
+	<a href="/about">About</a>
+
 	
 
-    </div>
-    
-</div><div id="extraContainer" class="extra-container">
-    
-    
-    <div class="pagination">
-        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
-            <i class="material-icons pagination-action-icon">
-                keyboard_arrow_up
-            </i>
-        </a>
-        
-        <a type="button" class="pagination-action" id="darkModeToggleButton">
-            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
-                dark_mode
-            </span>
-        </a>
-        
-        
-        
-            <div class="pagination-indicator">
-                <span style="text-align: center">
-                    1<br><div style="display: inline-block; transform: rotate(-28deg)">-</div><br>2
-                </span>
-            </div>
-            
-            
-
-            
-            <a class="pagination-action" href="/page/2/">
-                <i class="material-icons pagination-action-icon">
-                    chevron_right
-                </i>
-            </a>
-            
-        
-        
-    </div>
-</div>
-<div class="single-column-drawer-container" id="drawer"
-     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
-    <div class="drawer-content">
-        <div class="drawer-menu">
-            
-            
-            
-            
-        </div>
-    </div>
-</div>
-<transition name="fade">
-    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
-</transition>
-<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
-    <div id="navBackground" class="nav-background"></div>
-    <div class="container container-narrow nav-content">
-        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
-            <i class="material-icons">
-                menu
-            </i>
-        </button>
-        <a id="navTitle" class="navbar-brand" href="https://foezzy.github.io/">
-            Blog
-        </a>
-        
-        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
-            <i class="material-icons" id="darkModeToggleIcon2">
-                dark_mode
-            </i>
-        </button>
-        
-    </div>
+	
 </nav>
-<div class="single-column-header-container" id="pageHead"
-     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
-    <a href="https://foezzy.github.io/">
-        <div class="single-column-header-title">Blog</div>
-        
 
-    </a>
+
+    <main class="main">
+      
+<header class="profile">
+    
+        <img class="avatar" alt="avatar" src="/images/avatar.png" />
+    
+
+    <h1>Blog</h1>
+    
+    
+</header>
+
+<div id="list-page">
+    
+    
+    
+        
+        
+        <section class="item">
+          <div>
+            <h1 class="title"><a href='/posts/clashx%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/'>clashX使用说明</a></h1>
+            <div class ="date">
+                <time datetime="2020-06-25 17:11:45 &#43;0000 UTC">Jun 25, 2020</time>  
+            </div>
+          </div>
+
+          
+              <div class="summary">前言 🔗Clash 是一个使用 Go 语言编写，基于规则的跨平台代理软件核心程序。 ClashX 是运行在 macOS 上的一款科学上网工具。 也就是ClashX是套着Clash程序的MacOS平台的科学上网外壳。
+下载 🔗ClashX下载地址： https://github.com/yichengchen/clashX/releases
+选择最新的dmg版本下载，然后安装到MacOS系统
+如果速度太慢，可以选择蓝奏盘下载，蓝奏盘的版本是1.20.4，地址如下： https://wwa.lanzous.com/iPf0pe0zfsh
+安装 🔗下载dmg文件后打开，直接把clash.app拖动到Application文件夹
+使用 🔗打开Clash,如果第一次打开失败可以在进程管理器杀掉ClashX进程再打开一次 在状态栏发现一个小猫的图标，说明启动完成
+1.添加配置，最好使用订阅连接，也可以自己手动添加节点，从机场服务商获取到订阅连接后可以直接添加到Clash，目前Clash支持SS、V2ray节点两种方式
+添加订阅节点方式：单击小猫图标 - 配置 - 托管配置 - 管理 然后添加订阅连接。
+重要说明： 🔗自己手动配置节点还是比较麻烦，推荐还是通过添加配置自动生成 自动生成涉及到订阅的转化，因为机场商提供的不是yaml格式的配置，所以要转换一下，把ss或者v2ray节点转换为ClashX支持的格式
+可以通过：https://acl4ssr.netlify.app/ 这个地址转换，比如复制了Surge3的订阅连接，然后打开上面，把地址添加到ClashX中，客户端选择Clash，点击生成订阅连接，就得到了Clash客户端的订阅连接，添加到ClashX里，就可以看到生成的yaml文件
+注意：该地址需要科学上网，而且打开速度有点慢，如果打开不了需要自己搜索：clash 订阅转换 找到合适的替代品
+2.同时需要注意的是,要勾选上设置为系统代理，这个表示ClashX是否工作，勾上就开始工作 3.节点添加完成后就可以测速是否正常，选择某个节点，就可以愉快地上网了。</div>
+          
+
+        </section>
+    
+        
+        
+        <section class="item">
+          <div>
+            <h1 class="title"><a href='/posts/%E4%B8%8D%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BA%BF%E8%BF%9E%E6%8E%A5adb-%E9%9C%80%E8%A6%81root%E6%9D%83%E9%99%90/'>不用数据线连接adb,需要root权限</a></h1>
+            <div class ="date">
+                <time datetime="2020-05-15 11:34:05 &#43;0000 UTC">May 15, 2020</time>  
+            </div>
+          </div>
+
+          
+              <div class="summary">有 2 种方法开启无线调试，其中一种需要 USB 线先连接，这里只介绍另一种不借助 USB 线的
+过程很简单，手机需要有 ROOT 权限
+手机端下载 终端模拟器 或其他终端 手机终端输入如下命令
+su
+setprop service.adb.tcp.port 5555
+stop adbd
+start adbd
+查看本机 ip ifconfig
+在开发者选项中打开 USB 调试（否则连接后会显示未授权）
+电脑端输入
+adb connect Phone_ip:5555 (Phone_ip 为你自己手机 ip) adb devices
+若成功 此时你便能看到自己的设备了 List of devices attached
+192.168.1.59:5555 device
+可能遇到的问题 🔗问题：unable to connect to 192.168.199.248:5555: Connection refused 解决办法 (设置监听端口)
+$ setprop service.adb.tcp.port 5555 //设置监听端口 $ stop adbd $ start adbd </div>
+          
+
+        </section>
+    
+        
+        
+        <section class="item">
+          <div>
+            <h1 class="title"><a href='/posts/glide%E7%94%A8%E5%88%B0%E7%9A%84%E4%BB%A3%E7%A0%81%E8%AE%B0%E5%BD%95/'>Glide用到的代码记录</a></h1>
+            <div class ="date">
+                <time datetime="2020-05-12 10:32:00 &#43;0000 UTC">May 12, 2020</time>  
+            </div>
+          </div>
+
+          
+              <div class="summary">同步加载 🔗public static void loadImgSync(Context context, String url) { new Thread(new Runnable() { @Override public void run() { FutureTarget&lt;Bitmap&gt; futureBitmap = Glide.with(context) .asBitmap() .load(url) .submit(); try { Bitmap myBitmap = futureBitmap.get(); LogUtils.d(&#34;hei:&#34; &#43; myBitmap.getHeight()); LogUtils.d(&#34;wid:&#34; &#43; myBitmap.getWidth()); } catch (ExecutionException e) { e.printStackTrace(); } catch (InterruptedException e) { e.printStackTrace(); } } }).start(); } 获取宽高 🔗方式1： 🔗Glide.with(getContext().getApplicationContext()) .asBitmap() .load(path) .into(new SimpleTarget&lt;Bitmap&gt;() { @Override public void onResourceReady(Bitmap bitmap, Transition&lt;? super Bitmap&gt; transition) { int w = bitmap.</div>
+          
+
+        </section>
+    
+        
+        
+        <section class="item">
+          <div>
+            <h1 class="title"><a href='/posts/charles%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BAproxy/'>Charles快速配置安卓手机Proxy</a></h1>
+            <div class ="date">
+                <time datetime="2020-05-11 15:02:58 &#43;0000 UTC">May 11, 2020</time>  
+            </div>
+          </div>
+
+          
+              <div class="summary">前言 🔗Charles可以实现很多功能，比如抓包，修改返回结果，限速，真是一个神器，但是每次手机配置代理，真是逆天的操作
+1.进入设置 2.进入 WLAN 3.找对应 wifi 连接 4.进入详情 5.找到代理 6.选择手动 7.输入主机名 8.输入端口号 9.最后保存
+所以这篇文章就是为了把这么多步简化的过程，在网上搜索了一些方式，发现有两篇有很好的参考价值 一键设置 Android http proxy 的尝试 Android自动设置HTTP代理 主要方式 🔗方式一：安装一个app,然后用adb shell发送给app，代码进行wifi连接与配置，这种方式在 Api &gt; 23 就会失效，目前大部分都是8.0以上的手机，这种方式就不好用了
+方式二：用adb shell settings put global进行配置，但是这种方式是临时的，不用的话还要手动关一下
+目前做法 🔗参考知乎上那位大神的做法，直接写个sh脚本，再加上zsh的alias，就能比较方便的配置proxy了
+步骤 🔗新建 easy_proxy.sh 的文本，把以下代码贴进去即可
+#!/bin/bash echo &#34;\n---------------- Support ------------------&#34; echo &#34;设置本机IP代理 ./easy_proxy.sh set&#34; echo &#34;设置自定义代理 ./easy_proxy.sh set ****:8888&#34; echo &#34;删除代理 ./easy_proxy.sh clean&#34; echo &#34;--------------------------------------------\n&#34; # 获取当前IP ip=$(ifconfig en0 | grep -E &#39;inet \d{3}.&#39; | awk &#39;{print $2}&#39;) default_proxy=${ip}&#34;:8888&#34; echo &#34;本机IP为: $default_proxy\n&#34; if [ &#34;$1&#34; == &#34;set&#34; ];then if [ -n &#34;$2&#34; ];then echo &#34;设置自定义代理 $2&#34; adb shell settings put global http_proxy $2 else echo &#34;设置本机IP代理 $default_proxy&#34; adb shell settings put global http_proxy $default_proxy fi elif [ &#34;$1&#34; == &#34;clean&#34; ];then echo &#34;清除代理成功&#34; adb shell settings put global http_proxy :0 else echo &#34;!</div>
+          
+
+        </section>
+    
+        
+        
+        <section class="item">
+          <div>
+            <h1 class="title"><a href='/posts/java%E7%A2%B0%E5%88%B0%E7%9A%84%E5%A5%87%E6%80%AA%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/'>Java碰到的奇怪问题汇总</a></h1>
+            <div class ="date">
+                <time datetime="2020-04-23 19:12:21 &#43;0000 UTC">Apr 23, 2020</time>  
+            </div>
+          </div>
+
+          
+              <div class="summary">1.除法返回0.0 🔗情景展示 🔗　double d = 1/10;
+System.out.println(d);
+返回的结果居然是 0.0 原因分析 🔗　第一步：你会发现用运算结果也可以用 int 类型接收
+在 Java 语言中，整数之间的除法运算，不管你的小数位有多少位，小数是几，统统舍弃，只返回整数位数字！
+第二步：用 double 类型接收为什么也可以？
+因为 double 类型的取值返回要大于 int 类型，所以属于向上类型转换，当然可以用比它大的容器接收。 第三步：为什么整数之间的除法运算，只返回整数位？
+因为在 Java 中，由运算结果，由被运算数的最高数据类型决定，也就是说：整数之间的运算，数据类型都为 int 类型，所以，返回的结果也为 int 类型。 3. 解决方案 🔗　如果我们想要返回完整的运算结果 ，我们就需要将其中一个的数据类型转换成 double 类型或者 float 类型，而不是只改变接收运算结果的数据类型！
+方式一：将被除数转换成 double 类型
+double d4 = 100d/235886; System.out.println(d4);//4.2393359504167265E-4 方式二：将除数转换成 double 类型
+double d5 = 100/235886d; System.out.println(d5);//4.2393359504167265E-4 方式三：将被除数转换成 float 类型
+float f4 = 2358861f/235886; System.out.println(f4);//10.000004 方式四：将除数转换成 float 类型</div>
+          
+
+        </section>
+    
+        
+        
+        <section class="item">
+          <div>
+            <h1 class="title"><a href='/posts/java%E6%AD%A3%E5%88%99%E4%B9%8B%E5%9D%91/'>Java正则之坑</a></h1>
+            <div class ="date">
+                <time datetime="2020-03-06 19:45:20 &#43;0000 UTC">Mar 6, 2020</time>  
+            </div>
+          </div>
+
+          
+              <div class="summary">首先说明需求
+有个xxx.api.abc.com需要替换成config.abc.com
+这个是可以用正则做到的，如下
+String oldUrl = &#34;xxx.api.abc.com&#34;; String newUrl = oldUrl.replaceAll(&#34;.*\.api&#34;, &#34;config&#34;); //报错 查了下，发现正则要用两个斜杆\\，所以改成
+String newUrl = oldUrl.replaceAll(&#34;.*\\.api&#34;, &#34;config&#34;) //OK //或者下面的更简单 String newUrl = oldUrl.replaceAll(&#34;.*api&#34;, &#34;config&#34;) //OK 之所以有坑，是因为java里的\有一定含义，反斜杠 \ 在 Java 中表示转义字符
+这里例举两个特别重要的用法：
+在匹配 . 或 { 或 [ 或 ( 或 ? 或 $ 或 ^ 或 * 这些特殊字符时，需要在前面加上 \\，比如匹配 . 时，Java 中要写为 \\.，但对于正则表达式来说就是 \. 在匹配 \ 时，Java 中要写为 \\\\，但对于正则表达式来说就是 \\ 其他类似\d在Java里要写成\\d Java 中的正则表达式字符串有两层含义，首先 Java 字符串转义出符合正则表达式语法的字符串，然后再由转义后的正则表达式进行模式匹配</div>
+          
+
+        </section>
+    
+        
+        
+        <section class="item">
+          <div>
+            <h1 class="title"><a href='/posts/gitignore%E6%80%BB%E7%BB%93/'>gitignore总结</a></h1>
+            <div class ="date">
+                <time datetime="2020-01-16 11:45:22 &#43;0000 UTC">Jan 16, 2020</time>  
+            </div>
+          </div>
+
+          
+              <div class="summary">##gitignore生效操作
+###场景一：某个文件已经被追踪 比如Android项目下.idea文件夹，里面已经有某些文件提交过，要忽略.idea文件夹下所有文件 先在.gitignore文件夹添加/.idea，表示忽略.idea下所有文件
+接着删除缓存
+git rm -r --cached ./.idea 这个命令把之前跟踪的.idea目录下所有文件的缓存给删了，然后需要push到远程项目地址就OK了，本地.idea下有修改都不会被检测到了
+说明：所有文件指的是多级目录，git update-index –assume-unchanged 这个命令也能清除追踪，但是只能指定文件，所以不用这个命令
+场景二：未提交项目，要忽略的文件夹下的文件还未被追踪 🔗直接在.gitignore文件夹添加/.idea，表示忽略.idea下所有文件，然后直接push就可以了</div>
+          
+
+        </section>
+    
+        
+        
+        <section class="item">
+          <div>
+            <h1 class="title"><a href='/posts/android%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9%E5%BD%92%E7%BA%B3/'>Android音频焦点归纳整理</a></h1>
+            <div class ="date">
+                <time datetime="2019-12-14 15:26:42 &#43;0000 UTC">Dec 14, 2019</time>  
+            </div>
+          </div>
+
+          
+              <div class="summary">前言 🔗音频焦点是 API 8 中引入的一个概念，它主要作用于用户在同一个时刻只能关注单个音频流，或者用来降低背景声音，使用户只关注要主要的声音。在不同Android版本中，对应的代码也有区别。主要三个节点为
+2.2 (API level 8) 5.0 (API level 21) 8.0 (API level 26) 2.2-5.0 🔗申请焦点：
+private void requestAudioFocus() { audioManager = (AudioManager) getContext().getSystemService(Context.AUDIO_SERVICE); if (audioManager != null) { audioManager.requestAudioFocus(mAudioFocusListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT); } } requestAudioFocus中，有3个参数，先说参数2，参数2是多种声音类型，如下：
+AudioManager.STREAM_VOICE_CALL
+AudioManager.STREAM_SYSTEM
+AudioManager.STREAM_RING
+AudioManager.STREAM_MUSIC
+AudioManager.STREAM_ALARM
+AudioManager.STREAM_NOTIFICATION
+AudioManager.STREAM_BLUETOOTH_SCO
+AudioManager.STREAM_SYSTEM_ENFORCED
+AudioManager.STREAM_DTMF
+AudioManager.STREAM_TTS
+然后是参数3，也是有多个声明类型，如下：
+AudioManager.AUDIOFOCUS_GAIN：想要长期占有焦点，失去焦点者stop播放和释放 AudioManager.AUDIOFOCUS_GAIN_TRANSIENT：想要短暂占有焦点，失去焦点者pause播放 AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK：想要短暂占有焦点，失去焦点者可以继续播放但是音量需要调低 AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_EXCLUSIVE：想要短暂占有焦点，但希望失去焦点者不要有声音播放 最后是参数1，参数1要自己写个回调：
+private AudioManager.OnAudioFocusChangeListener mAudioFocusListener = new AudioManager.OnAudioFocusChangeListener() { @Override public void onAudioFocusChange(int focusChange) { switch (focusChange) { case AudioManager.</div>
+          
+
+        </section>
+    
+        
+        
+        <section class="item">
+          <div>
+            <h1 class="title"><a href='/posts/%E5%9F%BA%E6%9C%AC%E5%8D%95%E4%BD%8D%E8%AE%B0%E5%BD%95-%E6%98%93%E6%B7%B7/'>基本单位记录-易混</a></h1>
+            <div class ="date">
+                <time datetime="2019-11-27 17:51:20 &#43;0000 UTC">Nov 27, 2019</time>  
+            </div>
+          </div>
+
+          
+              <div class="summary">数据传输、存储的单位及换算 🔗bit与byte的区别 🔗bit意为“位”或“比特”，是计算机运算的基础； byte意为“字节”，是计算机文件大小的基本计算单位；
+1 byte = 8 bit 宽带运营商说的下载速度、路由器的标明速度Mbps其实就是Mbit per second，也就是兆比特每秒 下载速度要换成存储大小单位，就要除以8，也就是 1Mbit/s 的文件传输速度 可以转化为 1MByte/s 的文件下载速度 说到usb2.0标准接口传输速率。许多人都将“480mbps”误解为480兆/秒。其实，这是错误的，事实上“480mbps”应为“480兆比特/秒”或“480兆位/秒”，它等于“60兆字节/秒”，大家看到差距了吧。 这要从bit和byte说起：bit和byte同译为&#34;比特&#34;，都是数据量度单位，bit=“比特”或“位”。 byte=字节即1byte=8bits,两者换算是1：8的关系。 mbps=mega bits per second(兆位/秒)是速率单位，所以正确的说法应该是说usb2.0的传输速度是480兆位/秒,即480mbps。 mb=mega bytes(兆比、兆字节)是量单位，1mb/s（兆字节/秒）=8mbps（兆位/秒）。 我们所说的硬盘容量是40gb、80gb、100gb，这里的b指是的byte也就是“字节”。 1 kb = 1024 bytes =2^10 bytes 1 mb = 1024 kb = 2^20 bytes 1 gb = 1024 mb = 2^30 bytes 比如以前所谓的56kb的modem换算过来56kbps除以8也就是7kbyte，所以真正从网上下载文件存在硬盘上的速度也就是每秒7kbyte，网卡，ADSL等都应该以此来计算！ 也就是说与传输速度有关的b一般指的是bit。 与容量有关的b一般指的是byte。 最后再说一点: usb2.0 480mbps=60mb/s的传输速率还只是理论值，它还要受到系统环境的制约（cpu、硬盘和内存等），其实际读、取写入硬盘的速度约在11～16mb/s。但这也比usb1.1的12mbps(1.5m/s)快了近10倍。 比如网速4080Kbps的真实速度换算是:(要注意Kbps还是KBps) K=1000(或1024) 4080Kbps(小b)=4080000bps 也可以把4080Kbps(位)看成4080000个&#34;位&#34;或&#34;比特&#34; 那么4080000位等于多少字节呢,因8个位等于1个字节,所以4080000/8=510000字节 那么51000字节等于多少KB呢,因1024个字节等于1KB,所以51000/1024=498.04KB(约等于500KB) 有时候看到 500K字节/秒其实也是500000字节/秒也可以说成是500K每秒..一个意思
+其他常用单位 🔗Bit 位 Byte (字节) 1Byte=8Bits 1KB=1024Byte 1KB=1024Byte=8192Bits 1Byte(字节)=8Bit(位) 1 kB = 1024 Byte 千 1 MB = 1024 kB 兆 1 GB = 1024 MB 吉 1 TB = 1024 GB 太 1 PB = 1024 TB 拍 1 EB = 1024 PB 艾 1 ZB = 1024 EB 皆 1 YB = 1024 ZB 佑</div>
+          
+
+        </section>
+    
+        
+        
+        <section class="item">
+          <div>
+            <h1 class="title"><a href='/posts/github%E5%8A%A0%E9%80%9F%E5%92%8C%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86/'>github加速和终端代理</a></h1>
+            <div class ="date">
+                <time datetime="2019-10-09 10:16:24 &#43;0000 UTC">Oct 9, 2019</time>  
+            </div>
+          </div>
+
+          
+              <div class="summary">github加速： 🔗解决github在访问和clone时速度太慢的问题
+下载一个可以设置host的软件，比如mac上可以用iHost
+然后设置下面的host
+https://gitee.com/Mosiki/github/raw/master/github_hosts.txt
+设置完刷新dns，就可以加速github的访问和clone了
+终端代理： 🔗就是在iterm2里要能访问到外网数据
+比如在拉取某一个仓库时，如果这个仓库需要fq，就要用到这个东西
+参考链接：https://zhuanlan.zhihu.com/p/46973701
+最后是用v2ray-u加zshrc设置alias简写来简化操作，每次要用的时候输入setproxy，不用了就unsetproxy。
+alias setproxy=“export ALL_PROXY=socks5://127.0.0.1:1080”
+alias unsetproxy=“unset ALL_PROXY”</div>
+          
+
+        </section>
+    
+
+    
+        <div class="pagination">
+          
+          
+          
+              <span class="next">
+                  <a href="/page/2/">
+                      Older posts <span class="arrow">→</span>
+                  </a>
+              </span>
+          
+        </div>
+    
+
+
 </div>
 
-            <div id="content">
-                <div id="streamContainer" class="stream-container">
+    </main>
+    
+    <footer id="footer">
+    
 
-
-    <div class="post-list-container post-list-container-no-background">
-        
-            
-            <a href="https://foezzy.github.io/posts/clashx%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                clashX使用说明
-                            </div>
-                            <div class="post-item-summary">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    2020-06-25
-    &emsp;
+    <div class="copyright">
     
+       © Copyright 
+       2024 
+       <span class="split">
+        <svg fill="#bbbbbb" width="15" height="15" version="1.1" id="heart-15" xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 15 15">
+  <path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75&#xA;&#x9;C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z"/>
+</svg>
+       </span>
+       
     
-    
-    &emsp;
-    
-</div>
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://foezzy.github.io/posts/%E4%B8%8D%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BA%BF%E8%BF%9E%E6%8E%A5adb-%E9%9C%80%E8%A6%81root%E6%9D%83%E9%99%90/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                不用数据线连接adb,需要root权限
-                            </div>
-                            <div class="post-item-summary">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    2020-05-15
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://foezzy.github.io/posts/glide%E7%94%A8%E5%88%B0%E7%9A%84%E4%BB%A3%E7%A0%81%E8%AE%B0%E5%BD%95/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                Glide用到的代码记录
-                            </div>
-                            <div class="post-item-summary">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    2020-05-12
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://foezzy.github.io/posts/charles%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BAproxy/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                Charles快速配置安卓手机Proxy
-                            </div>
-                            <div class="post-item-summary">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    2020-05-11
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://foezzy.github.io/posts/java%E7%A2%B0%E5%88%B0%E7%9A%84%E5%A5%87%E6%80%AA%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                Java碰到的奇怪问题汇总
-                            </div>
-                            <div class="post-item-summary">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    2020-04-23
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://foezzy.github.io/posts/java%E6%AD%A3%E5%88%99%E4%B9%8B%E5%9D%91/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                Java正则之坑
-                            </div>
-                            <div class="post-item-summary">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    2020-03-06
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://foezzy.github.io/posts/gitignore%E6%80%BB%E7%BB%93/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                gitignore总结
-                            </div>
-                            <div class="post-item-summary">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    2020-01-16
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://foezzy.github.io/posts/android%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9%E5%BD%92%E7%BA%B3/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                Android音频焦点归纳整理
-                            </div>
-                            <div class="post-item-summary">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    2019-12-14
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://foezzy.github.io/posts/%E5%9F%BA%E6%9C%AC%E5%8D%95%E4%BD%8D%E8%AE%B0%E5%BD%95-%E6%98%93%E6%B7%B7/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                基本单位记录-易混
-                            </div>
-                            <div class="post-item-summary">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    2019-11-27
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-            
-            <a href="https://foezzy.github.io/posts/github%E5%8A%A0%E9%80%9F%E5%92%8C%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86/" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-divider">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title">
-                                github加速和终端代理
-                            </div>
-                            <div class="post-item-summary">
-                                
-                            </div>
-                            <div class="post-item-meta">
-    2019-10-09
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
-
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            
-        
-        </a>
     </div>
 
-
-                    </div>
-            </div>
-
-<div class="pagination">
     
-    <a class="pagination-action" style="opacity:0">
+      <div class="powerby">
+        Powered by <a href='http://www.gohugo.io/'>Hugo</a> Theme By <a href='https://github.com/nodejh/hugo-theme-mini'>nodejh</a>
+      </div>
     
-        <i class="material-icons pagination-action-icon">
-            chevron_left
-        </i>
-    </a>
-
-        <div class="pagination-indicator">
-            <span>1/2</span>
-        </div>
-
-        
-        <a class="pagination-action" href="/page/2/"
-           style="opacity:1">
-        
-                <i class="material-icons pagination-action-icon">
-                    chevron_right
-                </i>
-            </a>
-</div>
+</footer>
 
 
-<div id="single-column-footer">
-Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
-<br>
-Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
-<br>
 
-&copy;
-	
-	2020 Blog
-	
-</div>
-            </div>
-    
-    <script src="/js/journal.js"></script>
-    </body>
+  </body>
 </html>
