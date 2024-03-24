@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jdk版本 on Blog</title><link>https://foezzy.github.io/tags/jdk%E7%89%88%E6%9C%AC/</link><description>Recent content in Jdk版本 on Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 23 Jun 2023 20:35:50 +0000</lastBuildDate><atom:link href="https://foezzy.github.io/tags/jdk%E7%89%88%E6%9C%AC/index.xml" rel="self" type="application/rss+xml"/><item><title>Mac系统多个jdk版本切换配置 - 简书</title><link>https://foezzy.github.io/posts/mac%E7%B3%BB%E7%BB%9F%E5%A4%9A%E4%B8%AAjdk%E7%89%88%E6%9C%AC%E5%88%87%E6%8D%A2%E9%85%8D%E7%BD%AE---%E7%AE%80%E4%B9%A6/</link><pubDate>Fri, 23 Jun 2023 20:35:50 +0000</pubDate><guid>https://foezzy.github.io/posts/mac%E7%B3%BB%E7%BB%9F%E5%A4%9A%E4%B8%AAjdk%E7%89%88%E6%9C%AC%E5%88%87%E6%8D%A2%E9%85%8D%E7%BD%AE---%E7%AE%80%E4%B9%A6/</guid><description>在学习一个框架时，该框架要求只能用java8编译。我的电脑上装的是java11。于是练习了一波装两个版本的java。
+安装比较简单，不赘述。
+安装完成后，就是配置环境变量。Mac的环境变量保存在 .bash_profile 文件中。一般情况下，不会自动将环境变量填入其中。也就是说，虽然你的电脑里面安装了jdk，但是，.bash_profile中并没有和jdk相关的配置。
+terminal中输入
+vi .bash_profile 打开文件
+插入
+export JAVA_8_HOME=&amp;#34;/Library/Java/JavaVirtualMachines/jdk1.8.0_261.jdk/Contents/Home&amp;#34; export JAVA_11_HOME=&amp;#34;/Library/Java/JavaVirtualMachines/jdk-11.0.14.jdk/Contents/Home&amp;#34; alias jdk8=&amp;#39;export JAVA_HOME=$JAVA_8_HOME&amp;#39; alias jdk11=&amp;#39;export JAVA_HOME=$JAVA_11_HOME&amp;#39; JAVA_HOME=$JAVA_11_HOME PATH=$JAVA_HOME/bin:$PATH:. CLASSPATH=$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/jrt-fs.jar:. export JAVA_HOME export PATH export CLASSPATH terminal 中输入
+source .bash_profile 保存更改
+通过变量
+JAVA_HOME=$JAVA_11_HOME
+来决定使用那个版本的jdk</description></item></channel></rss>

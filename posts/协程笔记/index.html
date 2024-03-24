@@ -1,0 +1,33 @@
+<!doctype html><html lang=en-us><head><title>协程笔记 | Blog</title>
+<meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=viewport content="width=device-width,minimum-scale=1"><meta name=description content="什么是协程 🔗官方描述：协程通过将复杂性放入库来简化异步编程。程序的逻辑可以在协程中顺序地表达，而底层库会为我们解决其异步性。该库可以将用户代码的相关部分包装为回调、订阅相关事件、在不同线程（甚至不同机器）上调度执行，而代码则保持如同顺序执行一样简单。就像非常轻量级的线程。
+为什么需要协程 🔗 轻量级 协程就像非常轻量级的线程。线程是由系统调度的，线程切换或线程阻塞的开销都比较大。而协程依赖于线程，但是协程挂起时不需要阻塞线程，几乎是无代价的，协程是由开发者控制的。所以协程也像用户态的线程，非常轻量级，一个线程中可以创建任意个协程。
+内存泄漏更少
+使用结构化并发机制在一个作用域内执行多项操作。
+内置取消支持
+取消操作会自动在整个协程层次内传播。
+jetpack集成
+许多jetpack库都包含提供全面的协程支持扩展，某些库还提供自己的协程作用域。
+方便使用
+如果后台执行一个复杂任务，第二个任务依赖上一个任务的执行结果，使用写成可以方便实现。这点类似于java8的Future以及Rxjava中的链式调用。
+基础 🔗gradle配置
+implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3' implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.3' 挂起函数
+suspend修饰符修饰的函数是挂起函数。挂起函数挂起协程时，不会阻塞协程所在的线程。挂起函数执行完后恢复协程，后面的代码才能继续执行。挂起函数只能在协程中调用。
+CoroutineDispatcher
+CoroutineDispatcher是协程调度器，决定协程运行的线程或线程池。
+coroutines-core中CoroutineDispatcher有三种标准实现：
+Dispatchers.Default 指定线程为共有的线程池，线程数量最少为2最大为CPU数
+Dispatchers.IO IO线程
+Dispatchers.Main 主线程
+Dispatchers.Unconfined 不指定线程
+开启协程方法 开启方式比较 是否创建新协程 是否阻塞当前线程 是否指定协程调度器 是否有返回值 其他 launch{} 是 否 是 否 async{} 是 否 是 是 用await()获取返回值 runBlocking {} 是 是 是 是 主要用于测试 withContext{} 否 挂起协程不阻塞县城 是 是 可让您在不引入回调的情况下控制任何代码行的线程池，因此您可以将其应用于非常小的函数，例如从数据库中读取数据或执行网络请求。 CoroutineScope CoroutineScope 会跟踪它使用 launch 或 async 创建的所有协程。您可以随时调用 scope."><meta name=generator content="Hugo 0.124.1"><meta name=ROBOTS content="NOINDEX, NOFOLLOW"><link rel=stylesheet href=/css/style.css><link rel="shortcut icon" href=/images/favicon.ico type=image/x-icon></head><body><nav class=navigation><a href=/><span class=arrow>←</span>Home</a>
+<a href=/posts>Archive</a>
+<a href=/tags>Tags</a>
+<a href=/about>About</a></nav><main class=main><section id=single><h1 class=title>协程笔记</h1><div class=tip><time datetime="2022-05-03 18:55:50 +0000 UTC">May 3, 2022</time>
+<span class=split>·
+</span><span>83 words
+</span><span class=split>·
+</span><span>1 minute read</span></div><div class=content><h3 id=什么是协程>什么是协程 <a href=#%e4%bb%80%e4%b9%88%e6%98%af%e5%8d%8f%e7%a8%8b class=anchor>🔗</a></h3><p>官方描述：协程通过将复杂性放入库来简化异步编程。程序的逻辑可以在协程中顺序地表达，而底层库会为我们解决其异步性。该库可以将用户代码的相关部分包装为回调、订阅相关事件、在不同线程（甚至不同机器）上调度执行，而代码则保持如同顺序执行一样简单。就像非常轻量级的线程。</p><h3 id=为什么需要协程>为什么需要协程 <a href=#%e4%b8%ba%e4%bb%80%e4%b9%88%e9%9c%80%e8%a6%81%e5%8d%8f%e7%a8%8b class=anchor>🔗</a></h3><ul><li>轻量级</li></ul><p>协程就像非常轻量级的线程。线程是由系统调度的，线程切换或线程阻塞的开销都比较大。而协程依赖于线程，但是协程挂起时不需要阻塞线程，几乎是无代价的，协程是由开发者控制的。所以协程也像用户态的线程，非常轻量级，一个线程中可以创建任意个协程。</p><ul><li><p>内存泄漏更少<br>使用结构化并发机制在一个作用域内执行多项操作。</p></li><li><p>内置取消支持<br>取消操作会自动在整个协程层次内传播。</p></li><li><p>jetpack集成<br>许多jetpack库都包含提供全面的协程支持扩展，某些库还提供自己的协程作用域。</p></li><li><p>方便使用</p></li></ul><p>如果后台执行一个复杂任务，第二个任务依赖上一个任务的执行结果，使用写成可以方便实现。这点类似于java8的Future以及Rxjava中的链式调用。</p><h3 id=基础>基础 <a href=#%e5%9f%ba%e7%a1%80 class=anchor>🔗</a></h3><p>gradle配置</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>implementation <span style=color:#e6db74>&#39;org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3&#39;</span>
+</span></span><span style=display:flex><span>implementation <span style=color:#e6db74>&#39;org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.3&#39;</span>
+</span></span></code></pre></div><ul><li><p>挂起函数<br><code>suspend</code>修饰符修饰的函数是挂起函数。挂起函数挂起协程时，不会阻塞协程所在的线程。挂起函数执行完后恢复协程，后面的代码才能继续执行。挂起函数只能在协程中调用。</p></li><li><p>CoroutineDispatcher</p></li></ul><p>CoroutineDispatcher是协程调度器，决定协程运行的线程或线程池。<br><code>coroutines-core</code>中CoroutineDispatcher有三种标准实现：<br>Dispatchers.Default 指定线程为共有的线程池，线程数量最少为2最大为CPU数<br>Dispatchers.IO IO线程<br>Dispatchers.Main 主线程<br>Dispatchers.Unconfined 不指定线程</p><ul><li>开启协程方法</li></ul><table><thead><tr><th>开启方式比较</th><th>是否创建新协程</th><th>是否阻塞当前线程</th><th>是否指定协程调度器</th><th>是否有返回值</th><th>其他</th></tr></thead><tbody><tr><td>launch{}</td><td>是</td><td>否</td><td>是</td><td>否</td><td></td></tr><tr><td>async{}</td><td>是</td><td>否</td><td>是</td><td>是</td><td>用await()获取返回值</td></tr><tr><td>runBlocking {}</td><td>是</td><td>是</td><td>是</td><td>是</td><td>主要用于测试</td></tr><tr><td>withContext{}</td><td>否</td><td>挂起协程不阻塞县城</td><td>是</td><td>是</td><td>可让您在不引入回调的情况下控制任何代码行的线程池，因此您可以将其应用于非常小的函数，例如从数据库中读取数据或执行网络请求。</td></tr></tbody></table><ul><li>CoroutineScope</li></ul><p>CoroutineScope 会跟踪它使用 launch 或 async 创建的所有协程。您可以随时调用 scope.cancel() 以取消正在进行的工作（即正在运行的协程）。不过，与调度程序不同，CoroutineScope 不运行协程。</p><ul><li>Job</li></ul><p>Job 是协程的句柄。使用 launch 或 async 创建的每个协程都会返回一个 Job 实例，该实例是相应协程的唯一标识并管理其生命周期。</p></div><div class=tags><a href=https://foezzy.github.io/tags/%E5%8D%8F%E7%A8%8B>协程</a></div></section></main><footer id=footer><div class=copyright>© Copyright
+2024
+<span class=split><svg fill="#bbb" width="15" height="15" id="heart-15" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><path d="M13.91 6.75c-1.17 2.25-4.3 5.31-6.07 6.94-.1903.1718-.4797.1718-.67.0C5.39 12.06 2.26 9 1.09 6.75-1.48 1.8 5-1.5 7.5 3.45 10-1.5 16.48 1.8 13.91 6.75z"/></svg></span></div><div class=powerby>Powered by <a href=http://www.gohugo.io/>Hugo</a> Theme By <a href=https://github.com/nodejh/hugo-theme-mini>nodejh</a></div></footer></body></html>
