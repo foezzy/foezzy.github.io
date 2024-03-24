@@ -1,19 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>规范 on Blog</title>
-    <link>https://foezzy.github.io/tags/%E8%A7%84%E8%8C%83/</link>
-    <description>Recent content in 规范 on Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 14 Jun 2019 10:07:09 +0000</lastBuildDate>
-    <atom:link href="https://foezzy.github.io/tags/%E8%A7%84%E8%8C%83/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Android编码规范</title>
-      <link>https://foezzy.github.io/posts/android%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</link>
-      <pubDate>Fri, 14 Jun 2019 10:07:09 +0000</pubDate>
-      <guid>https://foezzy.github.io/posts/android%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</guid>
-      <description>Android编码规范 🔗命名规范 🔗 包命名及分包结构规范&#xA;包名沿用 Java 编程的通用风格 类命名规范&#xA;基本的类名沿用 Java 编程的通用风格（采用完整的英文描述符，所有单词第一个字母大写，采用驼峰式命名）&#xA;android 特有的类，如 Activity、Fragment、Service、Provider、Adapter、View 等，则以对应的类型单词为后缀&#xA;接口命名规范&#xA;类命名以大写字母 I 为前缀，如果是监听接口以 Listener 结尾&#xA;在自定义的监听接口里，监听事件以 on 开头, 如 onOpenMenu(), onRefresh()&amp;hellip;&#xA;方法命名规范&#xA;方法命名沿用 Java 编程的通用风格（采用完整的英文描述符，函数名字以代表函数功能的英文单词组成，除首单词小写，其他单词首字母大写；一般的，函数第一个单词要求用动词） 变量命名规范&#xA;boolean 成员要以 is 开头，或以 has 开头。如： isFirst, hasMore&#xA;控件命名规范： 原则是 “view 的缩写 + 功能描述”。 比如一个 TextView 缩写为 tv(驼峰命名抽取出来的缩写)， 这个 TextView 是显示用户名字的， 所以就可以命名为: tvUserName。&#xA;常量的名字全部大写，单词之间用’_’分开&#xA;控件命名规范： 原则是 “view 的缩写 + 功能描述”。 比如一个 TextView 缩写为 tv(驼峰命名抽取出来的缩写)， 这个 TextView 是显示用户名字的， 所以就可以命名为: tvUserName</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>规范 on Blog</title><link>https://foezzy.github.io/tags/%E8%A7%84%E8%8C%83/</link><description>Recent content in 规范 on Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 14 Jun 2019 10:07:09 +0000</lastBuildDate><atom:link href="https://foezzy.github.io/tags/%E8%A7%84%E8%8C%83/index.xml" rel="self" type="application/rss+xml"/><item><title>Android编码规范</title><link>https://foezzy.github.io/posts/android%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</link><pubDate>Fri, 14 Jun 2019 10:07:09 +0000</pubDate><guid>https://foezzy.github.io/posts/android%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</guid><description>Android编码规范 🔗命名规范 🔗 包命名及分包结构规范
+包名沿用 Java 编程的通用风格 类命名规范
+基本的类名沿用 Java 编程的通用风格（采用完整的英文描述符，所有单词第一个字母大写，采用驼峰式命名）
+android 特有的类，如 Activity、Fragment、Service、Provider、Adapter、View 等，则以对应的类型单词为后缀
+接口命名规范
+类命名以大写字母 I 为前缀，如果是监听接口以 Listener 结尾
+在自定义的监听接口里，监听事件以 on 开头, 如 onOpenMenu(), onRefresh()&amp;hellip;
+方法命名规范
+方法命名沿用 Java 编程的通用风格（采用完整的英文描述符，函数名字以代表函数功能的英文单词组成，除首单词小写，其他单词首字母大写；一般的，函数第一个单词要求用动词） 变量命名规范
+boolean 成员要以 is 开头，或以 has 开头。如： isFirst, hasMore
+控件命名规范： 原则是 “view 的缩写 + 功能描述”。 比如一个 TextView 缩写为 tv(驼峰命名抽取出来的缩写)， 这个 TextView 是显示用户名字的， 所以就可以命名为: tvUserName。
+常量的名字全部大写，单词之间用’_’分开
+控件命名规范： 原则是 “view 的缩写 + 功能描述”。 比如一个 TextView 缩写为 tv(驼峰命名抽取出来的缩写)， 这个 TextView 是显示用户名字的， 所以就可以命名为: tvUserName</description></item></channel></rss>

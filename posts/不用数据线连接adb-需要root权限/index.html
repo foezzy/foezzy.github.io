@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <title>不用数据线连接adb,需要root权限 | Blog</title>
-
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
-<meta name="viewport" content="width=device-width,minimum-scale=1">
-<meta name="description" content="有 2 种方法开启无线调试，其中一种需要 USB 线先连接，这里只介绍另一种不借助 USB 线的
+<!doctype html><html lang=en-us><head><title>不用数据线连接adb,需要root权限 | Blog</title>
+<meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=viewport content="width=device-width,minimum-scale=1"><meta name=description content="有 2 种方法开启无线调试，其中一种需要 USB 线先连接，这里只介绍另一种不借助 USB 线的
 过程很简单，手机需要有 ROOT 权限
 手机端下载 终端模拟器 或其他终端 手机终端输入如下命令
 su
@@ -20,162 +13,17 @@ adb connect Phone_ip:5555 (Phone_ip 为你自己手机 ip) adb devices
 若成功 此时你便能看到自己的设备了 List of devices attached
 192.168.1.59:5555 device
 可能遇到的问题 🔗问题：unable to connect to 192.168.199.248:5555: Connection refused 解决办法 (设置监听端口)
-$ setprop service.adb.tcp.port 5555 //设置监听端口 $ stop adbd $ start adbd ">
-<meta name="generator" content="Hugo 0.121.2">
-
-
-  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-
-
-<link rel="stylesheet" href="/css/style.css">
-
-
-
-<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
-
-
-
-
-
-
-
-
-  </head>
-
-  <body>
-    <nav class="navigation">
-	
-		<a href="/"> <span class="arrow">←</span>Home</a>
-	
-	<a href="/posts">Archive</a>
-	<a href="/tags">Tags</a>
-	<a href="/about">About</a>
-
-	
-
-	
-</nav>
-
-
-    <main class="main">
-      
-
-<section id="single">
-    <h1 class="title">不用数据线连接adb,需要root权限</h1>
-
-    <div class="tip">
-        <time datetime="2020-05-15 11:34:05 &#43;0000 UTC">May 15, 2020</time>
-        <span class="split">
-          ·
-        </span>
-        <span>
-          66 words
-        </span>
-        <span class="split">
-          ·
-        </span>
-        <span>
-          1 minute read
-        </span>
-    </div>
-
-    
-    
-
-
-    <div class="content">
-      <p>有 2 种方法开启无线调试，其中一种需要 USB 线先连接，这里只介绍另一种不借助 USB 线的</p>
-<p>过程很简单，手机需要有 ROOT 权限</p>
-<hr>
-<ol>
-<li>
-<p>手机端下载 终端模拟器 或其他终端 </p>
-</li>
-<li>
-<p>手机终端输入如下命令</p>
-</li>
-</ol>
-<blockquote>
-<p>su</p>
-<p>setprop service.adb.tcp.port 5555</p>
-<p>stop adbd</p>
-<p>start adbd</p>
-</blockquote>
-<ol start="3">
-<li>查看本机 ip</li>
-</ol>
-<blockquote>
-<p>ifconfig</p>
-</blockquote>
-<p><p class="markdown-image">
-  <img src="http://upload-images.jianshu.io/upload_images/18974911-6d579288a337e95e.png" alt=""  />
-</p></p>
-<ol start="4">
-<li>
-<p>在开发者选项中打开 USB 调试（否则连接后会显示未授权）</p>
-</li>
-<li>
-<p>电脑端输入</p>
-</li>
-</ol>
-<blockquote>
-<p>adb connect Phone_ip:5555 (Phone_ip 为你自己手机 ip) </p>
-<p>adb devices</p>
-</blockquote>
-<ol start="6">
-<li>若成功 此时你便能看到自己的设备了</li>
-</ol>
-<blockquote>
-<p>List of devices attached</p>
-<p>192.168.1.59:5555      device</p>
-</blockquote>
-<h3 id="可能遇到的问题">可能遇到的问题 <a href="#%e5%8f%af%e8%83%bd%e9%81%87%e5%88%b0%e7%9a%84%e9%97%ae%e9%a2%98" class="anchor">🔗</a></h3><p>问题：unable to connect to 192.168.199.248:5555: Connection refused
-解决办法 (设置监听端口)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>$ setprop service.<span style="color:#a6e22e">adb</span>.<span style="color:#a6e22e">tcp</span>.<span style="color:#a6e22e">port</span> 5555  <span style="color:#75715e">//设置监听端口</span>
-</span></span><span style="display:flex;"><span>$ stop adbd
-</span></span><span style="display:flex;"><span>$ start adbd
-</span></span></code></pre></div>
-    </div>
-
-    
-        <div class="tags">
-            
-                <a href="https://foezzy.github.io/tags/adb%E8%BF%9E%E6%8E%A5">adb连接</a>
-            
-        </div>
-    
-    
-    
-
-</section>
-
-
-    </main>
-    
-    <footer id="footer">
-    
-
-    <div class="copyright">
-    
-       © Copyright 
-       2024 
-       <span class="split">
-        <svg fill="#bbbbbb" width="15" height="15" version="1.1" id="heart-15" xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 15 15">
-  <path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75&#xA;&#x9;C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z"/>
-</svg>
-       </span>
-       
-    
-    </div>
-
-    
-      <div class="powerby">
-        Powered by <a href='http://www.gohugo.io/'>Hugo</a> Theme By <a href='https://github.com/nodejh/hugo-theme-mini'>nodejh</a>
-      </div>
-    
-</footer>
-
-
-
-  </body>
-</html>
+$ setprop service.adb.tcp.port 5555 //设置监听端口 $ stop adbd $ start adbd "><meta name=generator content="Hugo 0.124.1"><meta name=ROBOTS content="NOINDEX, NOFOLLOW"><link rel=stylesheet href=/css/style.css><link rel="shortcut icon" href=/images/favicon.ico type=image/x-icon></head><body><nav class=navigation><a href=/><span class=arrow>←</span>Home</a>
+<a href=/posts>Archive</a>
+<a href=/tags>Tags</a>
+<a href=/about>About</a></nav><main class=main><section id=single><h1 class=title>不用数据线连接adb,需要root权限</h1><div class=tip><time datetime="2020-05-15 11:34:05 +0000 UTC">May 15, 2020</time>
+<span class=split>·
+</span><span>66 words
+</span><span class=split>·
+</span><span>1 minute read</span></div><div class=content><p>有 2 种方法开启无线调试，其中一种需要 USB 线先连接，这里只介绍另一种不借助 USB 线的</p><p>过程很简单，手机需要有 ROOT 权限</p><hr><ol><li><p>手机端下载 终端模拟器 或其他终端 </p></li><li><p>手机终端输入如下命令</p></li></ol><blockquote><p>su</p><p>setprop service.adb.tcp.port 5555</p><p>stop adbd</p><p>start adbd</p></blockquote><ol start=3><li>查看本机 ip</li></ol><blockquote><p>ifconfig</p></blockquote><p><p class=markdown-image><img src=http://upload-images.jianshu.io/upload_images/18974911-6d579288a337e95e.png alt></p></p><ol start=4><li><p>在开发者选项中打开 USB 调试（否则连接后会显示未授权）</p></li><li><p>电脑端输入</p></li></ol><blockquote><p>adb connect Phone_ip:5555 (Phone_ip 为你自己手机 ip) </p><p>adb devices</p></blockquote><ol start=6><li>若成功 此时你便能看到自己的设备了</li></ol><blockquote><p>List of devices attached</p><p>192.168.1.59:5555      device</p></blockquote><h3 id=可能遇到的问题>可能遇到的问题 <a href=#%e5%8f%af%e8%83%bd%e9%81%87%e5%88%b0%e7%9a%84%e9%97%ae%e9%a2%98 class=anchor>🔗</a></h3><p>问题：unable to connect to 192.168.199.248:5555: Connection refused
+解决办法 (设置监听端口)</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span>$ setprop service.<span style=color:#a6e22e>adb</span>.<span style=color:#a6e22e>tcp</span>.<span style=color:#a6e22e>port</span> 5555  <span style=color:#75715e>//设置监听端口</span>
+</span></span><span style=display:flex><span>$ stop adbd
+</span></span><span style=display:flex><span>$ start adbd
+</span></span></code></pre></div></div><div class=tags><a href=https://foezzy.github.io/tags/adb%E8%BF%9E%E6%8E%A5>adb连接</a></div></section></main><footer id=footer><div class=copyright>© Copyright
+2024
+<span class=split><svg fill="#bbb" width="15" height="15" id="heart-15" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><path d="M13.91 6.75c-1.17 2.25-4.3 5.31-6.07 6.94-.1903.1718-.4797.1718-.67.0C5.39 12.06 2.26 9 1.09 6.75-1.48 1.8 5-1.5 7.5 3.45 10-1.5 16.48 1.8 13.91 6.75z"/></svg></span></div><div class=powerby>Powered by <a href=http://www.gohugo.io/>Hugo</a> Theme By <a href=https://github.com/nodejh/hugo-theme-mini>nodejh</a></div></footer></body></html>

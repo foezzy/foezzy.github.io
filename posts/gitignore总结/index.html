@@ -1,131 +1,19 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <title>gitignore总结 | Blog</title>
-
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
-<meta name="viewport" content="width=device-width,minimum-scale=1">
-<meta name="description" content="##gitignore生效操作
+<!doctype html><html lang=en-us><head><title>gitignore总结 | Blog</title>
+<meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=viewport content="width=device-width,minimum-scale=1"><meta name=description content="##gitignore生效操作
 ###场景一：某个文件已经被追踪 比如Android项目下.idea文件夹，里面已经有某些文件提交过，要忽略.idea文件夹下所有文件 先在.gitignore文件夹添加/.idea，表示忽略.idea下所有文件
 接着删除缓存
 git rm -r --cached ./.idea 这个命令把之前跟踪的.idea目录下所有文件的缓存给删了，然后需要push到远程项目地址就OK了，本地.idea下有修改都不会被检测到了
 说明：所有文件指的是多级目录，git update-index &ndash;assume-unchanged 这个命令也能清除追踪，但是只能指定文件，所以不用这个命令
-场景二：未提交项目，要忽略的文件夹下的文件还未被追踪 🔗直接在.gitignore文件夹添加/.idea，表示忽略.idea下所有文件，然后直接push就可以了">
-<meta name="generator" content="Hugo 0.121.2">
-
-
-  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-
-
-<link rel="stylesheet" href="/css/style.css">
-
-
-
-<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
-
-
-
-
-
-
-
-
-  </head>
-
-  <body>
-    <nav class="navigation">
-	
-		<a href="/"> <span class="arrow">←</span>Home</a>
-	
-	<a href="/posts">Archive</a>
-	<a href="/tags">Tags</a>
-	<a href="/about">About</a>
-
-	
-
-	
-</nav>
-
-
-    <main class="main">
-      
-
-<section id="single">
-    <h1 class="title">gitignore总结</h1>
-
-    <div class="tip">
-        <time datetime="2020-01-16 11:45:22 &#43;0000 UTC">Jan 16, 2020</time>
-        <span class="split">
-          ·
-        </span>
-        <span>
-          17 words
-        </span>
-        <span class="split">
-          ·
-        </span>
-        <span>
-          1 minute read
-        </span>
-    </div>
-
-    
-    
-
-
-    <div class="content">
-      <p>##gitignore生效操作</p>
-<p>###场景一：某个文件已经被追踪
+场景二：未提交项目，要忽略的文件夹下的文件还未被追踪 🔗直接在.gitignore文件夹添加/.idea，表示忽略.idea下所有文件，然后直接push就可以了"><meta name=generator content="Hugo 0.124.1"><meta name=ROBOTS content="NOINDEX, NOFOLLOW"><link rel=stylesheet href=/css/style.css><link rel="shortcut icon" href=/images/favicon.ico type=image/x-icon></head><body><nav class=navigation><a href=/><span class=arrow>←</span>Home</a>
+<a href=/posts>Archive</a>
+<a href=/tags>Tags</a>
+<a href=/about>About</a></nav><main class=main><section id=single><h1 class=title>gitignore总结</h1><div class=tip><time datetime="2020-01-16 11:45:22 +0000 UTC">Jan 16, 2020</time>
+<span class=split>·
+</span><span>17 words
+</span><span class=split>·
+</span><span>1 minute read</span></div><div class=content><p>##gitignore生效操作</p><p>###场景一：某个文件已经被追踪
 比如Android项目下.idea文件夹，里面已经有某些文件提交过，要忽略.idea文件夹下所有文件
-先在.gitignore文件夹添加/.idea，表示忽略.idea下所有文件</p>
-<p>接着删除缓存</p>
-<pre tabindex="0"><code>git rm -r --cached ./.idea
-</code></pre><p>这个命令把之前跟踪的.idea目录下所有文件的缓存给删了，然后需要push到远程项目地址就OK了，本地.idea下有修改都不会被检测到了</p>
-<p>说明：所有文件指的是多级目录，git update-index &ndash;assume-unchanged 这个命令也能清除追踪，但是只能指定文件，所以不用这个命令</p>
-<h4 id="场景二未提交项目要忽略的文件夹下的文件还未被追踪">场景二：未提交项目，要忽略的文件夹下的文件还未被追踪 <a href="#%e5%9c%ba%e6%99%af%e4%ba%8c%e6%9c%aa%e6%8f%90%e4%ba%a4%e9%a1%b9%e7%9b%ae%e8%a6%81%e5%bf%bd%e7%95%a5%e7%9a%84%e6%96%87%e4%bb%b6%e5%a4%b9%e4%b8%8b%e7%9a%84%e6%96%87%e4%bb%b6%e8%bf%98%e6%9c%aa%e8%a2%ab%e8%bf%bd%e8%b8%aa" class="anchor">🔗</a></h4><p>直接在.gitignore文件夹添加/.idea，表示忽略.idea下所有文件，然后直接push就可以了</p>
-
-    </div>
-
-    
-        <div class="tags">
-            
-                <a href="https://foezzy.github.io/tags/gitignore">gitignore</a>
-            
-        </div>
-    
-    
-    
-
-</section>
-
-
-    </main>
-    
-    <footer id="footer">
-    
-
-    <div class="copyright">
-    
-       © Copyright 
-       2024 
-       <span class="split">
-        <svg fill="#bbbbbb" width="15" height="15" version="1.1" id="heart-15" xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 15 15">
-  <path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75&#xA;&#x9;C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z"/>
-</svg>
-       </span>
-       
-    
-    </div>
-
-    
-      <div class="powerby">
-        Powered by <a href='http://www.gohugo.io/'>Hugo</a> Theme By <a href='https://github.com/nodejh/hugo-theme-mini'>nodejh</a>
-      </div>
-    
-</footer>
-
-
-
-  </body>
-</html>
+先在.gitignore文件夹添加/.idea，表示忽略.idea下所有文件</p><p>接着删除缓存</p><pre tabindex=0><code>git rm -r --cached ./.idea
+</code></pre><p>这个命令把之前跟踪的.idea目录下所有文件的缓存给删了，然后需要push到远程项目地址就OK了，本地.idea下有修改都不会被检测到了</p><p>说明：所有文件指的是多级目录，git update-index &ndash;assume-unchanged 这个命令也能清除追踪，但是只能指定文件，所以不用这个命令</p><h4 id=场景二未提交项目要忽略的文件夹下的文件还未被追踪>场景二：未提交项目，要忽略的文件夹下的文件还未被追踪 <a href=#%e5%9c%ba%e6%99%af%e4%ba%8c%e6%9c%aa%e6%8f%90%e4%ba%a4%e9%a1%b9%e7%9b%ae%e8%a6%81%e5%bf%bd%e7%95%a5%e7%9a%84%e6%96%87%e4%bb%b6%e5%a4%b9%e4%b8%8b%e7%9a%84%e6%96%87%e4%bb%b6%e8%bf%98%e6%9c%aa%e8%a2%ab%e8%bf%bd%e8%b8%aa class=anchor>🔗</a></h4><p>直接在.gitignore文件夹添加/.idea，表示忽略.idea下所有文件，然后直接push就可以了</p></div><div class=tags><a href=https://foezzy.github.io/tags/gitignore>gitignore</a></div></section></main><footer id=footer><div class=copyright>© Copyright
+2024
+<span class=split><svg fill="#bbb" width="15" height="15" id="heart-15" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><path d="M13.91 6.75c-1.17 2.25-4.3 5.31-6.07 6.94-.1903.1718-.4797.1718-.67.0C5.39 12.06 2.26 9 1.09 6.75-1.48 1.8 5-1.5 7.5 3.45 10-1.5 16.48 1.8 13.91 6.75z"/></svg></span></div><div class=powerby>Powered by <a href=http://www.gohugo.io/>Hugo</a> Theme By <a href=https://github.com/nodejh/hugo-theme-mini>nodejh</a></div></footer></body></html>

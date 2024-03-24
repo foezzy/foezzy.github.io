@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <title>Java碰到的奇怪问题汇总 | Blog</title>
-
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
-<meta name="viewport" content="width=device-width,minimum-scale=1">
-<meta name="description" content="1.除法返回0.0 🔗情景展示 🔗　double d = 1/10;
+<!doctype html><html lang=en-us><head><title>Java碰到的奇怪问题汇总 | Blog</title>
+<meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=viewport content="width=device-width,minimum-scale=1"><meta name=description content="1.除法返回0.0 🔗情景展示 🔗　double d = 1/10;
 System.out.println(d);
 返回的结果居然是 0.0 原因分析 🔗　第一步：你会发现用运算结果也可以用 int 类型接收
 在 Java 语言中，整数之间的除法运算，不管你的小数位有多少位，小数是几，统统舍弃，只返回整数位数字！
@@ -16,149 +9,33 @@ System.out.println(d);
 方式一：将被除数转换成 double 类型
 double d4 = 100d/235886; System.out.println(d4);//4.2393359504167265E-4 方式二：将除数转换成 double 类型
 double d5 = 100/235886d; System.out.println(d5);//4.2393359504167265E-4 方式三：将被除数转换成 float 类型
-float f4 = 2358861f/235886; System.out.println(f4);//10.000004 方式四：将除数转换成 float 类型">
-<meta name="generator" content="Hugo 0.121.2">
-
-
-  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-
-
-<link rel="stylesheet" href="/css/style.css">
-
-
-
-<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
-
-
-
-
-
-
-
-
-  </head>
-
-  <body>
-    <nav class="navigation">
-	
-		<a href="/"> <span class="arrow">←</span>Home</a>
-	
-	<a href="/posts">Archive</a>
-	<a href="/tags">Tags</a>
-	<a href="/about">About</a>
-
-	
-
-	
-</nav>
-
-
-    <main class="main">
-      
-
-<section id="single">
-    <h1 class="title">Java碰到的奇怪问题汇总</h1>
-
-    <div class="tip">
-        <time datetime="2020-04-23 19:12:21 &#43;0000 UTC">Apr 23, 2020</time>
-        <span class="split">
-          ·
-        </span>
-        <span>
-          113 words
-        </span>
-        <span class="split">
-          ·
-        </span>
-        <span>
-          1 minute read
-        </span>
-    </div>
-
-    
-    
-
-
-    <div class="content">
-      <h2 id="1除法返回00">1.除法返回0.0 <a href="#1%e9%99%a4%e6%b3%95%e8%bf%94%e5%9b%9e00" class="anchor">🔗</a></h2><h3 id="情景展示">情景展示 <a href="#%e6%83%85%e6%99%af%e5%b1%95%e7%a4%ba" class="anchor">🔗</a></h3><p>　　double d = 1/10;</p>
-<p>　　System.out.println(d);</p>
-<p>　　返回的结果居然是 0.0 </p>
-<h3 id="原因分析">原因分析 <a href="#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90" class="anchor">🔗</a></h3><p>　　第一步：你会发现用运算结果也可以用 int 类型接收</p>
-<p>　　<strong>在 Java 语言中，整数之间的除法运算，不管你的小数位有多少位，小数是几，统统舍弃，只返回整数位数字！</strong></p>
-<p>　　第二步：用 double 类型接收为什么也可以？</p>
-<p>　　因为 double 类型的取值返回要大于 int 类型，所以属于向上类型转换，当然可以用比它大的容器接收。
+float f4 = 2358861f/235886; System.out.println(f4);//10.000004 方式四：将除数转换成 float 类型"><meta name=generator content="Hugo 0.124.1"><meta name=ROBOTS content="NOINDEX, NOFOLLOW"><link rel=stylesheet href=/css/style.css><link rel="shortcut icon" href=/images/favicon.ico type=image/x-icon></head><body><nav class=navigation><a href=/><span class=arrow>←</span>Home</a>
+<a href=/posts>Archive</a>
+<a href=/tags>Tags</a>
+<a href=/about>About</a></nav><main class=main><section id=single><h1 class=title>Java碰到的奇怪问题汇总</h1><div class=tip><time datetime="2020-04-23 19:12:21 +0000 UTC">Apr 23, 2020</time>
+<span class=split>·
+</span><span>113 words
+</span><span class=split>·
+</span><span>1 minute read</span></div><div class=content><h2 id=1除法返回00>1.除法返回0.0 <a href=#1%e9%99%a4%e6%b3%95%e8%bf%94%e5%9b%9e00 class=anchor>🔗</a></h2><h3 id=情景展示>情景展示 <a href=#%e6%83%85%e6%99%af%e5%b1%95%e7%a4%ba class=anchor>🔗</a></h3><p>　　double d = 1/10;</p><p>　　System.out.println(d);</p><p>　　返回的结果居然是 0.0 </p><h3 id=原因分析>原因分析 <a href=#%e5%8e%9f%e5%9b%a0%e5%88%86%e6%9e%90 class=anchor>🔗</a></h3><p>　　第一步：你会发现用运算结果也可以用 int 类型接收</p><p>　　<strong>在 Java 语言中，整数之间的除法运算，不管你的小数位有多少位，小数是几，统统舍弃，只返回整数位数字！</strong></p><p>　　第二步：用 double 类型接收为什么也可以？</p><p>　　因为 double 类型的取值返回要大于 int 类型，所以属于向上类型转换，当然可以用比它大的容器接收。
 　　
-　　第三步：为什么整数之间的除法运算，只返回整数位？</p>
-<p>　　因为在 Java 中，由运算结果，由被运算数的最高数据类型决定，也就是说：整数之间的运算，数据类型都为 int 类型，所以，返回的结果也为 int 类型。 </p>
-<h3 id="3-解决方案">3. 解决方案 <a href="#3-%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88" class="anchor">🔗</a></h3><p>　　如果我们想要返回完整的运算结果 ，我们就需要将其中一个的数据类型转换成 double 类型或者 float 类型，而不是只改变接收运算结果的数据类型！</p>
-<p>　　方式一：将被除数转换成 double 类型</p>
-<pre tabindex="0"><code>double d4 = 100d/235886;
+　　第三步：为什么整数之间的除法运算，只返回整数位？</p><p>　　因为在 Java 中，由运算结果，由被运算数的最高数据类型决定，也就是说：整数之间的运算，数据类型都为 int 类型，所以，返回的结果也为 int 类型。 </p><h3 id=3-解决方案>3. 解决方案 <a href=#3-%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88 class=anchor>🔗</a></h3><p>　　如果我们想要返回完整的运算结果 ，我们就需要将其中一个的数据类型转换成 double 类型或者 float 类型，而不是只改变接收运算结果的数据类型！</p><p>　　方式一：将被除数转换成 double 类型</p><pre tabindex=0><code>double d4 = 100d/235886;
 System.out.println(d4);//4.2393359504167265E-4
-</code></pre><p>　　方式二：将除数转换成 double 类型</p>
-<pre tabindex="0"><code>double d5 = 100/235886d;
+</code></pre><p>　　方式二：将除数转换成 double 类型</p><pre tabindex=0><code>double d5 = 100/235886d;
 System.out.println(d5);//4.2393359504167265E-4
-</code></pre><p>　　方式三：将被除数转换成 float 类型</p>
-<pre tabindex="0"><code>float f4 = 2358861f/235886;
+</code></pre><p>　　方式三：将被除数转换成 float 类型</p><pre tabindex=0><code>float f4 = 2358861f/235886;
 System.out.println(f4);//10.000004
-</code></pre><p>　　方式四：将除数转换成 float 类型</p>
-<pre tabindex="0"><code>float f5 = 2358861/235886f;
+</code></pre><p>　　方式四：将除数转换成 float 类型</p><pre tabindex=0><code>float f5 = 2358861/235886f;
 System.out.println(f5);//10.000004
-</code></pre><p>　　连续运算</p>
-<pre tabindex="0"><code>// 连续运算也是如此
+</code></pre><p>　　连续运算</p><pre tabindex=0><code>// 连续运算也是如此
 int i4 = 1234567/1000/3600;
 System.out.println(i4);//0
 double d = 1234567d/1000/3600;
 System.out.println(d);//0.34293527777777777
-</code></pre><p>　　转换成 long 类型没用哦！</p>
-<pre tabindex="0"><code>long l = 100L/235886;
+</code></pre><p>　　转换成 long 类型没用哦！</p><pre tabindex=0><code>long l = 100L/235886;
 System.out.println(l);// 0
-</code></pre><p>　　两个 Long 类型的数值进行除法运算</p>
-<pre tabindex="0"><code>System.out.println(&#34;long类型除法运算：&#34; + 12345678910L/98765432110L);//0
+</code></pre><p>　　两个 Long 类型的数值进行除法运算</p><pre tabindex=0><code>System.out.println(&#34;long类型除法运算：&#34; + 12345678910L/98765432110L);//0
 System.out.println(&#34;上升为double类型运算：&#34; + 12345678910L/98765432110D);//0.12499999894953125
 System.out.println(&#34;上升为float类型运算：&#34; + 12345678910L/98765432110F);//0.125
-</code></pre><h3 id="js-的整数间的运算会返回实际运算结果">js 的整数间的运算，会返回实际运算结果 <a href="#js-%e7%9a%84%e6%95%b4%e6%95%b0%e9%97%b4%e7%9a%84%e8%bf%90%e7%ae%97%e4%bc%9a%e8%bf%94%e5%9b%9e%e5%ae%9e%e9%99%85%e8%bf%90%e7%ae%97%e7%bb%93%e6%9e%9c" class="anchor">🔗</a></h3><p>console.log(1/10);  //0.1</p>
-
-    </div>
-
-    
-        <div class="tags">
-            
-                <a href="https://foezzy.github.io/tags/java">Java</a>
-            
-        </div>
-    
-    
-    
-
-</section>
-
-
-    </main>
-    
-    <footer id="footer">
-    
-
-    <div class="copyright">
-    
-       © Copyright 
-       2024 
-       <span class="split">
-        <svg fill="#bbbbbb" width="15" height="15" version="1.1" id="heart-15" xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 15 15">
-  <path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75&#xA;&#x9;C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z"/>
-</svg>
-       </span>
-       
-    
-    </div>
-
-    
-      <div class="powerby">
-        Powered by <a href='http://www.gohugo.io/'>Hugo</a> Theme By <a href='https://github.com/nodejh/hugo-theme-mini'>nodejh</a>
-      </div>
-    
-</footer>
-
-
-
-  </body>
-</html>
+</code></pre><h3 id=js-的整数间的运算会返回实际运算结果>js 的整数间的运算，会返回实际运算结果 <a href=#js-%e7%9a%84%e6%95%b4%e6%95%b0%e9%97%b4%e7%9a%84%e8%bf%90%e7%ae%97%e4%bc%9a%e8%bf%94%e5%9b%9e%e5%ae%9e%e9%99%85%e8%bf%90%e7%ae%97%e7%bb%93%e6%9e%9c class=anchor>🔗</a></h3><p>console.log(1/10); //0.1</p></div><div class=tags><a href=https://foezzy.github.io/tags/java>Java</a></div></section></main><footer id=footer><div class=copyright>© Copyright
+2024
+<span class=split><svg fill="#bbb" width="15" height="15" id="heart-15" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><path d="M13.91 6.75c-1.17 2.25-4.3 5.31-6.07 6.94-.1903.1718-.4797.1718-.67.0C5.39 12.06 2.26 9 1.09 6.75-1.48 1.8 5-1.5 7.5 3.45 10-1.5 16.48 1.8 13.91 6.75z"/></svg></span></div><div class=powerby>Powered by <a href=http://www.gohugo.io/>Hugo</a> Theme By <a href=https://github.com/nodejh/hugo-theme-mini>nodejh</a></div></footer></body></html>

@@ -1,26 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Glide on Blog</title>
-    <link>https://foezzy.github.io/tags/glide/</link>
-    <description>Recent content in Glide on Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 12 May 2020 10:32:00 +0000</lastBuildDate>
-    <atom:link href="https://foezzy.github.io/tags/glide/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Glide用到的代码记录</title>
-      <link>https://foezzy.github.io/posts/glide%E7%94%A8%E5%88%B0%E7%9A%84%E4%BB%A3%E7%A0%81%E8%AE%B0%E5%BD%95/</link>
-      <pubDate>Tue, 12 May 2020 10:32:00 +0000</pubDate>
-      <guid>https://foezzy.github.io/posts/glide%E7%94%A8%E5%88%B0%E7%9A%84%E4%BB%A3%E7%A0%81%E8%AE%B0%E5%BD%95/</guid>
-      <description>同步加载 🔗public static void loadImgSync(Context context, String url) { new Thread(new Runnable() { @Override public void run() { FutureTarget&amp;lt;Bitmap&amp;gt; futureBitmap = Glide.with(context) .asBitmap() .load(url) .submit(); try { Bitmap myBitmap = futureBitmap.get(); LogUtils.d(&amp;#34;hei:&amp;#34; + myBitmap.getHeight()); LogUtils.d(&amp;#34;wid:&amp;#34; + myBitmap.getWidth()); } catch (ExecutionException e) { e.printStackTrace(); } catch (InterruptedException e) { e.printStackTrace(); } } }).start(); } 获取宽高 🔗方式1： 🔗Glide.with(getContext().getApplicationContext()) .asBitmap() .load(path) .into(new SimpleTarget&amp;lt;Bitmap&amp;gt;() { @Override public void onResourceReady(Bitmap bitmap, Transition&amp;lt;? super Bitmap&amp;gt; transition) { int w = bitmap.</description>
-    </item>
-    <item>
-      <title>Glide遇到的问题</title>
-      <link>https://foezzy.github.io/posts/glide%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Sat, 13 Apr 2019 17:18:28 +0000</pubDate>
-      <guid>https://foezzy.github.io/posts/glide%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
-      <description>在RecyclerView中notifyDataSetChangedd的时候闪烁 🔗这个问题是在item中某一项需要刷新的时候出现的，本来imageview不用刷新，结果还是刷新了，并且闪烁了一下，解决方法参考：链接&#xA;解决方法一：&#xA;RequestOptions options = new RequestOptions().transform(new GlideCircleTransform()).placeholder(view.getDrawable()); Glide.with(Utils.getContext()).load(url).apply(options).into(view); 解决方法二：&#xA;RequestOptions options = new RequestOptions().transform(new GlideCircleTransform()).dontAnimate().fitCenter(); Glide.with(Utils.getContext()).load(url).apply(options).into(view); </description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Glide on Blog</title><link>https://foezzy.github.io/tags/glide/</link><description>Recent content in Glide on Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 12 May 2020 10:32:00 +0000</lastBuildDate><atom:link href="https://foezzy.github.io/tags/glide/index.xml" rel="self" type="application/rss+xml"/><item><title>Glide用到的代码记录</title><link>https://foezzy.github.io/posts/glide%E7%94%A8%E5%88%B0%E7%9A%84%E4%BB%A3%E7%A0%81%E8%AE%B0%E5%BD%95/</link><pubDate>Tue, 12 May 2020 10:32:00 +0000</pubDate><guid>https://foezzy.github.io/posts/glide%E7%94%A8%E5%88%B0%E7%9A%84%E4%BB%A3%E7%A0%81%E8%AE%B0%E5%BD%95/</guid><description>同步加载 🔗public static void loadImgSync(Context context, String url) { new Thread(new Runnable() { @Override public void run() { FutureTarget&amp;lt;Bitmap&amp;gt; futureBitmap = Glide.with(context) .asBitmap() .load(url) .submit(); try { Bitmap myBitmap = futureBitmap.get(); LogUtils.d(&amp;#34;hei:&amp;#34; + myBitmap.getHeight()); LogUtils.d(&amp;#34;wid:&amp;#34; + myBitmap.getWidth()); } catch (ExecutionException e) { e.printStackTrace(); } catch (InterruptedException e) { e.printStackTrace(); } } }).start(); } 获取宽高 🔗方式1： 🔗Glide.with(getContext().getApplicationContext()) .asBitmap() .load(path) .into(new SimpleTarget&amp;lt;Bitmap&amp;gt;() { @Override public void onResourceReady(Bitmap bitmap, Transition&amp;lt;? super Bitmap&amp;gt; transition) { int w = bitmap.</description></item><item><title>Glide遇到的问题</title><link>https://foezzy.github.io/posts/glide%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</link><pubDate>Sat, 13 Apr 2019 17:18:28 +0000</pubDate><guid>https://foezzy.github.io/posts/glide%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</guid><description>在RecyclerView中notifyDataSetChangedd的时候闪烁 🔗这个问题是在item中某一项需要刷新的时候出现的，本来imageview不用刷新，结果还是刷新了，并且闪烁了一下，解决方法参考：链接
+解决方法一：
+RequestOptions options = new RequestOptions().transform(new GlideCircleTransform()).placeholder(view.getDrawable()); Glide.with(Utils.getContext()).load(url).apply(options).into(view); 解决方法二：
+RequestOptions options = new RequestOptions().transform(new GlideCircleTransform()).dontAnimate().fitCenter(); Glide.with(Utils.getContext()).load(url).apply(options).into(view);</description></item></channel></rss>

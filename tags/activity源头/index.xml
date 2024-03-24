@@ -1,18 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Activity源头 on Blog</title>
-    <link>https://foezzy.github.io/tags/activity%E6%BA%90%E5%A4%B4/</link>
-    <description>Recent content in Activity源头 on Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <atom:link href="https://foezzy.github.io/tags/activity%E6%BA%90%E5%A4%B4/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Activity源头探究</title>
-      <link>https://foezzy.github.io/posts/activity%E6%BA%90%E5%A4%B4%E6%8E%A2%E7%A9%B6/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://foezzy.github.io/posts/activity%E6%BA%90%E5%A4%B4%E6%8E%A2%E7%A9%B6/</guid>
-      <description>疑问 🔗 开发中通过 startActivity() 创建 Activity 对象到底被谁持有引用了？ 新启动的 Activity 对象在其生命周期中理应是一直被持有引用，不然系统 gc 的时候就会被回收掉，那么其中的引用关系是怎样的呢？ Activity 对象的创建 🔗Activity 的创建会回调到 ActivityThread 中的 handleLaunchActivity() 方法：&#xA;frameworks/base/core/java/android/app/ActivityThread.java:&#xA;@Override public Activity handleLaunchActivity(ActivityClientRecord r, PendingTransactionActions pendingActions, Intent customIntent){ ··· final Activity a = performLaunchActivity(r, customIntent); ··· return a; } 接着在 performLaunchActivity() 方法里找到了 Acitivity 实例的创建：&#xA;private Activity performLaunchActivity(ActivityClientRecord r, Intent customIntent) { ··· ContextImpl appContext = createBaseContextForActivity(r); Activity activity = null; try { // 注解1：通过 ClassLoader 以及目标 Activity 的类名来创建新的 Activity 实例 java.</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Activity源头 on Blog</title><link>https://foezzy.github.io/tags/activity%E6%BA%90%E5%A4%B4/</link><description>Recent content in Activity源头 on Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://foezzy.github.io/tags/activity%E6%BA%90%E5%A4%B4/index.xml" rel="self" type="application/rss+xml"/><item><title>Activity源头探究</title><link>https://foezzy.github.io/posts/activity%E6%BA%90%E5%A4%B4%E6%8E%A2%E7%A9%B6/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://foezzy.github.io/posts/activity%E6%BA%90%E5%A4%B4%E6%8E%A2%E7%A9%B6/</guid><description>疑问 🔗 开发中通过 startActivity() 创建 Activity 对象到底被谁持有引用了？ 新启动的 Activity 对象在其生命周期中理应是一直被持有引用，不然系统 gc 的时候就会被回收掉，那么其中的引用关系是怎样的呢？ Activity 对象的创建 🔗Activity 的创建会回调到 ActivityThread 中的 handleLaunchActivity() 方法：
+frameworks/base/core/java/android/app/ActivityThread.java:
+@Override public Activity handleLaunchActivity(ActivityClientRecord r, PendingTransactionActions pendingActions, Intent customIntent){ ··· final Activity a = performLaunchActivity(r, customIntent); ··· return a; } 接着在 performLaunchActivity() 方法里找到了 Acitivity 实例的创建：
+private Activity performLaunchActivity(ActivityClientRecord r, Intent customIntent) { ··· ContextImpl appContext = createBaseContextForActivity(r); Activity activity = null; try { // 注解1：通过 ClassLoader 以及目标 Activity 的类名来创建新的 Activity 实例 java.</description></item></channel></rss>

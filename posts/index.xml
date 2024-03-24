@@ -1,145 +1,193 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on Blog</title>
-    <link>https://foezzy.github.io/posts/</link>
-    <description>Recent content in Posts on Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 25 Jun 2020 17:11:45 +0000</lastBuildDate>
-    <atom:link href="https://foezzy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>clashX使用说明</title>
-      <link>https://foezzy.github.io/posts/clashx%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</link>
-      <pubDate>Thu, 25 Jun 2020 17:11:45 +0000</pubDate>
-      <guid>https://foezzy.github.io/posts/clashx%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</guid>
-      <description>前言 🔗Clash 是一个使用 Go 语言编写，基于规则的跨平台代理软件核心程序。 ClashX 是运行在 macOS 上的一款科学上网工具。 也就是ClashX是套着Clash程序的MacOS平台的科学上网外壳。&#xA;下载 🔗ClashX下载地址： https://github.com/yichengchen/clashX/releases&#xA;选择最新的dmg版本下载，然后安装到MacOS系统&#xA;如果速度太慢，可以选择蓝奏盘下载，蓝奏盘的版本是1.20.4，地址如下： https://wwa.lanzous.com/iPf0pe0zfsh&#xA;安装 🔗下载dmg文件后打开，直接把clash.app拖动到Application文件夹&#xA;使用 🔗打开Clash,如果第一次打开失败可以在进程管理器杀掉ClashX进程再打开一次 在状态栏发现一个小猫的图标，说明启动完成&#xA;1.添加配置，最好使用订阅连接，也可以自己手动添加节点，从机场服务商获取到订阅连接后可以直接添加到Clash，目前Clash支持SS、V2ray节点两种方式&#xA;添加订阅节点方式：单击小猫图标 - 配置 - 托管配置 - 管理 然后添加订阅连接。&#xA;重要说明： 🔗自己手动配置节点还是比较麻烦，推荐还是通过添加配置自动生成 自动生成涉及到订阅的转化，因为机场商提供的不是yaml格式的配置，所以要转换一下，把ss或者v2ray节点转换为ClashX支持的格式&#xA;可以通过：https://acl4ssr.netlify.app/ 这个地址转换，比如复制了Surge3的订阅连接，然后打开上面，把地址添加到ClashX中，客户端选择Clash，点击生成订阅连接，就得到了Clash客户端的订阅连接，添加到ClashX里，就可以看到生成的yaml文件&#xA;注意：该地址需要科学上网，而且打开速度有点慢，如果打开不了需要自己搜索：clash 订阅转换 找到合适的替代品&#xA;2.同时需要注意的是,要勾选上设置为系统代理，这个表示ClashX是否工作，勾上就开始工作 3.节点添加完成后就可以测速是否正常，选择某个节点，就可以愉快地上网了。</description>
-    </item>
-    <item>
-      <title>不用数据线连接adb,需要root权限</title>
-      <link>https://foezzy.github.io/posts/%E4%B8%8D%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BA%BF%E8%BF%9E%E6%8E%A5adb-%E9%9C%80%E8%A6%81root%E6%9D%83%E9%99%90/</link>
-      <pubDate>Fri, 15 May 2020 11:34:05 +0000</pubDate>
-      <guid>https://foezzy.github.io/posts/%E4%B8%8D%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BA%BF%E8%BF%9E%E6%8E%A5adb-%E9%9C%80%E8%A6%81root%E6%9D%83%E9%99%90/</guid>
-      <description>有 2 种方法开启无线调试，其中一种需要 USB 线先连接，这里只介绍另一种不借助 USB 线的&#xA;过程很简单，手机需要有 ROOT 权限&#xA;手机端下载 终端模拟器 或其他终端 手机终端输入如下命令&#xA;su&#xA;setprop service.adb.tcp.port 5555&#xA;stop adbd&#xA;start adbd&#xA;查看本机 ip ifconfig&#xA;在开发者选项中打开 USB 调试（否则连接后会显示未授权）&#xA;电脑端输入&#xA;adb connect Phone_ip:5555 (Phone_ip 为你自己手机 ip) adb devices&#xA;若成功 此时你便能看到自己的设备了 List of devices attached&#xA;192.168.1.59:5555 device&#xA;可能遇到的问题 🔗问题：unable to connect to 192.168.199.248:5555: Connection refused 解决办法 (设置监听端口)&#xA;$ setprop service.adb.tcp.port 5555 //设置监听端口 $ stop adbd $ start adbd </description>
-    </item>
-    <item>
-      <title>Glide用到的代码记录</title>
-      <link>https://foezzy.github.io/posts/glide%E7%94%A8%E5%88%B0%E7%9A%84%E4%BB%A3%E7%A0%81%E8%AE%B0%E5%BD%95/</link>
-      <pubDate>Tue, 12 May 2020 10:32:00 +0000</pubDate>
-      <guid>https://foezzy.github.io/posts/glide%E7%94%A8%E5%88%B0%E7%9A%84%E4%BB%A3%E7%A0%81%E8%AE%B0%E5%BD%95/</guid>
-      <description>同步加载 🔗public static void loadImgSync(Context context, String url) { new Thread(new Runnable() { @Override public void run() { FutureTarget&amp;lt;Bitmap&amp;gt; futureBitmap = Glide.with(context) .asBitmap() .load(url) .submit(); try { Bitmap myBitmap = futureBitmap.get(); LogUtils.d(&amp;#34;hei:&amp;#34; + myBitmap.getHeight()); LogUtils.d(&amp;#34;wid:&amp;#34; + myBitmap.getWidth()); } catch (ExecutionException e) { e.printStackTrace(); } catch (InterruptedException e) { e.printStackTrace(); } } }).start(); } 获取宽高 🔗方式1： 🔗Glide.with(getContext().getApplicationContext()) .asBitmap() .load(path) .into(new SimpleTarget&amp;lt;Bitmap&amp;gt;() { @Override public void onResourceReady(Bitmap bitmap, Transition&amp;lt;? super Bitmap&amp;gt; transition) { int w = bitmap.</description>
-    </item>
-    <item>
-      <title>Charles快速配置安卓手机Proxy</title>
-      <link>https://foezzy.github.io/posts/charles%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BAproxy/</link>
-      <pubDate>Mon, 11 May 2020 15:02:58 +0000</pubDate>
-      <guid>https://foezzy.github.io/posts/charles%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BAproxy/</guid>
-      <description>前言 🔗Charles可以实现很多功能，比如抓包，修改返回结果，限速，真是一个神器，但是每次手机配置代理，真是逆天的操作&#xA;1.进入设置 2.进入 WLAN 3.找对应 wifi 连接 4.进入详情 5.找到代理 6.选择手动 7.输入主机名 8.输入端口号 9.最后保存&#xA;所以这篇文章就是为了把这么多步简化的过程，在网上搜索了一些方式，发现有两篇有很好的参考价值 一键设置 Android http proxy 的尝试 Android自动设置HTTP代理 主要方式 🔗方式一：安装一个app,然后用adb shell发送给app，代码进行wifi连接与配置，这种方式在 Api &amp;gt; 23 就会失效，目前大部分都是8.0以上的手机，这种方式就不好用了&#xA;方式二：用adb shell settings put global进行配置，但是这种方式是临时的，不用的话还要手动关一下&#xA;目前做法 🔗参考知乎上那位大神的做法，直接写个sh脚本，再加上zsh的alias，就能比较方便的配置proxy了&#xA;步骤 🔗新建 easy_proxy.sh 的文本，把以下代码贴进去即可&#xA;#!/bin/bash echo &amp;#34;\n---------------- Support ------------------&amp;#34; echo &amp;#34;设置本机IP代理 ./easy_proxy.sh set&amp;#34; echo &amp;#34;设置自定义代理 ./easy_proxy.sh set ****:8888&amp;#34; echo &amp;#34;删除代理 ./easy_proxy.sh clean&amp;#34; echo &amp;#34;--------------------------------------------\n&amp;#34; # 获取当前IP ip=$(ifconfig en0 | grep -E &amp;#39;inet \d{3}.&amp;#39; | awk &amp;#39;{print $2}&amp;#39;) default_proxy=${ip}&amp;#34;:8888&amp;#34; echo &amp;#34;本机IP为: $default_proxy\n&amp;#34; if [ &amp;#34;$1&amp;#34; == &amp;#34;set&amp;#34; ];then if [ -n &amp;#34;$2&amp;#34; ];then echo &amp;#34;设置自定义代理 $2&amp;#34; adb shell settings put global http_proxy $2 else echo &amp;#34;设置本机IP代理 $default_proxy&amp;#34; adb shell settings put global http_proxy $default_proxy fi elif [ &amp;#34;$1&amp;#34; == &amp;#34;clean&amp;#34; ];then echo &amp;#34;清除代理成功&amp;#34; adb shell settings put global http_proxy :0 else echo &amp;#34;!</description>
-    </item>
-    <item>
-      <title>Java碰到的奇怪问题汇总</title>
-      <link>https://foezzy.github.io/posts/java%E7%A2%B0%E5%88%B0%E7%9A%84%E5%A5%87%E6%80%AA%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</link>
-      <pubDate>Thu, 23 Apr 2020 19:12:21 +0000</pubDate>
-      <guid>https://foezzy.github.io/posts/java%E7%A2%B0%E5%88%B0%E7%9A%84%E5%A5%87%E6%80%AA%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
-      <description>1.除法返回0.0 🔗情景展示 🔗　double d = 1/10;&#xA;System.out.println(d);&#xA;返回的结果居然是 0.0 原因分析 🔗　第一步：你会发现用运算结果也可以用 int 类型接收&#xA;在 Java 语言中，整数之间的除法运算，不管你的小数位有多少位，小数是几，统统舍弃，只返回整数位数字！&#xA;第二步：用 double 类型接收为什么也可以？&#xA;因为 double 类型的取值返回要大于 int 类型，所以属于向上类型转换，当然可以用比它大的容器接收。 第三步：为什么整数之间的除法运算，只返回整数位？&#xA;因为在 Java 中，由运算结果，由被运算数的最高数据类型决定，也就是说：整数之间的运算，数据类型都为 int 类型，所以，返回的结果也为 int 类型。 3. 解决方案 🔗　如果我们想要返回完整的运算结果 ，我们就需要将其中一个的数据类型转换成 double 类型或者 float 类型，而不是只改变接收运算结果的数据类型！&#xA;方式一：将被除数转换成 double 类型&#xA;double d4 = 100d/235886; System.out.println(d4);//4.2393359504167265E-4 方式二：将除数转换成 double 类型&#xA;double d5 = 100/235886d; System.out.println(d5);//4.2393359504167265E-4 方式三：将被除数转换成 float 类型&#xA;float f4 = 2358861f/235886; System.out.println(f4);//10.000004 方式四：将除数转换成 float 类型</description>
-    </item>
-    <item>
-      <title>Java正则之坑</title>
-      <link>https://foezzy.github.io/posts/java%E6%AD%A3%E5%88%99%E4%B9%8B%E5%9D%91/</link>
-      <pubDate>Fri, 06 Mar 2020 19:45:20 +0000</pubDate>
-      <guid>https://foezzy.github.io/posts/java%E6%AD%A3%E5%88%99%E4%B9%8B%E5%9D%91/</guid>
-      <description>首先说明需求&#xA;有个xxx.api.abc.com需要替换成config.abc.com&#xA;这个是可以用正则做到的，如下&#xA;String oldUrl = &amp;#34;xxx.api.abc.com&amp;#34;; String newUrl = oldUrl.replaceAll(&amp;#34;.*\.api&amp;#34;, &amp;#34;config&amp;#34;); //报错 查了下，发现正则要用两个斜杆\\，所以改成&#xA;String newUrl = oldUrl.replaceAll(&amp;#34;.*\\.api&amp;#34;, &amp;#34;config&amp;#34;) //OK //或者下面的更简单 String newUrl = oldUrl.replaceAll(&amp;#34;.*api&amp;#34;, &amp;#34;config&amp;#34;) //OK 之所以有坑，是因为java里的\有一定含义，反斜杠 \ 在 Java 中表示转义字符&#xA;这里例举两个特别重要的用法：&#xA;在匹配 . 或 { 或 [ 或 ( 或 ? 或 $ 或 ^ 或 * 这些特殊字符时，需要在前面加上 \\，比如匹配 . 时，Java 中要写为 \\.，但对于正则表达式来说就是 \. 在匹配 \ 时，Java 中要写为 \\\\，但对于正则表达式来说就是 \\ 其他类似\d在Java里要写成\\d Java 中的正则表达式字符串有两层含义，首先 Java 字符串转义出符合正则表达式语法的字符串，然后再由转义后的正则表达式进行模式匹配</description>
-    </item>
-    <item>
-      <title>gitignore总结</title>
-      <link>https://foezzy.github.io/posts/gitignore%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Thu, 16 Jan 2020 11:45:22 +0000</pubDate>
-      <guid>https://foezzy.github.io/posts/gitignore%E6%80%BB%E7%BB%93/</guid>
-      <description>##gitignore生效操作&#xA;###场景一：某个文件已经被追踪 比如Android项目下.idea文件夹，里面已经有某些文件提交过，要忽略.idea文件夹下所有文件 先在.gitignore文件夹添加/.idea，表示忽略.idea下所有文件&#xA;接着删除缓存&#xA;git rm -r --cached ./.idea 这个命令把之前跟踪的.idea目录下所有文件的缓存给删了，然后需要push到远程项目地址就OK了，本地.idea下有修改都不会被检测到了&#xA;说明：所有文件指的是多级目录，git update-index &amp;ndash;assume-unchanged 这个命令也能清除追踪，但是只能指定文件，所以不用这个命令&#xA;场景二：未提交项目，要忽略的文件夹下的文件还未被追踪 🔗直接在.gitignore文件夹添加/.idea，表示忽略.idea下所有文件，然后直接push就可以了</description>
-    </item>
-    <item>
-      <title>Android音频焦点归纳整理</title>
-      <link>https://foezzy.github.io/posts/android%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9%E5%BD%92%E7%BA%B3/</link>
-      <pubDate>Sat, 14 Dec 2019 15:26:42 +0000</pubDate>
-      <guid>https://foezzy.github.io/posts/android%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9%E5%BD%92%E7%BA%B3/</guid>
-      <description>前言 🔗音频焦点是 API 8 中引入的一个概念，它主要作用于用户在同一个时刻只能关注单个音频流，或者用来降低背景声音，使用户只关注要主要的声音。在不同Android版本中，对应的代码也有区别。主要三个节点为&#xA;2.2 (API level 8) 5.0 (API level 21) 8.0 (API level 26) 2.2-5.0 🔗申请焦点：&#xA;private void requestAudioFocus() { audioManager = (AudioManager) getContext().getSystemService(Context.AUDIO_SERVICE); if (audioManager != null) { audioManager.requestAudioFocus(mAudioFocusListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT); } } requestAudioFocus中，有3个参数，先说参数2，参数2是多种声音类型，如下：&#xA;AudioManager.STREAM_VOICE_CALL&#xA;AudioManager.STREAM_SYSTEM&#xA;AudioManager.STREAM_RING&#xA;AudioManager.STREAM_MUSIC&#xA;AudioManager.STREAM_ALARM&#xA;AudioManager.STREAM_NOTIFICATION&#xA;AudioManager.STREAM_BLUETOOTH_SCO&#xA;AudioManager.STREAM_SYSTEM_ENFORCED&#xA;AudioManager.STREAM_DTMF&#xA;AudioManager.STREAM_TTS&#xA;然后是参数3，也是有多个声明类型，如下：&#xA;AudioManager.AUDIOFOCUS_GAIN：想要长期占有焦点，失去焦点者stop播放和释放 AudioManager.AUDIOFOCUS_GAIN_TRANSIENT：想要短暂占有焦点，失去焦点者pause播放 AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK：想要短暂占有焦点，失去焦点者可以继续播放但是音量需要调低 AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_EXCLUSIVE：想要短暂占有焦点，但希望失去焦点者不要有声音播放 最后是参数1，参数1要自己写个回调：&#xA;private AudioManager.OnAudioFocusChangeListener mAudioFocusListener = new AudioManager.OnAudioFocusChangeListener() { @Override public void onAudioFocusChange(int focusChange) { switch (focusChange) { case AudioManager.</description>
-    </item>
-    <item>
-      <title>基本单位记录-易混</title>
-      <link>https://foezzy.github.io/posts/%E5%9F%BA%E6%9C%AC%E5%8D%95%E4%BD%8D%E8%AE%B0%E5%BD%95-%E6%98%93%E6%B7%B7/</link>
-      <pubDate>Wed, 27 Nov 2019 17:51:20 +0000</pubDate>
-      <guid>https://foezzy.github.io/posts/%E5%9F%BA%E6%9C%AC%E5%8D%95%E4%BD%8D%E8%AE%B0%E5%BD%95-%E6%98%93%E6%B7%B7/</guid>
-      <description>数据传输、存储的单位及换算 🔗bit与byte的区别 🔗bit意为“位”或“比特”，是计算机运算的基础； byte意为“字节”，是计算机文件大小的基本计算单位；&#xA;1 byte = 8 bit 宽带运营商说的下载速度、路由器的标明速度Mbps其实就是Mbit per second，也就是兆比特每秒 下载速度要换成存储大小单位，就要除以8，也就是 1Mbit/s 的文件传输速度 可以转化为 1MByte/s 的文件下载速度 说到usb2.0标准接口传输速率。许多人都将“480mbps”误解为480兆/秒。其实，这是错误的，事实上“480mbps”应为“480兆比特/秒”或“480兆位/秒”，它等于“60兆字节/秒”，大家看到差距了吧。 这要从bit和byte说起：bit和byte同译为&amp;quot;比特&amp;quot;，都是数据量度单位，bit=“比特”或“位”。 byte=字节即1byte=8bits,两者换算是1：8的关系。 mbps=mega bits per second(兆位/秒)是速率单位，所以正确的说法应该是说usb2.0的传输速度是480兆位/秒,即480mbps。 mb=mega bytes(兆比、兆字节)是量单位，1mb/s（兆字节/秒）=8mbps（兆位/秒）。 我们所说的硬盘容量是40gb、80gb、100gb，这里的b指是的byte也就是“字节”。 1 kb = 1024 bytes =2^10 bytes 1 mb = 1024 kb = 2^20 bytes 1 gb = 1024 mb = 2^30 bytes 比如以前所谓的56kb的modem换算过来56kbps除以8也就是7kbyte，所以真正从网上下载文件存在硬盘上的速度也就是每秒7kbyte，网卡，ADSL等都应该以此来计算！ 也就是说与传输速度有关的b一般指的是bit。 与容量有关的b一般指的是byte。 最后再说一点: usb2.0 480mbps=60mb/s的传输速率还只是理论值，它还要受到系统环境的制约（cpu、硬盘和内存等），其实际读、取写入硬盘的速度约在11～16mb/s。但这也比usb1.1的12mbps(1.5m/s)快了近10倍。 比如网速4080Kbps的真实速度换算是:(要注意Kbps还是KBps) K=1000(或1024) 4080Kbps(小b)=4080000bps 也可以把4080Kbps(位)看成4080000个&amp;quot;位&amp;quot;或&amp;quot;比特&amp;quot; 那么4080000位等于多少字节呢,因8个位等于1个字节,所以4080000/8=510000字节 那么51000字节等于多少KB呢,因1024个字节等于1KB,所以51000/1024=498.04KB(约等于500KB) 有时候看到 500K字节/秒其实也是500000字节/秒也可以说成是500K每秒..一个意思&#xA;其他常用单位 🔗Bit 位 Byte (字节) 1Byte=8Bits 1KB=1024Byte 1KB=1024Byte=8192Bits 1Byte(字节)=8Bit(位) 1 kB = 1024 Byte 千 1 MB = 1024 kB 兆 1 GB = 1024 MB 吉 1 TB = 1024 GB 太 1 PB = 1024 TB 拍 1 EB = 1024 PB 艾 1 ZB = 1024 EB 皆 1 YB = 1024 ZB 佑</description>
-    </item>
-    <item>
-      <title>github加速和终端代理</title>
-      <link>https://foezzy.github.io/posts/github%E5%8A%A0%E9%80%9F%E5%92%8C%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86/</link>
-      <pubDate>Wed, 09 Oct 2019 10:16:24 +0000</pubDate>
-      <guid>https://foezzy.github.io/posts/github%E5%8A%A0%E9%80%9F%E5%92%8C%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86/</guid>
-      <description>github加速： 🔗解决github在访问和clone时速度太慢的问题&#xA;下载一个可以设置host的软件，比如mac上可以用iHost&#xA;然后设置下面的host&#xA;https://gitee.com/Mosiki/github/raw/master/github_hosts.txt&#xA;设置完刷新dns，就可以加速github的访问和clone了&#xA;终端代理： 🔗就是在iterm2里要能访问到外网数据&#xA;比如在拉取某一个仓库时，如果这个仓库需要fq，就要用到这个东西&#xA;参考链接：https://zhuanlan.zhihu.com/p/46973701&#xA;最后是用v2ray-u加zshrc设置alias简写来简化操作，每次要用的时候输入setproxy，不用了就unsetproxy。&#xA;alias setproxy=&amp;ldquo;export ALL_PROXY=socks5://127.0.0.1:1080&amp;rdquo;&#xA;alias unsetproxy=&amp;ldquo;unset ALL_PROXY&amp;rdquo;</description>
-    </item>
-    <item>
-      <title>一个简单的最近热点Android阅读器</title>
-      <link>https://foezzy.github.io/posts/%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%9C%80%E8%BF%91%E7%83%AD%E7%82%B9android%E9%98%85%E8%AF%BB%E5%99%A8/</link>
-      <pubDate>Mon, 30 Sep 2019 14:01:02 +0000</pubDate>
-      <guid>https://foezzy.github.io/posts/%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%9C%80%E8%BF%91%E7%83%AD%E7%82%B9android%E9%98%85%E8%AF%BB%E5%99%A8/</guid>
-      <description>V2EX上有人做了个热榜api，看着不错&#xA;https://www.v2ex.com/t/578957&#xA;有人拿来做了个网页&#xA;https://www.telami.cn/hot/&#xA;发现这个网页好是好，但是一下子数据太多，看不过来，于是看了下接口，发现可以自己随便定&#xA;在手机上我用的via浏览器，发现打开知乎或者一些会自动跳转的有scheme的网页，会出现找不到协议的错误，网页就没法看了&#xA;基于以上两点，自己加工了一下，做了个安卓端可以自己定义内容的查看器，其实就是内嵌个webview，截图如下&#xA;源码可以前往 https://github.com/foezzy/EasyNewsForAndroid&#xA;直接下载apk体验地址 https://www.lanzous.com/i6i60yj&#xA;使用说明：&#xA;1.点下面检查接口，在弹出框可以看到每个频道对应了一个id，记住这个id&#xA;2.点击add，然后名字随便自己定，id就填那个id，然后ok就添加了一个频道&#xA;3.点item就可以获取最新的新闻了&#xA;4.长按item会出现关闭按钮，可以自由添加删除&#xA;5.有时网络慢时，无任何反应，接口没返回时没做什么处理&#xA;6.觉得不错请给个star谢谢&#xA;其中webview最开始自己写了一个，发现一直有些奇怪的问题，后来找了一个开源的过来用，感谢这个作者&#xA;https://github.com/hylinux1024/BridgeWebView</description>
-    </item>
-    <item>
-      <title>.9图片设置无效问题</title>
-      <link>https://foezzy.github.io/posts/9%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE%E6%97%A0%E6%95%88%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Mon, 30 Sep 2019 13:43:08 +0000</pubDate>
-      <guid>https://foezzy.github.io/posts/9%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE%E6%97%A0%E6%95%88%E9%97%AE%E9%A2%98/</guid>
-      <description>最近在加.9图片的时候，发现用了一直没生效，最后搜到是说要放到xhdpi目录下，很奇葩的问题，特此记录一下&#xA;原文链接: https://blog.csdn.net/rrr9805/article/details/79165273&#xA;Android Studio中使用.9图片 🔗 Android Studio项目中对于.9图片的规范更加的严格,.9图片不能放到mipmap目录中,否则编译会报错,只能放到drawable目录中. Android Studio集成了draw9patch工具,所以如果你更新了最新的SDK的话,在tools目录下是找不到draw9patch.bat这个脚本执行文件的 使用Android Studio自带的draw9patch工具的步骤: 生成完.9图片后,切记要拷贝到drawable文件夹中 设置好.9图片不生效 🔗这里不赘述如何画一张.9图片,方法自行百度.可以参考 http://blog.csdn.net/lastwarmth/article/details/49991445&#xA;重点来了,当你绘制好.9图片,然后应用到View上的时候,怎么都不生效的话那么 \1. 确保.9图片在drawable目录下 \2. 确保你的mipmap目录下,没有和.9图片重名(此处的重名是指,排除文件后缀的重名,例如: back.png和back.9.png属于同名)的文件,如果有,删除掉mipmap目录下的同名文件 \3. 上面操作都做了还不生效的话,那么就在你的res目录下,新建一个drawable-xdpi的目录,把.9图片移动到这个目录中(楼主就是这么解决的),然后就可以完结撒花了;</description>
-    </item>
-    <item>
-      <title>Android依赖相问题</title>
-      <link>https://foezzy.github.io/posts/android%E4%BE%9D%E8%B5%96%E7%9B%B8%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Thu, 29 Aug 2019 10:20:29 +0000</pubDate>
-      <guid>https://foezzy.github.io/posts/android%E4%BE%9D%E8%B5%96%E7%9B%B8%E9%97%AE%E9%A2%98/</guid>
-      <description>Android依赖第三方库引起一个报错 🔗uses-sdk:minSdkVersion 1 cannot be smaller than version 14 declared in library [com.android.support:appcompat-v7:28.0.0] 谷歌查了一下说是依赖库版本比主模块版本低，要提高依赖库的版本， 但是找了发现没有低，主要是没有找到是哪个依赖库，最终是在报错信息里发现了那个库没有minSdkVersion字段，在该模块的build.gradle文件下的defaultConfig加上对应的minSdkVersion即可，要不低于主模块的版本</description>
-    </item>
-    <item>
-      <title>Android Studio 使用相关</title>
-      <link>https://foezzy.github.io/posts/android-studio-%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3/</link>
-      <pubDate>Mon, 12 Aug 2019 13:52:14 +0000</pubDate>
-      <guid>https://foezzy.github.io/posts/android-studio-%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3/</guid>
-      <description>记录Android Studio使用过程中，配置的快捷键，插件相关的东西（Mac平台） 🔗 快捷键 🔗在Finder快速打开某个文件或文件夹 🔗本来这个东西是挺简单的，结果找了有一会，特地记录下&#xA;直接右键有个选项 - Reveal in Finder&#xA;但是每次去找都是在一堆选择中找它，特别不方便&#xA;想找个什么插件也没有找到能直接打开的，后来突然想到可以设置快捷键&#xA;这个Reveal in Finder默认是没有快捷键的~ 有点奇葩&#xA;解决方法：&#xA;在Preferences - Keymap - 搜索 Reveal in Finder - 双击它 - Add Keyboard Shortcut&#xA;设置成上面这样，就是直接按F键就行了，然后Apply - 确定，以后在Finder里打开直接双击F键就行了，非常方便&#xA;勘误：&#xA;这种做法不太好，在开始使用后发现按F没反应，就是说不能直接用某个按键去操作，要加上功能键才行&#xA;目前改为 control + , 来实现打开文件夹目录的功能&#xA;自动保存 🔗在输入一行或者多行代码后按 command + s 自动格式化代码 🔗Android Studio默认是自动保存代码的，不需要按 command + s 按钮，但是每次代码都不能自动格式化，需要录制一个宏（相当于自动操作），然后给这个宏设置快捷键，然后就能实现自动格式化了 在mac上默认格式化的快捷键是option+command+l，所以本质是把这个快捷键映射成 command + s 而已，因为更符合操作习惯，具体操作见下面链接： 录制宏&#xA;其中设置代码风格的方式有默认的，也可以自己引入xml文件，参考链接： Android Studio 配置 Code Style&#xA;这样设置之后，在保存的时候，就默认已经格式化完成了&#xA;后文： 使用过程还发现xml文件也会格式化，但是还自动重新排序了，这样会导致布局文件异常，解决方案看下面链接： 格式化 xml 文件时代码错乱问题</description>
-    </item>
-    <item>
-      <title>七夕</title>
-      <link>https://foezzy.github.io/posts/%E4%B8%83%E5%A4%95/</link>
-      <pubDate>Wed, 07 Aug 2019 17:23:09 +0000</pubDate>
-      <guid>https://foezzy.github.io/posts/%E4%B8%83%E5%A4%95/</guid>
-      <description>今天七夕，突然想起N年前某个骚年骚里骚气的操作，截个图做个纪念&#xA;怀念QQ空间写说说，记日记的日记，好像过去好久了~&#xA;晚上世界之窗走起~</description>
-    </item>
-    <item>
-      <title>Android编码规范</title>
-      <link>https://foezzy.github.io/posts/android%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</link>
-      <pubDate>Fri, 14 Jun 2019 10:07:09 +0000</pubDate>
-      <guid>https://foezzy.github.io/posts/android%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</guid>
-      <description>Android编码规范 🔗命名规范 🔗 包命名及分包结构规范&#xA;包名沿用 Java 编程的通用风格 类命名规范&#xA;基本的类名沿用 Java 编程的通用风格（采用完整的英文描述符，所有单词第一个字母大写，采用驼峰式命名）&#xA;android 特有的类，如 Activity、Fragment、Service、Provider、Adapter、View 等，则以对应的类型单词为后缀&#xA;接口命名规范&#xA;类命名以大写字母 I 为前缀，如果是监听接口以 Listener 结尾&#xA;在自定义的监听接口里，监听事件以 on 开头, 如 onOpenMenu(), onRefresh()&amp;hellip;&#xA;方法命名规范&#xA;方法命名沿用 Java 编程的通用风格（采用完整的英文描述符，函数名字以代表函数功能的英文单词组成，除首单词小写，其他单词首字母大写；一般的，函数第一个单词要求用动词） 变量命名规范&#xA;boolean 成员要以 is 开头，或以 has 开头。如： isFirst, hasMore&#xA;控件命名规范： 原则是 “view 的缩写 + 功能描述”。 比如一个 TextView 缩写为 tv(驼峰命名抽取出来的缩写)， 这个 TextView 是显示用户名字的， 所以就可以命名为: tvUserName。&#xA;常量的名字全部大写，单词之间用’_’分开&#xA;控件命名规范： 原则是 “view 的缩写 + 功能描述”。 比如一个 TextView 缩写为 tv(驼峰命名抽取出来的缩写)， 这个 TextView 是显示用户名字的， 所以就可以命名为: tvUserName</description>
-    </item>
-    <item>
-      <title>Glide遇到的问题</title>
-      <link>https://foezzy.github.io/posts/glide%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Sat, 13 Apr 2019 17:18:28 +0000</pubDate>
-      <guid>https://foezzy.github.io/posts/glide%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
-      <description>在RecyclerView中notifyDataSetChangedd的时候闪烁 🔗这个问题是在item中某一项需要刷新的时候出现的，本来imageview不用刷新，结果还是刷新了，并且闪烁了一下，解决方法参考：链接&#xA;解决方法一：&#xA;RequestOptions options = new RequestOptions().transform(new GlideCircleTransform()).placeholder(view.getDrawable()); Glide.with(Utils.getContext()).load(url).apply(options).into(view); 解决方法二：&#xA;RequestOptions options = new RequestOptions().transform(new GlideCircleTransform()).dontAnimate().fitCenter(); Glide.with(Utils.getContext()).load(url).apply(options).into(view); </description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://foezzy.github.io/posts/android%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%B5%84%E6%BA%90%E7%9A%84%E6%A0%BC%E5%BC%8F%E5%8C%96/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://foezzy.github.io/posts/android%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%B5%84%E6%BA%90%E7%9A%84%E6%A0%BC%E5%BC%8F%E5%8C%96/</guid>
-      <description>为什么要写这一篇随笔呢？最近做项目的过程中，遇到很多页面在要显示文本时，有一部分是固定的文本，有一部分是动态获取的，并且格式各式各样。一开始采取比较笨的办法，把他拆分成一个个文本控件，然后对不同的控件采用不同的样式。这样做效率&#xA;很低，并且文本之间的对齐是个很大的问题，后来到网上寻求帮助，找到一些有关Android字符串和字符串资源格式化的文章，在此做一个总结。&#xA;一.字符串格式化&#xA;Java的String类给我们提供了两个重载的格式化字符串的方法，可以通过占位符的方式，向固定字符串中传入参数。他们分别是：&#xA;format(String format, Object&amp;hellip; args) 新字符串使用本地语言环境，制定字符串格式和参数生成格式化的新字符串。&#xA;format(Locale locale, String format, Object&amp;hellip; args) 使用指定的语言环境，制定字符串格式和参数生成格式化的字符串。&#xA;例如：&#xA;字符串占位符%s ：System.out.println(&amp;ldquo;Hi,%s&amp;rdquo;, &amp;ldquo;王力&amp;rdquo;) 输出 Hi,王力&#xA;十进制整形占位符%d ：System.out.println(&amp;ldquo;我今年%d岁&amp;rdquo;, 20) 输出 我今年20岁&#xA;浮点型占位符%f：System.out.println(&amp;ldquo;荔枝的价格是 %f 元&amp;rdquo;, 3.5) 输出 荔枝的价格是3.5元&#xA;还有其他字符型，整形，日期格式等等格式化方法，再次就不一一举例了。&#xA;二.带HTML标签的字符串格式化&#xA;当我们需要对一段文字的部分文字进行字体颜色，字形，字体风格设置时，我们可以使用HTML标签，然后在输出的时候，通过Html.from方法解析为html字符串。&#xA;例如：&#xA;String str = &amp;#34;后面的文字是加粗的红色文字：&amp;#34; + &amp;#34;&amp;lt;font color=&amp;#39;#ff0000&amp;#39;&amp;gt;&amp;lt;b&amp;gt;加粗红色文字&amp;lt;/b&amp;gt;&amp;lt;/font&amp;gt;&amp;#34;; CharseQuence cq=Html.from(str); textView.setText(cq); 第一种情形和第二种情形可以结合起来使用：&#xA;String str = &amp;#34;后面的文字是加粗的红色文字：&amp;#34; + &amp;#34;&amp;lt;font color=&amp;#39;#ff0000&amp;#39;&amp;gt;&amp;lt;b&amp;gt;%s&amp;lt;/b&amp;gt;&amp;lt;/font&amp;gt;&amp;#34;; String str2=String.format(str,&amp;#34;红色加粗文字&amp;#34;); 输出与上面一样.&#xA;三.字符串资源的格式化&#xA;我们在字符串资源中同样可以通过占位符来给字符串传入参数，不过与第一种方式相比，占位符的格式略有不同&#xA;我们使用%[index]$[type]格式进行标记，index标记替换资源中第index个资源对应的位置，type则标示所要替换的资源的类型（s表示资源为字符串格式）&#xA;例如：&#xA;&amp;lt;resources&amp;gt; &amp;lt;string name=&amp;ldquo;hello&amp;rdquo;&amp;gt;Hello World, my name is %1$s!&amp;lt;/string&amp;gt; &amp;lt;string name=&amp;ldquo;app_name&amp;rdquo;&amp;gt;MyString&amp;lt;/string&amp;gt; &amp;lt;/resources&amp;gt;</description>
-    </item>
-    <item>
-      <title>Activity源头探究</title>
-      <link>https://foezzy.github.io/posts/activity%E6%BA%90%E5%A4%B4%E6%8E%A2%E7%A9%B6/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://foezzy.github.io/posts/activity%E6%BA%90%E5%A4%B4%E6%8E%A2%E7%A9%B6/</guid>
-      <description>疑问 🔗 开发中通过 startActivity() 创建 Activity 对象到底被谁持有引用了？ 新启动的 Activity 对象在其生命周期中理应是一直被持有引用，不然系统 gc 的时候就会被回收掉，那么其中的引用关系是怎样的呢？ Activity 对象的创建 🔗Activity 的创建会回调到 ActivityThread 中的 handleLaunchActivity() 方法：&#xA;frameworks/base/core/java/android/app/ActivityThread.java:&#xA;@Override public Activity handleLaunchActivity(ActivityClientRecord r, PendingTransactionActions pendingActions, Intent customIntent){ ··· final Activity a = performLaunchActivity(r, customIntent); ··· return a; } 接着在 performLaunchActivity() 方法里找到了 Acitivity 实例的创建：&#xA;private Activity performLaunchActivity(ActivityClientRecord r, Intent customIntent) { ··· ContextImpl appContext = createBaseContextForActivity(r); Activity activity = null; try { // 注解1：通过 ClassLoader 以及目标 Activity 的类名来创建新的 Activity 实例 java.</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Blog</title><link>https://foezzy.github.io/posts/</link><description>Recent content in Posts on Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 12 Nov 2023 19:45:20 +0000</lastBuildDate><atom:link href="https://foezzy.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>LiveData数据丢失问题</title><link>https://foezzy.github.io/posts/livedata%E6%95%B0%E6%8D%AE%E4%B8%A2%E5%A4%B1%E9%97%AE%E9%A2%98/</link><pubDate>Sun, 12 Nov 2023 19:45:20 +0000</pubDate><guid>https://foezzy.github.io/posts/livedata%E6%95%B0%E6%8D%AE%E4%B8%A2%E5%A4%B1%E9%97%AE%E9%A2%98/</guid><description>LiveData一个具有生命周期感知能力的观察者模式，是在页面与数据分离中维持页面和数据的一致性的桥梁。
+基本使用 🔗一般在ViewModel中定义
+val uiStatusLiveData = MutableLiveData&amp;lt;LoginUiStatus&amp;gt;() 在需要通知页面的数据变化的时候，将消息发布
+val status = LoginUiStatus() status.needDismissDialog = true uiStatusLiveData.postValue(status) 在activity或者fragment中只要注册观察着就好了
+viewModel.uiStatusLiveData.observe(this) { status -&amp;gt; //更改UI的代码 } 以上就是简单的使用，然而在使用过程中出现了一个问题：发送数据丢失。
+数据丢失问题 🔗事情的起因是这样的，我在viewmodel中周期性的发一个消息去通知UI改变，在周期之外，还发了其他的消息。可是有时候却收不到周期之外的消息。于是去查源码看看问题出在了哪。
+protected void postValue(T value) { boolean postTask; synchronized (mDataLock) { postTask = mPendingData == NOT_SET; mPendingData = value; } if (!postTask) { return; } ArchTaskExecutor.getInstance().postToMainThread(mPostValueRunnable); } 这代码就有意思了，如果一次发送很多，LiveData来不及发送的话，他就会丢弃最早获取的而只发送最后一个消息。如果一次发送消息太多的时候，重要的中间态消息会被丢弃。
+那么发送消息还有另一个方法即setValue()
+@MainThread protected void setValue(T value) { assertMainThread(&amp;#34;setValue&amp;#34;); mVersion++; mData = value; dispatchingValue(null); } 这个方法不会丢失消息，但是只能在主线程中使用
+总结 🔗setValue方法，不会丢失消息，但是必须在主线程中使用</description></item><item><title>Mac系统多个jdk版本切换配置 - 简书</title><link>https://foezzy.github.io/posts/mac%E7%B3%BB%E7%BB%9F%E5%A4%9A%E4%B8%AAjdk%E7%89%88%E6%9C%AC%E5%88%87%E6%8D%A2%E9%85%8D%E7%BD%AE---%E7%AE%80%E4%B9%A6/</link><pubDate>Fri, 23 Jun 2023 20:35:50 +0000</pubDate><guid>https://foezzy.github.io/posts/mac%E7%B3%BB%E7%BB%9F%E5%A4%9A%E4%B8%AAjdk%E7%89%88%E6%9C%AC%E5%88%87%E6%8D%A2%E9%85%8D%E7%BD%AE---%E7%AE%80%E4%B9%A6/</guid><description>在学习一个框架时，该框架要求只能用java8编译。我的电脑上装的是java11。于是练习了一波装两个版本的java。
+安装比较简单，不赘述。
+安装完成后，就是配置环境变量。Mac的环境变量保存在 .bash_profile 文件中。一般情况下，不会自动将环境变量填入其中。也就是说，虽然你的电脑里面安装了jdk，但是，.bash_profile中并没有和jdk相关的配置。
+terminal中输入
+vi .bash_profile 打开文件
+插入
+export JAVA_8_HOME=&amp;#34;/Library/Java/JavaVirtualMachines/jdk1.8.0_261.jdk/Contents/Home&amp;#34; export JAVA_11_HOME=&amp;#34;/Library/Java/JavaVirtualMachines/jdk-11.0.14.jdk/Contents/Home&amp;#34; alias jdk8=&amp;#39;export JAVA_HOME=$JAVA_8_HOME&amp;#39; alias jdk11=&amp;#39;export JAVA_HOME=$JAVA_11_HOME&amp;#39; JAVA_HOME=$JAVA_11_HOME PATH=$JAVA_HOME/bin:$PATH:. CLASSPATH=$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/jrt-fs.jar:. export JAVA_HOME export PATH export CLASSPATH terminal 中输入
+source .bash_profile 保存更改
+通过变量
+JAVA_HOME=$JAVA_11_HOME
+来决定使用那个版本的jdk</description></item><item><title>协程笔记</title><link>https://foezzy.github.io/posts/%E5%8D%8F%E7%A8%8B%E7%AC%94%E8%AE%B0/</link><pubDate>Tue, 03 May 2022 18:55:50 +0000</pubDate><guid>https://foezzy.github.io/posts/%E5%8D%8F%E7%A8%8B%E7%AC%94%E8%AE%B0/</guid><description>什么是协程 🔗官方描述：协程通过将复杂性放入库来简化异步编程。程序的逻辑可以在协程中顺序地表达，而底层库会为我们解决其异步性。该库可以将用户代码的相关部分包装为回调、订阅相关事件、在不同线程（甚至不同机器）上调度执行，而代码则保持如同顺序执行一样简单。就像非常轻量级的线程。
+为什么需要协程 🔗 轻量级 协程就像非常轻量级的线程。线程是由系统调度的，线程切换或线程阻塞的开销都比较大。而协程依赖于线程，但是协程挂起时不需要阻塞线程，几乎是无代价的，协程是由开发者控制的。所以协程也像用户态的线程，非常轻量级，一个线程中可以创建任意个协程。
+内存泄漏更少
+使用结构化并发机制在一个作用域内执行多项操作。
+内置取消支持
+取消操作会自动在整个协程层次内传播。
+jetpack集成
+许多jetpack库都包含提供全面的协程支持扩展，某些库还提供自己的协程作用域。
+方便使用
+如果后台执行一个复杂任务，第二个任务依赖上一个任务的执行结果，使用写成可以方便实现。这点类似于java8的Future以及Rxjava中的链式调用。
+基础 🔗gradle配置
+implementation &amp;#39;org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3&amp;#39; implementation &amp;#39;org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.3&amp;#39; 挂起函数
+suspend修饰符修饰的函数是挂起函数。挂起函数挂起协程时，不会阻塞协程所在的线程。挂起函数执行完后恢复协程，后面的代码才能继续执行。挂起函数只能在协程中调用。
+CoroutineDispatcher
+CoroutineDispatcher是协程调度器，决定协程运行的线程或线程池。
+coroutines-core中CoroutineDispatcher有三种标准实现：
+Dispatchers.Default 指定线程为共有的线程池，线程数量最少为2最大为CPU数
+Dispatchers.IO IO线程
+Dispatchers.Main 主线程
+Dispatchers.Unconfined 不指定线程
+开启协程方法 开启方式比较 是否创建新协程 是否阻塞当前线程 是否指定协程调度器 是否有返回值 其他 launch{} 是 否 是 否 async{} 是 否 是 是 用await()获取返回值 runBlocking {} 是 是 是 是 主要用于测试 withContext{} 否 挂起协程不阻塞县城 是 是 可让您在不引入回调的情况下控制任何代码行的线程池，因此您可以将其应用于非常小的函数，例如从数据库中读取数据或执行网络请求。 CoroutineScope CoroutineScope 会跟踪它使用 launch 或 async 创建的所有协程。您可以随时调用 scope.</description></item><item><title>clashX使用说明</title><link>https://foezzy.github.io/posts/clashx%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</link><pubDate>Thu, 25 Jun 2020 17:11:45 +0000</pubDate><guid>https://foezzy.github.io/posts/clashx%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</guid><description>前言 🔗Clash 是一个使用 Go 语言编写，基于规则的跨平台代理软件核心程序。 ClashX 是运行在 macOS 上的一款科学上网工具。 也就是ClashX是套着Clash程序的MacOS平台的科学上网外壳。
+下载 🔗ClashX下载地址： https://github.com/yichengchen/clashX/releases
+选择最新的dmg版本下载，然后安装到MacOS系统
+如果速度太慢，可以选择蓝奏盘下载，蓝奏盘的版本是1.20.4，地址如下： https://wwa.lanzous.com/iPf0pe0zfsh
+安装 🔗下载dmg文件后打开，直接把clash.app拖动到Application文件夹
+使用 🔗打开Clash,如果第一次打开失败可以在进程管理器杀掉ClashX进程再打开一次 在状态栏发现一个小猫的图标，说明启动完成
+1.添加配置，最好使用订阅连接，也可以自己手动添加节点，从机场服务商获取到订阅连接后可以直接添加到Clash，目前Clash支持SS、V2ray节点两种方式
+添加订阅节点方式：单击小猫图标 - 配置 - 托管配置 - 管理 然后添加订阅连接。
+重要说明： 🔗自己手动配置节点还是比较麻烦，推荐还是通过添加配置自动生成 自动生成涉及到订阅的转化，因为机场商提供的不是yaml格式的配置，所以要转换一下，把ss或者v2ray节点转换为ClashX支持的格式
+可以通过：https://acl4ssr.netlify.app/ 这个地址转换，比如复制了Surge3的订阅连接，然后打开上面，把地址添加到ClashX中，客户端选择Clash，点击生成订阅连接，就得到了Clash客户端的订阅连接，添加到ClashX里，就可以看到生成的yaml文件
+注意：该地址需要科学上网，而且打开速度有点慢，如果打开不了需要自己搜索：clash 订阅转换 找到合适的替代品
+2.同时需要注意的是,要勾选上设置为系统代理，这个表示ClashX是否工作，勾上就开始工作 3.节点添加完成后就可以测速是否正常，选择某个节点，就可以愉快地上网了。</description></item><item><title>不用数据线连接adb,需要root权限</title><link>https://foezzy.github.io/posts/%E4%B8%8D%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BA%BF%E8%BF%9E%E6%8E%A5adb-%E9%9C%80%E8%A6%81root%E6%9D%83%E9%99%90/</link><pubDate>Fri, 15 May 2020 11:34:05 +0000</pubDate><guid>https://foezzy.github.io/posts/%E4%B8%8D%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BA%BF%E8%BF%9E%E6%8E%A5adb-%E9%9C%80%E8%A6%81root%E6%9D%83%E9%99%90/</guid><description>有 2 种方法开启无线调试，其中一种需要 USB 线先连接，这里只介绍另一种不借助 USB 线的
+过程很简单，手机需要有 ROOT 权限
+手机端下载 终端模拟器 或其他终端 手机终端输入如下命令
+su
+setprop service.adb.tcp.port 5555
+stop adbd
+start adbd
+查看本机 ip ifconfig
+在开发者选项中打开 USB 调试（否则连接后会显示未授权）
+电脑端输入
+adb connect Phone_ip:5555 (Phone_ip 为你自己手机 ip) adb devices
+若成功 此时你便能看到自己的设备了 List of devices attached
+192.168.1.59:5555 device
+可能遇到的问题 🔗问题：unable to connect to 192.168.199.248:5555: Connection refused 解决办法 (设置监听端口)
+$ setprop service.adb.tcp.port 5555 //设置监听端口 $ stop adbd $ start adbd</description></item><item><title>Glide用到的代码记录</title><link>https://foezzy.github.io/posts/glide%E7%94%A8%E5%88%B0%E7%9A%84%E4%BB%A3%E7%A0%81%E8%AE%B0%E5%BD%95/</link><pubDate>Tue, 12 May 2020 10:32:00 +0000</pubDate><guid>https://foezzy.github.io/posts/glide%E7%94%A8%E5%88%B0%E7%9A%84%E4%BB%A3%E7%A0%81%E8%AE%B0%E5%BD%95/</guid><description>同步加载 🔗public static void loadImgSync(Context context, String url) { new Thread(new Runnable() { @Override public void run() { FutureTarget&amp;lt;Bitmap&amp;gt; futureBitmap = Glide.with(context) .asBitmap() .load(url) .submit(); try { Bitmap myBitmap = futureBitmap.get(); LogUtils.d(&amp;#34;hei:&amp;#34; + myBitmap.getHeight()); LogUtils.d(&amp;#34;wid:&amp;#34; + myBitmap.getWidth()); } catch (ExecutionException e) { e.printStackTrace(); } catch (InterruptedException e) { e.printStackTrace(); } } }).start(); } 获取宽高 🔗方式1： 🔗Glide.with(getContext().getApplicationContext()) .asBitmap() .load(path) .into(new SimpleTarget&amp;lt;Bitmap&amp;gt;() { @Override public void onResourceReady(Bitmap bitmap, Transition&amp;lt;? super Bitmap&amp;gt; transition) { int w = bitmap.</description></item><item><title>Charles快速配置安卓手机Proxy</title><link>https://foezzy.github.io/posts/charles%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BAproxy/</link><pubDate>Mon, 11 May 2020 15:02:58 +0000</pubDate><guid>https://foezzy.github.io/posts/charles%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BAproxy/</guid><description>前言 🔗Charles可以实现很多功能，比如抓包，修改返回结果，限速，真是一个神器，但是每次手机配置代理，真是逆天的操作
+1.进入设置 2.进入 WLAN 3.找对应 wifi 连接 4.进入详情 5.找到代理 6.选择手动 7.输入主机名 8.输入端口号 9.最后保存
+所以这篇文章就是为了把这么多步简化的过程，在网上搜索了一些方式，发现有两篇有很好的参考价值 一键设置 Android http proxy 的尝试 Android自动设置HTTP代理 主要方式 🔗方式一：安装一个app,然后用adb shell发送给app，代码进行wifi连接与配置，这种方式在 Api &amp;gt; 23 就会失效，目前大部分都是8.0以上的手机，这种方式就不好用了
+方式二：用adb shell settings put global进行配置，但是这种方式是临时的，不用的话还要手动关一下
+目前做法 🔗参考知乎上那位大神的做法，直接写个sh脚本，再加上zsh的alias，就能比较方便的配置proxy了
+步骤 🔗新建 easy_proxy.sh 的文本，把以下代码贴进去即可
+#!/bin/bash echo &amp;#34;\n---------------- Support ------------------&amp;#34; echo &amp;#34;设置本机IP代理 ./easy_proxy.sh set&amp;#34; echo &amp;#34;设置自定义代理 ./easy_proxy.sh set ****:8888&amp;#34; echo &amp;#34;删除代理 ./easy_proxy.sh clean&amp;#34; echo &amp;#34;--------------------------------------------\n&amp;#34; # 获取当前IP ip=$(ifconfig en0 | grep -E &amp;#39;inet \d{3}.&amp;#39; | awk &amp;#39;{print $2}&amp;#39;) default_proxy=${ip}&amp;#34;:8888&amp;#34; echo &amp;#34;本机IP为: $default_proxy\n&amp;#34; if [ &amp;#34;$1&amp;#34; == &amp;#34;set&amp;#34; ];then if [ -n &amp;#34;$2&amp;#34; ];then echo &amp;#34;设置自定义代理 $2&amp;#34; adb shell settings put global http_proxy $2 else echo &amp;#34;设置本机IP代理 $default_proxy&amp;#34; adb shell settings put global http_proxy $default_proxy fi elif [ &amp;#34;$1&amp;#34; == &amp;#34;clean&amp;#34; ];then echo &amp;#34;清除代理成功&amp;#34; adb shell settings put global http_proxy :0 else echo &amp;#34;!</description></item><item><title>Java碰到的奇怪问题汇总</title><link>https://foezzy.github.io/posts/java%E7%A2%B0%E5%88%B0%E7%9A%84%E5%A5%87%E6%80%AA%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</link><pubDate>Thu, 23 Apr 2020 19:12:21 +0000</pubDate><guid>https://foezzy.github.io/posts/java%E7%A2%B0%E5%88%B0%E7%9A%84%E5%A5%87%E6%80%AA%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid><description>1.除法返回0.0 🔗情景展示 🔗　double d = 1/10;
+System.out.println(d);
+返回的结果居然是 0.0 原因分析 🔗　第一步：你会发现用运算结果也可以用 int 类型接收
+在 Java 语言中，整数之间的除法运算，不管你的小数位有多少位，小数是几，统统舍弃，只返回整数位数字！
+第二步：用 double 类型接收为什么也可以？
+因为 double 类型的取值返回要大于 int 类型，所以属于向上类型转换，当然可以用比它大的容器接收。 第三步：为什么整数之间的除法运算，只返回整数位？
+因为在 Java 中，由运算结果，由被运算数的最高数据类型决定，也就是说：整数之间的运算，数据类型都为 int 类型，所以，返回的结果也为 int 类型。 3. 解决方案 🔗　如果我们想要返回完整的运算结果 ，我们就需要将其中一个的数据类型转换成 double 类型或者 float 类型，而不是只改变接收运算结果的数据类型！
+方式一：将被除数转换成 double 类型
+double d4 = 100d/235886; System.out.println(d4);//4.2393359504167265E-4 方式二：将除数转换成 double 类型
+double d5 = 100/235886d; System.out.println(d5);//4.2393359504167265E-4 方式三：将被除数转换成 float 类型
+float f4 = 2358861f/235886; System.out.println(f4);//10.000004 方式四：将除数转换成 float 类型</description></item><item><title>Java正则之坑</title><link>https://foezzy.github.io/posts/java%E6%AD%A3%E5%88%99%E4%B9%8B%E5%9D%91/</link><pubDate>Fri, 06 Mar 2020 19:45:20 +0000</pubDate><guid>https://foezzy.github.io/posts/java%E6%AD%A3%E5%88%99%E4%B9%8B%E5%9D%91/</guid><description>首先说明需求
+有个xxx.api.abc.com需要替换成config.abc.com
+这个是可以用正则做到的，如下
+String oldUrl = &amp;#34;xxx.api.abc.com&amp;#34;; String newUrl = oldUrl.replaceAll(&amp;#34;.*\.api&amp;#34;, &amp;#34;config&amp;#34;); //报错 查了下，发现正则要用两个斜杆\\，所以改成
+String newUrl = oldUrl.replaceAll(&amp;#34;.*\\.api&amp;#34;, &amp;#34;config&amp;#34;) //OK //或者下面的更简单 String newUrl = oldUrl.replaceAll(&amp;#34;.*api&amp;#34;, &amp;#34;config&amp;#34;) //OK 之所以有坑，是因为java里的\有一定含义，反斜杠 \ 在 Java 中表示转义字符
+这里例举两个特别重要的用法：
+在匹配 . 或 { 或 [ 或 ( 或 ? 或 $ 或 ^ 或 * 这些特殊字符时，需要在前面加上 \\，比如匹配 . 时，Java 中要写为 \\.，但对于正则表达式来说就是 \. 在匹配 \ 时，Java 中要写为 \\\\，但对于正则表达式来说就是 \\ 其他类似\d在Java里要写成\\d Java 中的正则表达式字符串有两层含义，首先 Java 字符串转义出符合正则表达式语法的字符串，然后再由转义后的正则表达式进行模式匹配</description></item><item><title>gitignore总结</title><link>https://foezzy.github.io/posts/gitignore%E6%80%BB%E7%BB%93/</link><pubDate>Thu, 16 Jan 2020 11:45:22 +0000</pubDate><guid>https://foezzy.github.io/posts/gitignore%E6%80%BB%E7%BB%93/</guid><description>##gitignore生效操作
+###场景一：某个文件已经被追踪 比如Android项目下.idea文件夹，里面已经有某些文件提交过，要忽略.idea文件夹下所有文件 先在.gitignore文件夹添加/.idea，表示忽略.idea下所有文件
+接着删除缓存
+git rm -r --cached ./.idea 这个命令把之前跟踪的.idea目录下所有文件的缓存给删了，然后需要push到远程项目地址就OK了，本地.idea下有修改都不会被检测到了
+说明：所有文件指的是多级目录，git update-index &amp;ndash;assume-unchanged 这个命令也能清除追踪，但是只能指定文件，所以不用这个命令
+场景二：未提交项目，要忽略的文件夹下的文件还未被追踪 🔗直接在.gitignore文件夹添加/.idea，表示忽略.idea下所有文件，然后直接push就可以了</description></item><item><title>Android音频焦点归纳整理</title><link>https://foezzy.github.io/posts/android%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9%E5%BD%92%E7%BA%B3/</link><pubDate>Sat, 14 Dec 2019 15:26:42 +0000</pubDate><guid>https://foezzy.github.io/posts/android%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9%E5%BD%92%E7%BA%B3/</guid><description>前言 🔗音频焦点是 API 8 中引入的一个概念，它主要作用于用户在同一个时刻只能关注单个音频流，或者用来降低背景声音，使用户只关注要主要的声音。在不同Android版本中，对应的代码也有区别。主要三个节点为
+2.2 (API level 8) 5.0 (API level 21) 8.0 (API level 26) 2.2-5.0 🔗申请焦点：
+private void requestAudioFocus() { audioManager = (AudioManager) getContext().getSystemService(Context.AUDIO_SERVICE); if (audioManager != null) { audioManager.requestAudioFocus(mAudioFocusListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT); } } requestAudioFocus中，有3个参数，先说参数2，参数2是多种声音类型，如下：
+AudioManager.STREAM_VOICE_CALL
+AudioManager.STREAM_SYSTEM
+AudioManager.STREAM_RING
+AudioManager.STREAM_MUSIC
+AudioManager.STREAM_ALARM
+AudioManager.STREAM_NOTIFICATION
+AudioManager.STREAM_BLUETOOTH_SCO
+AudioManager.STREAM_SYSTEM_ENFORCED
+AudioManager.STREAM_DTMF
+AudioManager.STREAM_TTS
+然后是参数3，也是有多个声明类型，如下：
+AudioManager.AUDIOFOCUS_GAIN：想要长期占有焦点，失去焦点者stop播放和释放 AudioManager.AUDIOFOCUS_GAIN_TRANSIENT：想要短暂占有焦点，失去焦点者pause播放 AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK：想要短暂占有焦点，失去焦点者可以继续播放但是音量需要调低 AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_EXCLUSIVE：想要短暂占有焦点，但希望失去焦点者不要有声音播放 最后是参数1，参数1要自己写个回调：
+private AudioManager.OnAudioFocusChangeListener mAudioFocusListener = new AudioManager.OnAudioFocusChangeListener() { @Override public void onAudioFocusChange(int focusChange) { switch (focusChange) { case AudioManager.</description></item><item><title>基本单位记录-易混</title><link>https://foezzy.github.io/posts/%E5%9F%BA%E6%9C%AC%E5%8D%95%E4%BD%8D%E8%AE%B0%E5%BD%95-%E6%98%93%E6%B7%B7/</link><pubDate>Wed, 27 Nov 2019 17:51:20 +0000</pubDate><guid>https://foezzy.github.io/posts/%E5%9F%BA%E6%9C%AC%E5%8D%95%E4%BD%8D%E8%AE%B0%E5%BD%95-%E6%98%93%E6%B7%B7/</guid><description>数据传输、存储的单位及换算 🔗bit与byte的区别 🔗bit意为“位”或“比特”，是计算机运算的基础； byte意为“字节”，是计算机文件大小的基本计算单位；
+1 byte = 8 bit 宽带运营商说的下载速度、路由器的标明速度Mbps其实就是Mbit per second，也就是兆比特每秒 下载速度要换成存储大小单位，就要除以8，也就是 1Mbit/s 的文件传输速度 可以转化为 1MByte/s 的文件下载速度 说到usb2.0标准接口传输速率。许多人都将“480mbps”误解为480兆/秒。其实，这是错误的，事实上“480mbps”应为“480兆比特/秒”或“480兆位/秒”，它等于“60兆字节/秒”，大家看到差距了吧。 这要从bit和byte说起：bit和byte同译为&amp;quot;比特&amp;quot;，都是数据量度单位，bit=“比特”或“位”。 byte=字节即1byte=8bits,两者换算是1：8的关系。 mbps=mega bits per second(兆位/秒)是速率单位，所以正确的说法应该是说usb2.0的传输速度是480兆位/秒,即480mbps。 mb=mega bytes(兆比、兆字节)是量单位，1mb/s（兆字节/秒）=8mbps（兆位/秒）。 我们所说的硬盘容量是40gb、80gb、100gb，这里的b指是的byte也就是“字节”。 1 kb = 1024 bytes =2^10 bytes 1 mb = 1024 kb = 2^20 bytes 1 gb = 1024 mb = 2^30 bytes 比如以前所谓的56kb的modem换算过来56kbps除以8也就是7kbyte，所以真正从网上下载文件存在硬盘上的速度也就是每秒7kbyte，网卡，ADSL等都应该以此来计算！ 也就是说与传输速度有关的b一般指的是bit。 与容量有关的b一般指的是byte。 最后再说一点: usb2.0 480mbps=60mb/s的传输速率还只是理论值，它还要受到系统环境的制约（cpu、硬盘和内存等），其实际读、取写入硬盘的速度约在11～16mb/s。但这也比usb1.1的12mbps(1.5m/s)快了近10倍。 比如网速4080Kbps的真实速度换算是:(要注意Kbps还是KBps) K=1000(或1024) 4080Kbps(小b)=4080000bps 也可以把4080Kbps(位)看成4080000个&amp;quot;位&amp;quot;或&amp;quot;比特&amp;quot; 那么4080000位等于多少字节呢,因8个位等于1个字节,所以4080000/8=510000字节 那么51000字节等于多少KB呢,因1024个字节等于1KB,所以51000/1024=498.04KB(约等于500KB) 有时候看到 500K字节/秒其实也是500000字节/秒也可以说成是500K每秒..一个意思
+其他常用单位 🔗Bit 位 Byte (字节) 1Byte=8Bits 1KB=1024Byte 1KB=1024Byte=8192Bits 1Byte(字节)=8Bit(位) 1 kB = 1024 Byte 千 1 MB = 1024 kB 兆 1 GB = 1024 MB 吉 1 TB = 1024 GB 太 1 PB = 1024 TB 拍 1 EB = 1024 PB 艾 1 ZB = 1024 EB 皆 1 YB = 1024 ZB 佑</description></item><item><title>github加速和终端代理</title><link>https://foezzy.github.io/posts/github%E5%8A%A0%E9%80%9F%E5%92%8C%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86/</link><pubDate>Wed, 09 Oct 2019 10:16:24 +0000</pubDate><guid>https://foezzy.github.io/posts/github%E5%8A%A0%E9%80%9F%E5%92%8C%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86/</guid><description>github加速： 🔗解决github在访问和clone时速度太慢的问题
+下载一个可以设置host的软件，比如mac上可以用iHost
+然后设置下面的host
+https://gitee.com/Mosiki/github/raw/master/github_hosts.txt
+设置完刷新dns，就可以加速github的访问和clone了
+终端代理： 🔗就是在iterm2里要能访问到外网数据
+比如在拉取某一个仓库时，如果这个仓库需要fq，就要用到这个东西
+参考链接：https://zhuanlan.zhihu.com/p/46973701
+最后是用v2ray-u加zshrc设置alias简写来简化操作，每次要用的时候输入setproxy，不用了就unsetproxy。
+alias setproxy=&amp;ldquo;export ALL_PROXY=socks5://127.0.0.1:1080&amp;rdquo;
+alias unsetproxy=&amp;ldquo;unset ALL_PROXY&amp;rdquo;</description></item><item><title>一个简单的最近热点Android阅读器</title><link>https://foezzy.github.io/posts/%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%9C%80%E8%BF%91%E7%83%AD%E7%82%B9android%E9%98%85%E8%AF%BB%E5%99%A8/</link><pubDate>Mon, 30 Sep 2019 14:01:02 +0000</pubDate><guid>https://foezzy.github.io/posts/%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%9C%80%E8%BF%91%E7%83%AD%E7%82%B9android%E9%98%85%E8%AF%BB%E5%99%A8/</guid><description>V2EX上有人做了个热榜api，看着不错
+https://www.v2ex.com/t/578957
+有人拿来做了个网页
+https://www.telami.cn/hot/
+发现这个网页好是好，但是一下子数据太多，看不过来，于是看了下接口，发现可以自己随便定
+在手机上我用的via浏览器，发现打开知乎或者一些会自动跳转的有scheme的网页，会出现找不到协议的错误，网页就没法看了
+基于以上两点，自己加工了一下，做了个安卓端可以自己定义内容的查看器，其实就是内嵌个webview，截图如下
+源码可以前往 https://github.com/foezzy/EasyNewsForAndroid
+直接下载apk体验地址 https://www.lanzous.com/i6i60yj
+使用说明：
+1.点下面检查接口，在弹出框可以看到每个频道对应了一个id，记住这个id
+2.点击add，然后名字随便自己定，id就填那个id，然后ok就添加了一个频道
+3.点item就可以获取最新的新闻了
+4.长按item会出现关闭按钮，可以自由添加删除
+5.有时网络慢时，无任何反应，接口没返回时没做什么处理
+6.觉得不错请给个star谢谢
+其中webview最开始自己写了一个，发现一直有些奇怪的问题，后来找了一个开源的过来用，感谢这个作者
+https://github.com/hylinux1024/BridgeWebView</description></item><item><title>.9图片设置无效问题</title><link>https://foezzy.github.io/posts/9%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE%E6%97%A0%E6%95%88%E9%97%AE%E9%A2%98/</link><pubDate>Mon, 30 Sep 2019 13:43:08 +0000</pubDate><guid>https://foezzy.github.io/posts/9%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE%E6%97%A0%E6%95%88%E9%97%AE%E9%A2%98/</guid><description>最近在加.9图片的时候，发现用了一直没生效，最后搜到是说要放到xhdpi目录下，很奇葩的问题，特此记录一下
+原文链接: https://blog.csdn.net/rrr9805/article/details/79165273
+Android Studio中使用.9图片 🔗 Android Studio项目中对于.9图片的规范更加的严格,.9图片不能放到mipmap目录中,否则编译会报错,只能放到drawable目录中. Android Studio集成了draw9patch工具,所以如果你更新了最新的SDK的话,在tools目录下是找不到draw9patch.bat这个脚本执行文件的 使用Android Studio自带的draw9patch工具的步骤: 生成完.9图片后,切记要拷贝到drawable文件夹中 设置好.9图片不生效 🔗这里不赘述如何画一张.9图片,方法自行百度.可以参考 http://blog.csdn.net/lastwarmth/article/details/49991445
+重点来了,当你绘制好.9图片,然后应用到View上的时候,怎么都不生效的话那么 \1. 确保.9图片在drawable目录下 \2. 确保你的mipmap目录下,没有和.9图片重名(此处的重名是指,排除文件后缀的重名,例如: back.png和back.9.png属于同名)的文件,如果有,删除掉mipmap目录下的同名文件 \3. 上面操作都做了还不生效的话,那么就在你的res目录下,新建一个drawable-xdpi的目录,把.9图片移动到这个目录中(楼主就是这么解决的),然后就可以完结撒花了;</description></item><item><title>Android依赖相问题</title><link>https://foezzy.github.io/posts/android%E4%BE%9D%E8%B5%96%E7%9B%B8%E9%97%AE%E9%A2%98/</link><pubDate>Thu, 29 Aug 2019 10:20:29 +0000</pubDate><guid>https://foezzy.github.io/posts/android%E4%BE%9D%E8%B5%96%E7%9B%B8%E9%97%AE%E9%A2%98/</guid><description>Android依赖第三方库引起一个报错 🔗uses-sdk:minSdkVersion 1 cannot be smaller than version 14 declared in library [com.android.support:appcompat-v7:28.0.0] 谷歌查了一下说是依赖库版本比主模块版本低，要提高依赖库的版本， 但是找了发现没有低，主要是没有找到是哪个依赖库，最终是在报错信息里发现了那个库没有minSdkVersion字段，在该模块的build.gradle文件下的defaultConfig加上对应的minSdkVersion即可，要不低于主模块的版本</description></item><item><title>Android Studio 使用相关</title><link>https://foezzy.github.io/posts/android-studio-%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3/</link><pubDate>Mon, 12 Aug 2019 13:52:14 +0000</pubDate><guid>https://foezzy.github.io/posts/android-studio-%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3/</guid><description>记录Android Studio使用过程中，配置的快捷键，插件相关的东西（Mac平台） 🔗 快捷键 🔗在Finder快速打开某个文件或文件夹 🔗本来这个东西是挺简单的，结果找了有一会，特地记录下
+直接右键有个选项 - Reveal in Finder
+但是每次去找都是在一堆选择中找它，特别不方便
+想找个什么插件也没有找到能直接打开的，后来突然想到可以设置快捷键
+这个Reveal in Finder默认是没有快捷键的~ 有点奇葩
+解决方法：
+在Preferences - Keymap - 搜索 Reveal in Finder - 双击它 - Add Keyboard Shortcut
+设置成上面这样，就是直接按F键就行了，然后Apply - 确定，以后在Finder里打开直接双击F键就行了，非常方便
+勘误：
+这种做法不太好，在开始使用后发现按F没反应，就是说不能直接用某个按键去操作，要加上功能键才行
+目前改为 control + , 来实现打开文件夹目录的功能
+自动保存 🔗在输入一行或者多行代码后按 command + s 自动格式化代码 🔗Android Studio默认是自动保存代码的，不需要按 command + s 按钮，但是每次代码都不能自动格式化，需要录制一个宏（相当于自动操作），然后给这个宏设置快捷键，然后就能实现自动格式化了 在mac上默认格式化的快捷键是option+command+l，所以本质是把这个快捷键映射成 command + s 而已，因为更符合操作习惯，具体操作见下面链接： 录制宏
+其中设置代码风格的方式有默认的，也可以自己引入xml文件，参考链接： Android Studio 配置 Code Style
+这样设置之后，在保存的时候，就默认已经格式化完成了
+后文： 使用过程还发现xml文件也会格式化，但是还自动重新排序了，这样会导致布局文件异常，解决方案看下面链接： 格式化 xml 文件时代码错乱问题</description></item><item><title>七夕</title><link>https://foezzy.github.io/posts/%E4%B8%83%E5%A4%95/</link><pubDate>Wed, 07 Aug 2019 17:23:09 +0000</pubDate><guid>https://foezzy.github.io/posts/%E4%B8%83%E5%A4%95/</guid><description>今天七夕，突然想起N年前某个骚年骚里骚气的操作，截个图做个纪念
+怀念QQ空间写说说，记日记的日记，好像过去好久了~
+晚上世界之窗走起~</description></item><item><title>Android编码规范</title><link>https://foezzy.github.io/posts/android%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</link><pubDate>Fri, 14 Jun 2019 10:07:09 +0000</pubDate><guid>https://foezzy.github.io/posts/android%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</guid><description>Android编码规范 🔗命名规范 🔗 包命名及分包结构规范
+包名沿用 Java 编程的通用风格 类命名规范
+基本的类名沿用 Java 编程的通用风格（采用完整的英文描述符，所有单词第一个字母大写，采用驼峰式命名）
+android 特有的类，如 Activity、Fragment、Service、Provider、Adapter、View 等，则以对应的类型单词为后缀
+接口命名规范
+类命名以大写字母 I 为前缀，如果是监听接口以 Listener 结尾
+在自定义的监听接口里，监听事件以 on 开头, 如 onOpenMenu(), onRefresh()&amp;hellip;
+方法命名规范
+方法命名沿用 Java 编程的通用风格（采用完整的英文描述符，函数名字以代表函数功能的英文单词组成，除首单词小写，其他单词首字母大写；一般的，函数第一个单词要求用动词） 变量命名规范
+boolean 成员要以 is 开头，或以 has 开头。如： isFirst, hasMore
+控件命名规范： 原则是 “view 的缩写 + 功能描述”。 比如一个 TextView 缩写为 tv(驼峰命名抽取出来的缩写)， 这个 TextView 是显示用户名字的， 所以就可以命名为: tvUserName。
+常量的名字全部大写，单词之间用’_’分开
+控件命名规范： 原则是 “view 的缩写 + 功能描述”。 比如一个 TextView 缩写为 tv(驼峰命名抽取出来的缩写)， 这个 TextView 是显示用户名字的， 所以就可以命名为: tvUserName</description></item><item><title>Glide遇到的问题</title><link>https://foezzy.github.io/posts/glide%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</link><pubDate>Sat, 13 Apr 2019 17:18:28 +0000</pubDate><guid>https://foezzy.github.io/posts/glide%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</guid><description>在RecyclerView中notifyDataSetChangedd的时候闪烁 🔗这个问题是在item中某一项需要刷新的时候出现的，本来imageview不用刷新，结果还是刷新了，并且闪烁了一下，解决方法参考：链接
+解决方法一：
+RequestOptions options = new RequestOptions().transform(new GlideCircleTransform()).placeholder(view.getDrawable()); Glide.with(Utils.getContext()).load(url).apply(options).into(view); 解决方法二：
+RequestOptions options = new RequestOptions().transform(new GlideCircleTransform()).dontAnimate().fitCenter(); Glide.with(Utils.getContext()).load(url).apply(options).into(view);</description></item><item><title/><link>https://foezzy.github.io/posts/android%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%B5%84%E6%BA%90%E7%9A%84%E6%A0%BC%E5%BC%8F%E5%8C%96/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://foezzy.github.io/posts/android%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%B5%84%E6%BA%90%E7%9A%84%E6%A0%BC%E5%BC%8F%E5%8C%96/</guid><description>为什么要写这一篇随笔呢？最近做项目的过程中，遇到很多页面在要显示文本时，有一部分是固定的文本，有一部分是动态获取的，并且格式各式各样。一开始采取比较笨的办法，把他拆分成一个个文本控件，然后对不同的控件采用不同的样式。这样做效率
+很低，并且文本之间的对齐是个很大的问题，后来到网上寻求帮助，找到一些有关Android字符串和字符串资源格式化的文章，在此做一个总结。
+一.字符串格式化
+Java的String类给我们提供了两个重载的格式化字符串的方法，可以通过占位符的方式，向固定字符串中传入参数。他们分别是：
+format(String format, Object&amp;hellip; args) 新字符串使用本地语言环境，制定字符串格式和参数生成格式化的新字符串。
+format(Locale locale, String format, Object&amp;hellip; args) 使用指定的语言环境，制定字符串格式和参数生成格式化的字符串。
+例如：
+字符串占位符%s ：System.out.println(&amp;ldquo;Hi,%s&amp;rdquo;, &amp;ldquo;王力&amp;rdquo;) 输出 Hi,王力
+十进制整形占位符%d ：System.out.println(&amp;ldquo;我今年%d岁&amp;rdquo;, 20) 输出 我今年20岁
+浮点型占位符%f：System.out.println(&amp;ldquo;荔枝的价格是 %f 元&amp;rdquo;, 3.5) 输出 荔枝的价格是3.5元
+还有其他字符型，整形，日期格式等等格式化方法，再次就不一一举例了。
+二.带HTML标签的字符串格式化
+当我们需要对一段文字的部分文字进行字体颜色，字形，字体风格设置时，我们可以使用HTML标签，然后在输出的时候，通过Html.from方法解析为html字符串。
+例如：
+String str = &amp;#34;后面的文字是加粗的红色文字：&amp;#34; + &amp;#34;&amp;lt;font color=&amp;#39;#ff0000&amp;#39;&amp;gt;&amp;lt;b&amp;gt;加粗红色文字&amp;lt;/b&amp;gt;&amp;lt;/font&amp;gt;&amp;#34;; CharseQuence cq=Html.from(str); textView.setText(cq); 第一种情形和第二种情形可以结合起来使用：
+String str = &amp;#34;后面的文字是加粗的红色文字：&amp;#34; + &amp;#34;&amp;lt;font color=&amp;#39;#ff0000&amp;#39;&amp;gt;&amp;lt;b&amp;gt;%s&amp;lt;/b&amp;gt;&amp;lt;/font&amp;gt;&amp;#34;; String str2=String.format(str,&amp;#34;红色加粗文字&amp;#34;); 输出与上面一样.
+三.字符串资源的格式化
+我们在字符串资源中同样可以通过占位符来给字符串传入参数，不过与第一种方式相比，占位符的格式略有不同
+我们使用%[index]$[type]格式进行标记，index标记替换资源中第index个资源对应的位置，type则标示所要替换的资源的类型（s表示资源为字符串格式）
+例如：
+&amp;lt;resources&amp;gt; &amp;lt;string name=&amp;ldquo;hello&amp;rdquo;&amp;gt;Hello World, my name is %1$s!&amp;lt;/string&amp;gt; &amp;lt;string name=&amp;ldquo;app_name&amp;rdquo;&amp;gt;MyString&amp;lt;/string&amp;gt; &amp;lt;/resources&amp;gt;</description></item><item><title>Activity源头探究</title><link>https://foezzy.github.io/posts/activity%E6%BA%90%E5%A4%B4%E6%8E%A2%E7%A9%B6/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://foezzy.github.io/posts/activity%E6%BA%90%E5%A4%B4%E6%8E%A2%E7%A9%B6/</guid><description>疑问 🔗 开发中通过 startActivity() 创建 Activity 对象到底被谁持有引用了？ 新启动的 Activity 对象在其生命周期中理应是一直被持有引用，不然系统 gc 的时候就会被回收掉，那么其中的引用关系是怎样的呢？ Activity 对象的创建 🔗Activity 的创建会回调到 ActivityThread 中的 handleLaunchActivity() 方法：
+frameworks/base/core/java/android/app/ActivityThread.java:
+@Override public Activity handleLaunchActivity(ActivityClientRecord r, PendingTransactionActions pendingActions, Intent customIntent){ ··· final Activity a = performLaunchActivity(r, customIntent); ··· return a; } 接着在 performLaunchActivity() 方法里找到了 Acitivity 实例的创建：
+private Activity performLaunchActivity(ActivityClientRecord r, Intent customIntent) { ··· ContextImpl appContext = createBaseContextForActivity(r); Activity activity = null; try { // 注解1：通过 ClassLoader 以及目标 Activity 的类名来创建新的 Activity 实例 java.</description></item></channel></rss>

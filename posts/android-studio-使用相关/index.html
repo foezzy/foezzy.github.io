@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <title>Android Studio 使用相关 | Blog</title>
-
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
-<meta name="viewport" content="width=device-width,minimum-scale=1">
-<meta name="description" content="记录Android Studio使用过程中，配置的快捷键，插件相关的东西（Mac平台） 🔗 快捷键 🔗在Finder快速打开某个文件或文件夹 🔗本来这个东西是挺简单的，结果找了有一会，特地记录下
+<!doctype html><html lang=en-us><head><title>Android Studio 使用相关 | Blog</title>
+<meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=viewport content="width=device-width,minimum-scale=1"><meta name=description content="记录Android Studio使用过程中，配置的快捷键，插件相关的东西（Mac平台） 🔗 快捷键 🔗在Finder快速打开某个文件或文件夹 🔗本来这个东西是挺简单的，结果找了有一会，特地记录下
 直接右键有个选项 - Reveal in Finder
 但是每次去找都是在一堆选择中找它，特别不方便
 想找个什么插件也没有找到能直接打开的，后来突然想到可以设置快捷键
@@ -16,159 +9,22 @@
 设置成上面这样，就是直接按F键就行了，然后Apply - 确定，以后在Finder里打开直接双击F键就行了，非常方便
 勘误：
 这种做法不太好，在开始使用后发现按F没反应，就是说不能直接用某个按键去操作，要加上功能键才行
-目前改为 control &#43; , 来实现打开文件夹目录的功能
-自动保存 🔗在输入一行或者多行代码后按 command &#43; s 自动格式化代码 🔗Android Studio默认是自动保存代码的，不需要按 command &#43; s 按钮，但是每次代码都不能自动格式化，需要录制一个宏（相当于自动操作），然后给这个宏设置快捷键，然后就能实现自动格式化了 在mac上默认格式化的快捷键是option&#43;command&#43;l，所以本质是把这个快捷键映射成 command &#43; s 而已，因为更符合操作习惯，具体操作见下面链接： 录制宏
+目前改为 control + , 来实现打开文件夹目录的功能
+自动保存 🔗在输入一行或者多行代码后按 command + s 自动格式化代码 🔗Android Studio默认是自动保存代码的，不需要按 command + s 按钮，但是每次代码都不能自动格式化，需要录制一个宏（相当于自动操作），然后给这个宏设置快捷键，然后就能实现自动格式化了 在mac上默认格式化的快捷键是option+command+l，所以本质是把这个快捷键映射成 command + s 而已，因为更符合操作习惯，具体操作见下面链接： 录制宏
 其中设置代码风格的方式有默认的，也可以自己引入xml文件，参考链接： Android Studio 配置 Code Style
 这样设置之后，在保存的时候，就默认已经格式化完成了
-后文： 使用过程还发现xml文件也会格式化，但是还自动重新排序了，这样会导致布局文件异常，解决方案看下面链接： 格式化 xml 文件时代码错乱问题">
-<meta name="generator" content="Hugo 0.121.2">
-
-
-  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-
-
-<link rel="stylesheet" href="/css/style.css">
-
-
-
-<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
-
-
-
-
-
-
-
-
-  </head>
-
-  <body>
-    <nav class="navigation">
-	
-		<a href="/"> <span class="arrow">←</span>Home</a>
-	
-	<a href="/posts">Archive</a>
-	<a href="/tags">Tags</a>
-	<a href="/about">About</a>
-
-	
-
-	
-</nav>
-
-
-    <main class="main">
-      
-
-<section id="single">
-    <h1 class="title">Android Studio 使用相关</h1>
-
-    <div class="tip">
-        <time datetime="2019-08-12 13:52:14 &#43;0000 UTC">Aug 12, 2019</time>
-        <span class="split">
-          ·
-        </span>
-        <span>
-          91 words
-        </span>
-        <span class="split">
-          ·
-        </span>
-        <span>
-          1 minute read
-        </span>
-    </div>
-
-    
-    
-
-
-    <div class="content">
-      <h2 id="记录android-studio使用过程中配置的快捷键插件相关的东西mac平台">记录Android Studio使用过程中，配置的快捷键，插件相关的东西（Mac平台） <a href="#%e8%ae%b0%e5%bd%95android-studio%e4%bd%bf%e7%94%a8%e8%bf%87%e7%a8%8b%e4%b8%ad%e9%85%8d%e7%bd%ae%e7%9a%84%e5%bf%ab%e6%8d%b7%e9%94%ae%e6%8f%92%e4%bb%b6%e7%9b%b8%e5%85%b3%e7%9a%84%e4%b8%9c%e8%a5%bfmac%e5%b9%b3%e5%8f%b0" class="anchor">🔗</a></h2><hr>
-<h3 id="快捷键">快捷键 <a href="#%e5%bf%ab%e6%8d%b7%e9%94%ae" class="anchor">🔗</a></h3><h4 id="在finder快速打开某个文件或文件夹">在Finder快速打开某个文件或文件夹 <a href="#%e5%9c%a8finder%e5%bf%ab%e9%80%9f%e6%89%93%e5%bc%80%e6%9f%90%e4%b8%aa%e6%96%87%e4%bb%b6%e6%88%96%e6%96%87%e4%bb%b6%e5%a4%b9" class="anchor">🔗</a></h4><p>本来这个东西是挺简单的，结果找了有一会，特地记录下</p>
-<p>直接右键有个选项 - Reveal in Finder</p>
-<p><p class="markdown-image">
-  <img src="https://gitee.com/osc_hh/pics/raw/master/71Q1U2.png" alt="pic"  />
-</p></p>
-<p>但是每次去找都是在一堆选择中找它，特别不方便</p>
-<p>想找个什么插件也没有找到能直接打开的，后来突然想到可以设置快捷键<br>
-这个Reveal in Finder默认是没有快捷键的~ 有点奇葩</p>
-<p>解决方法：</p>
-<p>在Preferences - Keymap - 搜索 Reveal in Finder - 双击它 - Add Keyboard Shortcut</p>
-<p><p class="markdown-image">
-  <img src="https://gitee.com/osc_hh/pics/raw/master/iBDBYO.png" alt="pic"  />
-</p></p>
-<p>设置成上面这样，就是直接按F键就行了，然后Apply - 确定，以后在Finder里打开直接双击F键就行了，非常方便</p>
-<hr>
-<p>勘误：</p>
-<p>这种做法不太好，在开始使用后发现按F没反应，就是说不能直接用某个按键去操作，要加上功能键才行</p>
-<p>目前改为 control + ,  来实现打开文件夹目录的功能</p>
-<h3 id="自动保存">自动保存 <a href="#%e8%87%aa%e5%8a%a8%e4%bf%9d%e5%ad%98" class="anchor">🔗</a></h3><h4 id="在输入一行或者多行代码后按-command--s-自动格式化代码">在输入一行或者多行代码后按 command + s 自动格式化代码 <a href="#%e5%9c%a8%e8%be%93%e5%85%a5%e4%b8%80%e8%a1%8c%e6%88%96%e8%80%85%e5%a4%9a%e8%a1%8c%e4%bb%a3%e7%a0%81%e5%90%8e%e6%8c%89-command--s-%e8%87%aa%e5%8a%a8%e6%a0%bc%e5%bc%8f%e5%8c%96%e4%bb%a3%e7%a0%81" class="anchor">🔗</a></h4><p>Android Studio默认是自动保存代码的，不需要按 command + s 按钮，但是每次代码都不能自动格式化，需要录制一个宏（相当于自动操作），然后给这个宏设置快捷键，然后就能实现自动格式化了
+后文： 使用过程还发现xml文件也会格式化，但是还自动重新排序了，这样会导致布局文件异常，解决方案看下面链接： 格式化 xml 文件时代码错乱问题"><meta name=generator content="Hugo 0.124.1"><meta name=ROBOTS content="NOINDEX, NOFOLLOW"><link rel=stylesheet href=/css/style.css><link rel="shortcut icon" href=/images/favicon.ico type=image/x-icon></head><body><nav class=navigation><a href=/><span class=arrow>←</span>Home</a>
+<a href=/posts>Archive</a>
+<a href=/tags>Tags</a>
+<a href=/about>About</a></nav><main class=main><section id=single><h1 class=title>Android Studio 使用相关</h1><div class=tip><time datetime="2019-08-12 13:52:14 +0000 UTC">Aug 12, 2019</time>
+<span class=split>·
+</span><span>91 words
+</span><span class=split>·
+</span><span>1 minute read</span></div><div class=content><h2 id=记录android-studio使用过程中配置的快捷键插件相关的东西mac平台>记录Android Studio使用过程中，配置的快捷键，插件相关的东西（Mac平台） <a href=#%e8%ae%b0%e5%bd%95android-studio%e4%bd%bf%e7%94%a8%e8%bf%87%e7%a8%8b%e4%b8%ad%e9%85%8d%e7%bd%ae%e7%9a%84%e5%bf%ab%e6%8d%b7%e9%94%ae%e6%8f%92%e4%bb%b6%e7%9b%b8%e5%85%b3%e7%9a%84%e4%b8%9c%e8%a5%bfmac%e5%b9%b3%e5%8f%b0 class=anchor>🔗</a></h2><hr><h3 id=快捷键>快捷键 <a href=#%e5%bf%ab%e6%8d%b7%e9%94%ae class=anchor>🔗</a></h3><h4 id=在finder快速打开某个文件或文件夹>在Finder快速打开某个文件或文件夹 <a href=#%e5%9c%a8finder%e5%bf%ab%e9%80%9f%e6%89%93%e5%bc%80%e6%9f%90%e4%b8%aa%e6%96%87%e4%bb%b6%e6%88%96%e6%96%87%e4%bb%b6%e5%a4%b9 class=anchor>🔗</a></h4><p>本来这个东西是挺简单的，结果找了有一会，特地记录下</p><p>直接右键有个选项 - Reveal in Finder</p><p><p class=markdown-image><img src=https://gitee.com/osc_hh/pics/raw/master/71Q1U2.png alt=pic></p></p><p>但是每次去找都是在一堆选择中找它，特别不方便</p><p>想找个什么插件也没有找到能直接打开的，后来突然想到可以设置快捷键<br>这个Reveal in Finder默认是没有快捷键的~ 有点奇葩</p><p>解决方法：</p><p>在Preferences - Keymap - 搜索 Reveal in Finder - 双击它 - Add Keyboard Shortcut</p><p><p class=markdown-image><img src=https://gitee.com/osc_hh/pics/raw/master/iBDBYO.png alt=pic></p></p><p>设置成上面这样，就是直接按F键就行了，然后Apply - 确定，以后在Finder里打开直接双击F键就行了，非常方便</p><hr><p>勘误：</p><p>这种做法不太好，在开始使用后发现按F没反应，就是说不能直接用某个按键去操作，要加上功能键才行</p><p>目前改为 control + , 来实现打开文件夹目录的功能</p><h3 id=自动保存>自动保存 <a href=#%e8%87%aa%e5%8a%a8%e4%bf%9d%e5%ad%98 class=anchor>🔗</a></h3><h4 id=在输入一行或者多行代码后按-command--s-自动格式化代码>在输入一行或者多行代码后按 command + s 自动格式化代码 <a href=#%e5%9c%a8%e8%be%93%e5%85%a5%e4%b8%80%e8%a1%8c%e6%88%96%e8%80%85%e5%a4%9a%e8%a1%8c%e4%bb%a3%e7%a0%81%e5%90%8e%e6%8c%89-command--s-%e8%87%aa%e5%8a%a8%e6%a0%bc%e5%bc%8f%e5%8c%96%e4%bb%a3%e7%a0%81 class=anchor>🔗</a></h4><p>Android Studio默认是自动保存代码的，不需要按 command + s 按钮，但是每次代码都不能自动格式化，需要录制一个宏（相当于自动操作），然后给这个宏设置快捷键，然后就能实现自动格式化了
 在mac上默认格式化的快捷键是option+command+l，所以本质是把这个快捷键映射成 command + s 而已，因为更符合操作习惯，具体操作见下面链接：
-<a href="https://www.jianshu.com/p/8f982253eb9e" target="_blank" rel="noopener">录制宏</a></p>
-<p>其中设置代码风格的方式有默认的，也可以自己引入xml文件，参考链接：
-<a href="https://www.jianshu.com/p/6f78b59caf2c" target="_blank" rel="noopener">Android Studio 配置 Code Style</a></p>
-<p>这样设置之后，在保存的时候，就默认已经格式化完成了</p>
-<p>后文：
+<a href=https://www.jianshu.com/p/8f982253eb9e target=_blank rel=noopener>录制宏</a></p><p>其中设置代码风格的方式有默认的，也可以自己引入xml文件，参考链接：
+<a href=https://www.jianshu.com/p/6f78b59caf2c target=_blank rel=noopener>Android Studio 配置 Code Style</a></p><p>这样设置之后，在保存的时候，就默认已经格式化完成了</p><p>后文：
 使用过程还发现xml文件也会格式化，但是还自动重新排序了，这样会导致布局文件异常，解决方案看下面链接：
-<a href="https://blog.csdn.net/hdhdgdhdh/article/details/100012810" target="_blank" rel="noopener">格式化 xml 文件时代码错乱问题</a></p>
-<h3 id="书签">书签 <a href="#%e4%b9%a6%e7%ad%be" class="anchor">🔗</a></h3><p>Android Studio 自带的书签功能，挺好用的，要用起来</p>
-<p>默认情况下，菜单栏的 Navigate - Bookmarks 就可以操作书签，这里设置一下快捷方式，让它更好用</p>
-<p>添加到书签 Toggle Bookmark 这个是说你选中一行 然后选中这个选项，就添加到书签里，我设置成快捷键 F1</p>
-<p><p class="markdown-image">
-  <img src="https://gitee.com/osc_hh/pics/raw/master/PuSYU8.png" alt=""  />
-</p></p>
-<p>显示书签，没什么好说的</p>
-<p><p class="markdown-image">
-  <img src="https://gitee.com/osc_hh/pics/raw/master/nO1OEv.png" alt=""  />
-</p></p>
-<p>然后打开书签还可以设置别名，方便查看，书签就这么多常用功能了~</p>
-<p><p class="markdown-image">
-  <img src="https://gitee.com/osc_hh/pics/raw/master/lUvNZI.png" alt=""  />
-</p></p>
-<h3 id="插件">插件 <a href="#%e6%8f%92%e4%bb%b6" class="anchor">🔗</a></h3><p>//todo</p>
-
-    </div>
-
-    
-        <div class="tags">
-            
-                <a href="https://foezzy.github.io/tags/android-studio">Android Studio</a>
-            
-        </div>
-    
-    
-    
-
-</section>
-
-
-    </main>
-    
-    <footer id="footer">
-    
-
-    <div class="copyright">
-    
-       © Copyright 
-       2024 
-       <span class="split">
-        <svg fill="#bbbbbb" width="15" height="15" version="1.1" id="heart-15" xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 15 15">
-  <path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75&#xA;&#x9;C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z"/>
-</svg>
-       </span>
-       
-    
-    </div>
-
-    
-      <div class="powerby">
-        Powered by <a href='http://www.gohugo.io/'>Hugo</a> Theme By <a href='https://github.com/nodejh/hugo-theme-mini'>nodejh</a>
-      </div>
-    
-</footer>
-
-
-
-  </body>
-</html>
+<a href=https://blog.csdn.net/hdhdgdhdh/article/details/100012810 target=_blank rel=noopener>格式化 xml 文件时代码错乱问题</a></p><h3 id=书签>书签 <a href=#%e4%b9%a6%e7%ad%be class=anchor>🔗</a></h3><p>Android Studio 自带的书签功能，挺好用的，要用起来</p><p>默认情况下，菜单栏的 Navigate - Bookmarks 就可以操作书签，这里设置一下快捷方式，让它更好用</p><p>添加到书签 Toggle Bookmark 这个是说你选中一行 然后选中这个选项，就添加到书签里，我设置成快捷键 F1</p><p><p class=markdown-image><img src=https://gitee.com/osc_hh/pics/raw/master/PuSYU8.png alt></p></p><p>显示书签，没什么好说的</p><p><p class=markdown-image><img src=https://gitee.com/osc_hh/pics/raw/master/nO1OEv.png alt></p></p><p>然后打开书签还可以设置别名，方便查看，书签就这么多常用功能了~</p><p><p class=markdown-image><img src=https://gitee.com/osc_hh/pics/raw/master/lUvNZI.png alt></p></p><h3 id=插件>插件 <a href=#%e6%8f%92%e4%bb%b6 class=anchor>🔗</a></h3><p>//todo</p></div><div class=tags><a href=https://foezzy.github.io/tags/android-studio>Android Studio</a></div></section></main><footer id=footer><div class=copyright>© Copyright
+2024
+<span class=split><svg fill="#bbb" width="15" height="15" id="heart-15" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><path d="M13.91 6.75c-1.17 2.25-4.3 5.31-6.07 6.94-.1903.1718-.4797.1718-.67.0C5.39 12.06 2.26 9 1.09 6.75-1.48 1.8 5-1.5 7.5 3.45 10-1.5 16.48 1.8 13.91 6.75z"/></svg></span></div><div class=powerby>Powered by <a href=http://www.gohugo.io/>Hugo</a> Theme By <a href=https://github.com/nodejh/hugo-theme-mini>nodejh</a></div></footer></body></html>

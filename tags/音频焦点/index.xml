@@ -1,19 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>音频焦点 on Blog</title>
-    <link>https://foezzy.github.io/tags/%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9/</link>
-    <description>Recent content in 音频焦点 on Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 14 Dec 2019 15:26:42 +0000</lastBuildDate>
-    <atom:link href="https://foezzy.github.io/tags/%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Android音频焦点归纳整理</title>
-      <link>https://foezzy.github.io/posts/android%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9%E5%BD%92%E7%BA%B3/</link>
-      <pubDate>Sat, 14 Dec 2019 15:26:42 +0000</pubDate>
-      <guid>https://foezzy.github.io/posts/android%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9%E5%BD%92%E7%BA%B3/</guid>
-      <description>前言 🔗音频焦点是 API 8 中引入的一个概念，它主要作用于用户在同一个时刻只能关注单个音频流，或者用来降低背景声音，使用户只关注要主要的声音。在不同Android版本中，对应的代码也有区别。主要三个节点为&#xA;2.2 (API level 8) 5.0 (API level 21) 8.0 (API level 26) 2.2-5.0 🔗申请焦点：&#xA;private void requestAudioFocus() { audioManager = (AudioManager) getContext().getSystemService(Context.AUDIO_SERVICE); if (audioManager != null) { audioManager.requestAudioFocus(mAudioFocusListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT); } } requestAudioFocus中，有3个参数，先说参数2，参数2是多种声音类型，如下：&#xA;AudioManager.STREAM_VOICE_CALL&#xA;AudioManager.STREAM_SYSTEM&#xA;AudioManager.STREAM_RING&#xA;AudioManager.STREAM_MUSIC&#xA;AudioManager.STREAM_ALARM&#xA;AudioManager.STREAM_NOTIFICATION&#xA;AudioManager.STREAM_BLUETOOTH_SCO&#xA;AudioManager.STREAM_SYSTEM_ENFORCED&#xA;AudioManager.STREAM_DTMF&#xA;AudioManager.STREAM_TTS&#xA;然后是参数3，也是有多个声明类型，如下：&#xA;AudioManager.AUDIOFOCUS_GAIN：想要长期占有焦点，失去焦点者stop播放和释放 AudioManager.AUDIOFOCUS_GAIN_TRANSIENT：想要短暂占有焦点，失去焦点者pause播放 AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK：想要短暂占有焦点，失去焦点者可以继续播放但是音量需要调低 AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_EXCLUSIVE：想要短暂占有焦点，但希望失去焦点者不要有声音播放 最后是参数1，参数1要自己写个回调：&#xA;private AudioManager.OnAudioFocusChangeListener mAudioFocusListener = new AudioManager.OnAudioFocusChangeListener() { @Override public void onAudioFocusChange(int focusChange) { switch (focusChange) { case AudioManager.</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>音频焦点 on Blog</title><link>https://foezzy.github.io/tags/%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9/</link><description>Recent content in 音频焦点 on Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 14 Dec 2019 15:26:42 +0000</lastBuildDate><atom:link href="https://foezzy.github.io/tags/%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9/index.xml" rel="self" type="application/rss+xml"/><item><title>Android音频焦点归纳整理</title><link>https://foezzy.github.io/posts/android%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9%E5%BD%92%E7%BA%B3/</link><pubDate>Sat, 14 Dec 2019 15:26:42 +0000</pubDate><guid>https://foezzy.github.io/posts/android%E9%9F%B3%E9%A2%91%E7%84%A6%E7%82%B9%E5%BD%92%E7%BA%B3/</guid><description>前言 🔗音频焦点是 API 8 中引入的一个概念，它主要作用于用户在同一个时刻只能关注单个音频流，或者用来降低背景声音，使用户只关注要主要的声音。在不同Android版本中，对应的代码也有区别。主要三个节点为
+2.2 (API level 8) 5.0 (API level 21) 8.0 (API level 26) 2.2-5.0 🔗申请焦点：
+private void requestAudioFocus() { audioManager = (AudioManager) getContext().getSystemService(Context.AUDIO_SERVICE); if (audioManager != null) { audioManager.requestAudioFocus(mAudioFocusListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT); } } requestAudioFocus中，有3个参数，先说参数2，参数2是多种声音类型，如下：
+AudioManager.STREAM_VOICE_CALL
+AudioManager.STREAM_SYSTEM
+AudioManager.STREAM_RING
+AudioManager.STREAM_MUSIC
+AudioManager.STREAM_ALARM
+AudioManager.STREAM_NOTIFICATION
+AudioManager.STREAM_BLUETOOTH_SCO
+AudioManager.STREAM_SYSTEM_ENFORCED
+AudioManager.STREAM_DTMF
+AudioManager.STREAM_TTS
+然后是参数3，也是有多个声明类型，如下：
+AudioManager.AUDIOFOCUS_GAIN：想要长期占有焦点，失去焦点者stop播放和释放 AudioManager.AUDIOFOCUS_GAIN_TRANSIENT：想要短暂占有焦点，失去焦点者pause播放 AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK：想要短暂占有焦点，失去焦点者可以继续播放但是音量需要调低 AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_EXCLUSIVE：想要短暂占有焦点，但希望失去焦点者不要有声音播放 最后是参数1，参数1要自己写个回调：
+private AudioManager.OnAudioFocusChangeListener mAudioFocusListener = new AudioManager.OnAudioFocusChangeListener() { @Override public void onAudioFocusChange(int focusChange) { switch (focusChange) { case AudioManager.</description></item></channel></rss>
